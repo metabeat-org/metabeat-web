@@ -8,7 +8,14 @@
     <title> </title>
     <link type="text/css" media="all" rel="stylesheet" href="css/style.css">
     <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
+        $(document).ready(function () {
+            $('.navbar-toggler').click(function () {
+                $('.navbar ul').toggleClass('show');
+            });
+        });
     </script>
 </head>
 

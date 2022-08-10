@@ -8,7 +8,15 @@
     <title> </title>
     <link type="text/css" media="all" rel="stylesheet" href="css/style.css">
     <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        $(document).ready(function () {
+            $('.navbar-toggler').click(function () {
+                $('.navbar ul').toggleClass('show');
+                $('.navbar ul').slideDown( 1200, 'ease');
+            });
+        });
     </script>
 </head>
 
@@ -53,14 +61,14 @@
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="movie">Movie</div>
-                    <div class="info">
-                        <h2>
+                    <div class="info col-flex-column">
+                        <h2 class="col-full">
                             SuperClosely.<br>
                             <strong>Experience<br>
                             new<br>
                             distance!</strong>
                         </h2>
-                        <h5>
+                        <h5 class="col-full">
                             <p>METABEAT is an incentivization community platform based on FANomance (Fan Performance) using blockchain technology.</p>
                             <p>On METABEAT, Creators/Artists and Fans grow as partners through engagements and rewards.</p>
                             <p>Fans on MetaBeat build and strengthen partnerships with Creators/Artists through interactive and rewarding experiences fueled by the platform’s ecosystem.</p>
@@ -72,9 +80,9 @@
 
         <section class="section au-section-2">
             <div class="section-wrap container">
-                <div class="section-inner-wrap">
-                    <div class="photo">Images</div>
-                    <h5>
+                <div class="section-inner-wrap col-flex-column">
+                    <div class="photo col-full">Images</div>
+                    <h5 class="col-full">
                         <p>MetaBeat’s ecosystem converts fans’ social media activity into direct benefits by tokenizing their contributions on the platform.</p>
                         <p>The experience doesn’t stop there as fans are also rewarded for the music’s performance (such as airplay, streaming, etc.) and the Fandom’s performance within MetaBeat’s platform.</p>
                     </h5>
@@ -86,12 +94,12 @@
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="service-items"><img src="images/about_metabeat.png" alt="Metabeat Service Item"></div>
-                    <div class="info">
-                        <h2>Ay.<br>
+                    <div class="info col-flex-column">
+                        <h2 class="col-full">Ay.<br>
                             <strong>Drop the<br>
                                 beat!</strong>
                         </h2>
-                        <h5>
+                        <h5 class="col-full">
                             <p>By creating their own social economy, Fans can now convert their Fan activities into something bigger than a hobby.<br>
                                 The Fan possibilities are now endless.</p>
                         </h5>
@@ -129,18 +137,18 @@
                         <strong> The Partners</strong>
                     </h2>
                     <div class="partners">
-                        <div><img src="images/about_partner_1.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_2.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_3.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_4.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_5.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_6.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_7.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_8.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_9.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_10.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_11.png" width="216" height="108" alt="Partner Name"></div>
-                        <div><img src="images/about_partner_12.png" width="216" height="108" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_1.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_2.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_3.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_4.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_5.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_6.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_7.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_8.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_9.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_10.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_11.png" alt="Partner Name"></div>
+                        <div><img src="images/about_partner_12.png" alt="Partner Name"></div>
                     </div>
                 </div>
             </div>

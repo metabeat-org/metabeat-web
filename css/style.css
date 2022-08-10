@@ -21,7 +21,7 @@ h3, .f42 { font-size: 42rem; }
 h4, .f32 { font-size: 32rem; }
 h5, .f24 { font-size: 24rem; }
 h6, .f16 { font-size: 16rem; }
-p { margin-top: 0; margin-bottom: 1rem; }
+p { margin-top: 0; margin-bottom: 24rem; }
 strong, span, h1 p, h2 p, h3 p, h4 p, h5 p, f62 p, .f52 p, .f42 p, .f32 p, .f24 p  { font-size: inherit; line-height: inherit; }
 abbr[title], abbr[data-bs-original-title] { -webkit-text-decoration: underline dotted; text-decoration: underline dotted; cursor: help; -webkit-text-decoration-skip-ink: none; text-decoration-skip-ink: none; }
 address { margin-bottom: 10rem; font-style: normal; line-height: inherit; }
@@ -206,6 +206,7 @@ header { position: sticky; top:0; background-color: #FCFCFC;}
 #aboutus .visual-banner { position: absolute; top: 0; height: 1080px; background-color:;  }
 #aboutus .visual-banner .section-inner-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
 #aboutus .visual-banner h1 { text-align: center; margin-bottom: 120px;}
+#aboutus .visual-banner .h-line { display: inline-block; height: 2px; width: 140px; background-color: #111; vertical-align: super; margin: 0 16px; }
 
 .au-section-1 {}
 .au-section-1 .movie { background-color: #D9D9D9; border-radius: 12px; height: 670px; }
@@ -215,14 +216,15 @@ header { position: sticky; top:0; background-color: #FCFCFC;}
 
 .au-section-2 { }
 .au-section-2 .section-wrap { background-color: #D9D9D9; border-radius: 12px; height: 520px; margin-top: 500px; }
-.au-section-2 .section-inner-wrap { padding: 182px 64px; display: flex; flex-direction: row; justify-content: space-between; }
+.au-section-2 .section-inner-wrap { padding: 64px; display: flex; flex-direction: row; justify-content: space-between; }
 .au-section-2 .photo { width: 320px; }
 .au-section-2 h5 { width: 700px; }
 
 .au-section-3 {}
 .au-section-3 .section-wrap { margin-top: 400px; }
-.au-section-3 .service-items { position: absolute; width: 1404px; height: 385px; margin-left: -100px; }
-.au-section-3 .info { display: flex; flex-direction: row; justify-content: space-between; padding-top: 440px; }
+.au-section-3 .service-items { position: relative; background-color: #111; border-radius: 12px; height: 312px; }
+.au-section-3 .service-items img { position: absolute; bottom: 0; width: 1404px; left: 50%; transform: translateX(-50%); }
+.au-section-3 .info { display: flex; flex-direction: row; justify-content: space-between; padding-top: 72px; }
 .au-section-3 h2 { }
 .au-section-3 h5 { width: 700px; margin: 10px 0; }
 
@@ -243,13 +245,14 @@ header { position: sticky; top:0; background-color: #FCFCFC;}
 .au-section-6 .section-inner-wrap { padding: 64px; display: flex; flex-direction: column; justify-content: flex-start; }
 .au-section-6 h2 { text-align: center;  }
 .au-section-6 .partners { display: flex; flex-direction: row; flex-wrap: wrap; gap: 200px; margin-top: 180px; }
-.au-section-6 .partners div { width: 216px; height: 108px; }
+.au-section-6 .partners div { width: 216px; }
 
 .au-section-7 {}
 .au-section-7 .section-wrap { margin-top: 400px; margin-bottom: 250px; }
 .au-section-7 .section-inner-wrap { padding: 64px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .au-section-7 .action-btn-wrap { display: flex; justify-content: center; }
-.au-section-7 .action-btn-wrap button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 9px 24px; background-color: transparent; border: none; font-weight: 400; font-size: 114rem; color: #111; }
+.au-section-7 .action-btn-wrap button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 9px 24px 9px 24px;
+    background-color: transparent; border: none; font-weight: 400; font-size: 114rem; color: #111;  white-space: nowrap; }
 .au-section-7 .action-btn-wrap button i.arrow-r { display: inline-block; width: 124px; height: 124px; text-indent: -9999px; margin-left: 8px; background: url("../images/about_arrow_right.png") center center no-repeat; background-size: 96px; }
 .au-section-7 p { font-size: 24rem; }
 
@@ -472,20 +475,30 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
 
 }
 @media (min-width: 281px) and (max-width: 576px) {
-    html { font-size: .75px;}
+    section h1 { font-size: 35rem; line-height: 1.1; }
+    section h2 { font-size: 34rem; line-height: 1.1 !important; margin-bottom: 36px; }
+    section h3 { font-size: 30rem; line-height: 1.1 !important; }
+    section h4 { font-size: 24rem; line-height: 1.05 !important; }
+    section h5 { font-size: 20rem; line-height: 1.05 !important; }
+    section h6 { font-size: 14rem; line-height: 1.05 !important; }
 
     .header, .main, .footer { padding-left: 24px; padding-right: 24px; }
-    .container { width: 100%;}
+    .container { width: 100%; }
+
+    .col-full { width: 100% !important; }
+    .col-flex-column { flex-direction: column !important; }
+
+
 
     /*========== Header ==========*/
     header { position: sticky; top:0; background-color: #FCFCFC;}
     .header-wrap { padding-top: 24px; padding-bottom: 24px; display: flex; flex-direction: row; justify-content: space-between; }
     .navbar-brand { width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; }
     .navbar { margin-left: auto; display: flex; flex-direction: row; justify-content: flex-end; align-items: center; }
-    .navbar ul { display: flex; flex-direction: column; justify-content: flex-start; position: absolute; left: -24px; right: -24px; top: 84px; background-color: #FCFCFC; }
+    .navbar ul { display: flex; flex-direction: row; justify-content: flex-end; display: none }
     .navbar ul li a { display: block; height: 47px; padding: 8px 12px 7px; margin: 0 4px; transition: all 100ms ease;}
     .navbar ul li a span { height: 32px; padding: 2px 4px; line-height: 30px; font-weight: 600; font-size: 16rem; color: #000; text-decoration: none; display: flex; align-items: center; }
-    .navbar ul li a:after { content:''; display: block; width: 0; height: 2px; margin: 0 auto; transition: all 100ms ease; }
+    .navbar ul li a:after { content:''; display: block; width: 0%; height: 2px; margin: 0 auto; transition: all 100ms ease; }
     .navbar ul li a:hover, .navbar ul li.selected a { padding: 6px 12px 9px; }
     .navbar ul li a:hover:after, .navbar ul li.selected a:after { width: 100%; background-color: #000;}
     .navbar ul li a:hover span:before, .navbar ul li.selected a span:before { border-bottom: 2px solid #000; }
@@ -496,20 +509,39 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
     .navbar .download-app-btn:hover:after { transform: rotate(-90deg); }
     .navbar-toggler { width: 34px; height: 36px; display: block; margin-left: 8px; text-indent: -9999px;
         background: url("../images/gnb_menu_dark.png") center center no-repeat; background-size: 31px; border: none; border-radius: 11px;}
+    .navbar ul.hide { display: none; }
+    .navbar ul.show { display: flex; flex-direction: column; justify-content: flex-start;
+        position: absolute; left: -25px; right: -25px; top: 84px; padding: 16px 0; background-color: rgba(252, 252, 252, .75); }
+    .navbar ul.show li a { display: block; height: 47px; padding: 8px 12px 7px; margin: 0 4px; transition: all 100ms ease;}
+    .navbar ul.show li a span { height: 32px; padding: 2px 4px; line-height: 30px; font-weight: 600; font-size: 16rem; color: #000; text-decoration: none; display: flex; align-items: center; }
+    .navbar ul.show li a:after { content:''; display: block; width: 0; height: 2px; margin: 0 auto; transition: all 100ms ease; }
+    .navbar ul.show li a:hover, .navbar ul li.selected a { padding: 6px 12px 9px; }
+    .navbar ul.show li a:hover:after, .navbar ul li.selected a:after { width: 100%; background-color: transparent;}
+
+    #aboutus .visual-banner .h-line { width: 100px; }
+    .au-section-2 .section-inner-wrap { padding: 24px;}
+
+
+    .au-section-4 .section-inner-wrap { padding: 0;}
+
+    .au-section-5 .section-inner-wrap { padding: 0;}
+
+
+    .au-section-6 .section-inner-wrap { padding: 0; }
+    .au-section-6 .partners { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; gap: 15vw; margin-top: 24px; }
+    .au-section-6 .partners div { width: 18vw; }
+
+
+
+    .au-section-7 .section-inner-wrap { padding: 0;}
+    .au-section-7 .action-btn-wrap button { padding: 9px 8px 9px 8px; font-size: 48rem; }
+    .au-section-7 .action-btn-wrap button i.arrow-r { display: inline-block; width: 48px; height: 48px; text-indent: -9999px; margin-left: 8px; background-size: 42px; }
+    .au-section-7 p { font-size: 14rem; }
+
+
+    #contactus .navbar ul { background-color: rgba(107, 107, 107, .75); }
+    #contactus .navbar ul.show li a:hover:after, #contactus .navbar ul li.selected a:after { width: 100%; background-color: transparent;}
     #contactus .navbar-toggler { background: url("../images/gnb_menu_light.png") center center no-repeat; background-size: 31px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /*========== Footer ==========*/
@@ -517,7 +549,7 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
     .footer-wrap { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
     /* fnb */
     .fnb-info { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: 100%; margin-bottom: 72px; }
-    .fnb-info * { color: rgba(252, 252, 252, .65); font-size: 13rem; }
+    .fnb-info * { color: rgba(252, 252, 252, .65); font-size: 10rem; }
     .fnb-info .fnb-etc-info { display: flex; flex-direction: column; width: 100%; }
     .fnb-info .channel { display: flex; flex-direction: row; justify-content: space-between; width: unset; margin-bottom: 32px; }
     .fnb-info .channel li a { display: flex; width: 32px; height: 33px; border-radius: 50%; background: rgba(252, 252, 252, 0.15); justify-content: center; align-items: center; }
@@ -538,10 +570,10 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
     .fnb-logo-info a { display: block; width: 86px; margin-bottom: 36px; }
     /* copyright */
     .copyright-info { margin-left: 0; }
-    .copyright-info * { color: rgba(252, 252, 252, .8); font-size: 14rem; line-height: 1.2; font-weight: 500; }
+    .copyright-info * { color: rgba(252, 252, 252, .8); font-size: 10rem; line-height: 1.2; font-weight: 500; }
     .copyright-info .company-name { margin-bottom: 16px;}
     .copyright-info .address { margin-bottom: 24px; }
-    .copyright-info .copyright { color: rgba(252, 252, 252, .3); font-size: 13rem; font-weight: 500; }
+    .copyright-info .copyright { color: rgba(252, 252, 252, .3); font-size: 8rem; font-weight: 500; }
 }
 
 @media (max-width: 768px) {
