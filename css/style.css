@@ -483,7 +483,7 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
     .navbar-brand { width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; }
     .navbar { margin-left: auto; display: flex; flex-direction: row; justify-content: flex-end; align-items: center; }
     .navbar ul { display: flex; flex-direction: column; justify-content: flex-start; position: absolute; left: -24px; right: -24px; top: 84px; background-color: #FCFCFC; }
-    .navbar ul li a { display: block; height: 47px; padding: 8px 12px 7px; margin: 0 4px; transition: all 100ms ease;}  
+    .navbar ul li a { display: block; height: 47px; padding: 8px 12px 7px; margin: 0 4px; transition: all 100ms ease;}
     .navbar ul li a span { height: 32px; padding: 2px 4px; line-height: 30px; font-weight: 600; font-size: 16rem; color: #000; text-decoration: none; display: flex; align-items: center; }
     .navbar ul li a:after { content:''; display: block; width: 0; height: 2px; margin: 0 auto; transition: all 100ms ease; }
     .navbar ul li a:hover, .navbar ul li.selected a { padding: 6px 12px 9px; }
