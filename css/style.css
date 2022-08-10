@@ -502,6 +502,16 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
 
 
 
+
+
+
+
+
+
+
+
+
+
     /*========== Footer ==========*/
     footer { padding: 32px 24px 72px !important; }
     .footer-wrap { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
