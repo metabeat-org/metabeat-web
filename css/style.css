@@ -110,7 +110,7 @@ img { object-fit: contain; }
 .loader { display: none;  }
 /*------ Z-index ------*/
 .header { z-index: 3;}
-.visual-banner { z-index:;}
+.visual-banner { }
 .main { z-index: 2;}
 .footer { z-index: 1;}
 
@@ -198,12 +198,12 @@ header { position: sticky; top:0; background-color: #FCFCFC;}
 
 /*========== About us ==========*/
 #aboutus {}
-#aboutus main { position:; margin-top: 741px; background-color: #FCFCFC; border-radius: 12px; }
+#aboutus main { margin-top: 741px; background-color: #FCFCFC; border-radius: 12px; }
 /*------ header ------*/
 #aboutus .navbar ul li a:hover:after, #contactus .navbar ul li.selected a:after { background-color: #0000FF;}
 #aboutus .navbar .download-app-btn { background: #0000FF;}
 /* visual-banner */
-#aboutus .visual-banner { position: absolute; top: 0; height: 1080px; background-color:;  }
+#aboutus .visual-banner { position: absolute; top: 0; height: 1080px; }
 #aboutus .visual-banner .section-inner-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
 #aboutus .visual-banner h1 { text-align: center; margin-bottom: 120px;}
 #aboutus .visual-banner .h-line { display: inline-block; height: 2px; width: 140px; background-color: #111; vertical-align: super; margin: 0 16px; }
@@ -259,7 +259,7 @@ header { position: sticky; top:0; background-color: #FCFCFC;}
 
 /*========== Contact us ==========*/
 #contactus {}
-#contactus main { position:; margin-top: 741px; background-color: #FCFCFC; border-radius: 0; width: 1192px; margin-left: auto; margin-right: auto; padding: 0; border-radius: 12px;  }
+#contactus main { margin-top: 741px; background-color: #FCFCFC; border-radius: 0; width: 1192px; margin-left: auto; margin-right: auto; padding: 0; border-radius: 12px;  }
 /*------ header ------*/
 #contactus header { background-color: #111; }
 #contactus .navbar ul li a span { color: #FCFCFC; }
