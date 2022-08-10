@@ -223,7 +223,7 @@ header { position: sticky; top:0; background-color: #FCFCFC;}
 .au-section-3 {}
 .au-section-3 .section-wrap { margin-top: 400px; }
 .au-section-3 .service-items { position: relative; background-color: #111; border-radius: 12px; height: 312px; }
-.au-section-3 .service-items img { position: absolute; bottom: 0; width: 1404px; left: 50%; transform: translateX(-50%); }
+.au-section-3 .service-items img { position: absolute; bottom: 0; width: 1404px; left: 50%; transform: translateX(-51%); }
 .au-section-3 .info { display: flex; flex-direction: row; justify-content: space-between; padding-top: 72px; }
 .au-section-3 h2 { }
 .au-section-3 h5 { width: 700px; margin: 10px 0; }
@@ -521,6 +521,9 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
     #aboutus .visual-banner .h-line { width: 100px; }
     .au-section-2 .section-inner-wrap { padding: 24px;}
 
+
+    .au-section-3 .service-items { height: 30vw; }
+    .au-section-3 .service-items img { width: 120%; }
 
     .au-section-4 .section-inner-wrap { padding: 0;}
 
