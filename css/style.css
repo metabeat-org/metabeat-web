@@ -480,7 +480,6 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
     /*========== Header ==========*/
     header { position: sticky; top:0; background-color: #FCFCFC;}
     .header-wrap { padding-top: 24px; padding-bottom: 24px; display: flex; flex-direction: row; justify-content: space-between; }
-
     .navbar-brand { width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; }
     .navbar { margin-left: auto; display: flex; flex-direction: row; justify-content: flex-end; align-items: center; }
     .navbar ul { display: flex; flex-direction: column; justify-content: flex-start; position: absolute; left: -24px; right: -24px; top: 84px; background-color: #FCFCFC; }
@@ -497,12 +496,6 @@ footer { position: relative; background-color: #111; min-height: 296px; padding-
     .navbar .download-app-btn:hover:after { transform: rotate(-90deg); }
     .navbar-toggler { width: 34px; height: 36px; display: block; margin-left: 8px; text-indent: -9999px;
         background: url("../images/gnb_menu_dark.png") center center no-repeat; background-size: 31px; border: none; border-radius: 11px;}
-
-
-
-
-
-
     #contactus .navbar-toggler { background: url("../images/gnb_menu_light.png") center center no-repeat; background-size: 31px;}
 
     /*========== Footer ==========*/
