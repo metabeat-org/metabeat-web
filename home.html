@@ -13,7 +13,19 @@
     <script>
         $(document).ready(function () {
             $('.navbar-toggler').click(function () {
+                $(this).toggleClass('show');
+                $('.header').toggleClass('active');
                 $('.navbar ul').toggleClass('show');
+            });
+            $('.download-app-btn').click(function () {
+                $('.download-app-btn-wrap ul').toggleClass('show');
+            });
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 650) {
+                    $('.header').addClass('active');
+                } else {
+                    $('.header').removeClass('active');
+                }
             });
         });
     </script>
@@ -27,16 +39,53 @@
     <!-- ========== HEADER ========== -->
     <header class="header">
         <div class="header-wrap container">
-            <a class="navbar-brand" href="home.html"><img src="images/gnb_bi_metabeat_dark.png" title="Metabeat Logo"></a>
+            <a class="navbar-brand" href="home.html">Metabeat Logo</a>
             <nav class="navbar">
                 <ul>
-                    <li class="nav-item dropdown"><a href="aboutus.html"><span>About us </span></a></li>
-                    <li class="nav-item dropdown"><a href="contactus.html"><span>Contact us </span></a></li>
-                    <li class="nav-item dropdown"><a href="#"><span>Upcoming events </span></a></li>
-                    <li class="nav-item dropdown"><a href="#"><span>White Paper </span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="aboutus.html">
+                            <span>About us </span>
+                            <i>Here. We are the team who made<br>
+                                New - Distance</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="contactus.html">
+                            <span>Contact us </span>
+                            <i>Ring,Ring This is MetaBeat.<br>
+                                We are always awake.</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#">
+                            <span>Upcoming events </span>
+                            <i>Here are the events<br>
+                                we have prepared hard for you.</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="contactus.html">
+                            <span>App guide </span>
+                            <i>Sorry. This page is Under construction.<br>
+                                please wait for a moment!</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#">
+                            <span>White Paper </span>
+                            <i>Typing hard ,For those of you who<br>
+                                want to know more about MetaBeat.</i>
+                        </a>
+                    </li>
                 </ul>
-                <a class="download-app-btn" href="./index.html" target="_blank">Download the app</a>
             </nav>
+            <div class="download-app-btn-wrap">
+                <a class="download-app-btn" href=”javascript:;" target="_blank">Download the app</a>
+                <ul>
+                    <li class="nav-item dropdown"><a href="#"><span>Google Play Store</span></a></li>
+                    <li class="nav-item dropdown"><a href="#"><span>Apple App Store</span></a></li>
+                </ul>
+            </div>
             <button class="navbar-toggler" type="button">Navigation Toggler</button>
         </div>
     </header>

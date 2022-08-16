@@ -99,34 +99,54 @@ img { object-fit: contain; }
 .footer { z-index: 9;}
 
 /*========== HEADER ==========*/
-.header { position: sticky; top:0; background-color: #FCFCFC; padding: 24px 32px;
+.header { position: sticky; top:0; padding: 24px 32px;
   .header-wrap { display: flex; flex-direction: row; justify-content: space-between;
-    .navbar-brand { width: 47px; height: 47px; display: flex; justify-content: center; align-items: center; }
+    .navbar-brand { width: 47px; height: 47px; display: flex; justify-content: center; align-items: center; text-indent: -9999px; border-radius: 4px; overflow: hidden;
+      background: url("../images/gnb_bi_metabeat_dark.png") center center no-repeat; background-size: 47px; z-index: 2;
+    }
     // GNB
     .navbar { margin-left: auto; display: flex; flex-direction: row; justify-content: flex-end; align-items: center;
       ul { display: flex; flex-direction: row; justify-content: flex-end;
         li {
           a { display: block; height: 47px; padding: 8px 12px 7px; margin: 0 4px; transition: all 100ms ease;
-            span { height: 32px; padding: 2px 4px; line-height: 30px; font-weight: 600; font-size: 16rem; color: #000; text-decoration: none; display: flex; align-items: center; }
+            span { height: 32px; padding: 2px 2px; line-height: 30px; font-weight: 600; font-size: 16rem; color: #000; text-decoration: none; display: flex; align-items: center; }
+            i { display: none;}
+            &:after { content:''; display: block; width: 0%; height: 2px; margin: 0 auto; transition: all 100ms ease; }
           }
-          &:after { content:''; display: block; width: 0%; height: 2px; margin: 0 auto; transition: all 100ms ease; }
         }
         li a:hover, li.selected a { padding: 6px 12px 9px; }
         li a:hover:after, li.selected a:after { width: 100%; background-color: #000;}
         li a:hover span:before, li.selected a span:before { border-bottom: 2px solid #000; }
         li:last-child a span:after { content:''; display: inline-block; width: 14px; height: 14px; transition: all 100ms ease;
-          background: url("../images/gnb_dropdown_arrow_dark.png") 100% 60% no-repeat; background-size: 9px; }
-        li:last-child a:hover span:after, li:last-child.selected a span:after { transform: rotate(-90deg) translate(-3px, 0px);}
+          background: url("../images/gnb_dropdown_arrow_dark.png") 100% 44% no-repeat; background-size: 9px; }
+        li:last-child a:hover span:after, li:last-child.selected a span:after { transform: rotate(-90deg) translate(-2px, 2px);}
       }
-      .download-app-btn { display: block; height: 47px; padding: 12px 20px 12px 24px; border-radius: 11px; background: #111; color: #FFF; margin-left: 20px;
+    }
+    .download-app-btn-wrap { position: relative; margin-left: 20px; z-index: 2;
+      .download-app-btn { display: block; height: 47px; padding: 12px 16px 10px 20px; border-radius: 11px; background: #111; color: #FFF;
         display: flex; align-items: center;
-        &:after { content:''; display: inline-block; width: 16px; height: 16px; transition: all 100ms ease;
+        &:after { content:''; display: inline-block; width: 16px; height: 16px; margin-left: 2px; transition: all 100ms ease;
           background: url("../images/gnb_dropdown_arrow_light.png") center center no-repeat; background-size: 9px;  }
-        &:hover:after { transform: rotate(-90deg); }
+        &:hover:after { transform: rotate(-180deg); }
+      }
+      ul { position: absolute; top: 38px; width: 100%; padding: 8px 18px 6px 20px; background-color: #111; border-radius: 0 0 11px 11px;
+        transition: all 100ms ease; display: none;
+        li {
+          a { height: 32px; padding: 2px 0px; line-height: 30px; font-weight: 400; font-size: 14rem; color: #FAFAFA;
+            display: flex; justify-content: space-between; align-items: center;
+            span { font-weight: 400; font-size: 14rem; color: #FAFAFA; }
+            &:after { content:''; display: inline-block; width: 13px; height: 16px; transition: all 100ms ease;
+              background: url("../images/icon_download2.png") center 40% no-repeat; background-size: 8px;  }
+          }
+          &:first-of-type { border-bottom: 1px solid rgba(255, 255, 255, .4); }
+        }
+        &.show { display: block; }
       }
     }
     .navbar-toggler { width: 34px; height: 36px; display: none; margin-left: 8px; text-indent: -9999px; border: none; border-radius: 11px;
-      background: url("../images/gnb_menu_dark.png") center center no-repeat; background-size: 31px; }
+      background: url("../images/gnb_menu_dark.png") center center no-repeat; background-size: 31px; z-index: 2; transition: all 100ms ease;
+      &.show { background: url("../images/gnb_menu_delete_dark.png") center center no-repeat; background-size: 31px; }
+    }
   }
 }
 
@@ -236,12 +256,16 @@ img { object-fit: contain; }
 
 /*========== ABOUT US ==========*/
 #aboutus {
-  // header
-  .header .header-wrap {
+  // HEADER
+  .header {
+    .navbar-brand { background: url("../images/gnb_bi_metabeat_blue.png") center 0 no-repeat; }
+    .navbar ul li a:after { background-color: #0000FF;}
     .navbar ul li a:hover:after, #contactus .navbar ul li.selected a:after { background-color: #0000FF;}
-    .navbar .download-app-btn { background: #0000FF;}
+    .download-app-btn-wrap .download-app-btn { background-color: #0000FF;}
+    .download-app-btn-wrap ul { background-color: #0000FF;}
+    &.active { background-color: #FCFCFC; }
   }
-  // visual-banner
+  // VISUAL BANNER
   .visual-banner { position: absolute; top: 0; left: 0; right: 0; height: 100vh;
     .section-wrap { padding-bottom: 15vh;
       .section-inner-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -251,7 +275,7 @@ img { object-fit: contain; }
       }
     }
   }
-  // main
+  // MAIN
   .main { margin-top: 57vh; /* background-color: #FCFCFC; */ border-radius: 12px;
     .au-section-1 {
       .section-wrap { padding-top: 0;
@@ -334,7 +358,8 @@ img { object-fit: contain; }
 /*========== CONTACT US ==========*/
 #contactus {
   // HEADER
-  .header { background-color: #111;
+  .header {
+    .navbar-brand { background: url("../images/gnb_bi_metabeat_light.png") center center no-repeat; }
     .navbar ul {
       li a span { color: #FCFCFC; }
       li a:hover:after, li.selected a:after { background-color: #FCFCFC;}
@@ -342,11 +367,39 @@ img { object-fit: contain; }
       li:last-child a span:after { content:''; display: inline-block; width: 14px; height: 14px; transition: all 100ms ease;
         background: url("../images/gnb_dropdown_arrow_light.png") 100% 60% no-repeat; background-size: 9px; }
     }
-    .download-app-btn { background: #FCFCFC; color: #000;
-      &:after { content:''; display: inline-block; width: 16px; height: 16px;
-        background: url("../images/gnb_dropdown_arrow_dark.png") center center no-repeat; background-size: 9px; }
+    .download-app-btn-wrap {
+      .download-app-btn { background: #FCFCFC; color: #000;
+        &:after { content:''; display: inline-block; width: 16px; height: 16px;
+          background: url("../images/gnb_dropdown_arrow_dark.png") center center no-repeat; background-size: 9px; }
+      }
+      ul { background-color: #FCFCFC;
+        li {
+          a { color: #111;
+            span { color: #111; }
+            &:after { background: url("../images/icon_download.png") center 40% no-repeat; }
+          }
+          &:first-of-type { border-bottom: 1px solid rgba(107, 107, 107, .4); }
+        }
+      }
+    }
+    &.active { background-color: #FCFCFC;
+      .navbar-brand { background: url("../images/gnb_bi_metabeat_blue.png") center 0 no-repeat; }
+      .navbar ul li a span { color: #111 !important;}
+      .navbar ul li:last-child a span:after { background: url("../images/gnb_dropdown_arrow_dark.png") 100% 44% no-repeat; background-size: 9px; }
+      .navbar ul li a:after { background-color: #0000FF; }
+      .navbar ul li a:hover:after, #contactus .navbar ul li.selected a:after { background-color: #0000FF;}
+      .download-app-btn-wrap .download-app-btn { background-color: #0000FF; color: #FAFAFA; }
+      .download-app-btn-wrap .download-app-btn:after { background: url("../images/gnb_dropdown_arrow_light.png") center center no-repeat; background-size: 9px;}
+      .download-app-btn-wrap ul { background-color: #0000FF; }
+      .download-app-btn-wrap ul li a { color: #FAFAFA; }
+      .download-app-btn-wrap ul li a span { color: #FAFAFA; }
+      .download-app-btn-wrap ul li a:after { background: url("../images/icon_download2.png") center 40% no-repeat; background-size: 8px; }
+      .download-app-btn-wrap ul li:first-of-type { border-bottom: 1px solid rgba(255, 255, 255, .4); }
+      .navbar-toggler { background: url(../images/gnb_menu_dark.png) center center no-repeat; background-size: 31px; }
     }
   }
+  
+  
   // VISUAL BANNER
   .visual-banner { position: absolute; top: 0; left: 0; right: 0; height: 100vh; background-color: #111;
     .section-wrap { padding-bottom: 15vh;
@@ -366,7 +419,7 @@ img { object-fit: contain; }
       }
     }
     .cu-section-1 {
-      .section-wrap { padding-top: 0; padding-bottom: 40px;
+      .section-wrap { padding-top: 0;
         .section-inner-wrap {
           .conttactus-title-wrap { display: flex; flex-direction: row; justify-content: space-between;
             h2 { width: 320px; margin-right: 170px; }
@@ -389,10 +442,10 @@ img { object-fit: contain; }
               .channel-contents-wrap { border-top: 1px solid rgba(0, 0, 0, 0.1); margin-top: 24px; padding-top: 20px;
                 h2 { }
                 .action-btn-wrap { margin-top: 24px;
-                  button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 7px 24px 6px;
+                  button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 7px 24px 6px 20px;
                     background-color: transparent; border: 1px solid #111111; border-radius: 40px; font-weight: 500; font-size: 14rem; min-width: 100px;
                     height: 39px; color: #111;
-                    .copy { display: inline-block; width: 20px; height: 20px; margin-right: 8px; text-indent: -9999px;
+                    .copy { display: inline-block; width: 20px; height: 20px; margin-right: 4px; text-indent: -9999px;
                       background: url("../images/contact_copy.png") center center no-repeat; background-size: 13px; }
                   }
                 }
@@ -403,7 +456,7 @@ img { object-fit: contain; }
       }
     }
     .cu-section-2 {
-      .section-wrap { padding-top: 280px ; padding-bottom: 200px;
+      .section-wrap {
         .section-inner-wrap {
           .channel-wrap { display: flex; flex-direction: row; justify-content: space-between;
             .channel {
@@ -421,11 +474,13 @@ img { object-fit: contain; }
               .channel-contents-wrap {
                 h3 { line-height: 1.1; margin-bottom: 8px; }
                 p { font-weight: 500; font-size: 25rem; margin-bottom: 8px; opacity: .5; }
-                .channel-image { margin-top: 24px; margin-bottom: 40px;}
+                .channel-image { margin-top: 24px; margin-bottom: 40px; height: 524px; overflow: hidden;
+                  img { width: 100%; height: 100%; object-fit: cover; }
+                }
                 .action-btn-wrap { margin-top: 24px;
-                  button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 24px 4px; margin: 0 auto; height: 39px; color: #111;
+                  button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 5px 24px 5px; margin: 0 auto; height: 39px; color: #111;
                     background-color: transparent; border: 1px solid #111111; border-radius: 40px; font-weight: 500; font-size: 14rem; min-width: 100px;
-                    .medium { display: inline-block; width: 24px; height: 24px; margin-left: 8px; text-indent: -9999px;
+                    .medium { display: inline-block; width: 24px; height: 24px; margin-left: 6px; text-indent: -9999px;
                       background: url("../images/contact_channel_medium.png") center center no-repeat; background-size: 21px; }
                   }
                 }
@@ -436,7 +491,7 @@ img { object-fit: contain; }
       }
     }
     .cu-section-3 {
-      .section-wrap { padding-top: 280px ; padding-bottom: 200px;
+      .section-wrap {
         .section-inner-wrap {
           .channel-wrap { display: flex; flex-direction: row; justify-content: space-between;
             .channel { padding-top: 4px;
@@ -454,9 +509,11 @@ img { object-fit: contain; }
                   padding: 40px; margin: 18px 0 24px 102px; display: flex; flex-direction: column; align-items: center;
                   h4 { line-height: 1.1; margin-bottom: 8px; }
                   p { font-weight: 500; font-size: 20rem; margin-bottom: 6px; opacity: .5; }
-                  .channel-image { margin-bottom: 40px; }
+                  .channel-image { margin-bottom: 40px;
+                    img { width: 124px;}
+                  }
                   .action-btn-wrap { margin-top: 32px;
-                    button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 24px 4px; margin: 0 auto; height: 39px; color: #111;
+                    button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 5px 24px 5px; margin: 0 auto; height: 39px; color: #111;
                       background-color: transparent; border: 1px solid #111111; border-radius: 40px; font-weight: 500; font-size: 14rem; min-width: 100px;
                       .discord { display: inline-block; width: 24px; height: 24px; margin-left: 2px; margin-right: 2px; text-indent: -9999px;
                         background: url("../images/contact_channel_discord.png") center center no-repeat; background-size: 15px; }
@@ -471,7 +528,7 @@ img { object-fit: contain; }
       }
     }
     .cu-section-4 {
-      .section-wrap { padding-top: 280px; padding-bottom: 200px;
+      .section-wrap {
         .section-inner-wrap {
           .channel-wrap { display: flex; flex-direction: row; justify-content: space-between;
             .channel {
@@ -482,22 +539,24 @@ img { object-fit: contain; }
               .channel-user-info-wrap { background: url("../images/contact_bi.png") left top no-repeat; background-size: 78px; padding-left: 102px; min-height: 98px;
                 h4 { margin-bottom: 6px;
                   span { opacity: .5; }
+                  .dot { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background-color: #111; text-indent: -9999px; margin: 0px 8px 2px;
+                    vertical-align: middle; }
                 }
-                .dot { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background-color: #111; text-indent: -9999px; margin: 0px 8px 2px;
-                  vertical-align: middle; }
                 p { font-weight: 400; font-size: 32rem; line-height: 1.4; margin-bottom: 10px;
                   .tag { color: #0000FF; }
                 }
-                .channel-contents-wrap {
-                  h3 { line-height: 1.1; margin-bottom: 8px; }
-                  p { font-weight: 500; font-size: 25rem; margin-bottom: 8px; opacity: .5; }
-                  .channel-image { margin-top: 24px; margin-bottom: 40px; border-radius: 32px; overflow: hidden; }
-                  .action-btn-wrap { margin-top: 24px;
-                    button { display: flex; flex-direction: row; justify-content: center; padding: 6px 24px 4px; margin: 0 auto; height: 39px; color: #111;
-                      background-color: transparent; border: 1px solid #111111; border-radius: 40px; font-weight: 500; font-size: 14rem; min-width: 100px;
-                      .twitter { display: inline-block; width: 24px; height: 24px; margin-left: 8px; text-indent: -9999px;
-                        background: url("../images/contact_channel_tiwtter.png") center center no-repeat; background-size: 18px;
-                      }
+              }
+              .channel-contents-wrap {
+                h3 { line-height: 1.1; margin-bottom: 8px; }
+                p { font-weight: 500; font-size: 25rem; margin-bottom: 8px; opacity: .5; }
+                .channel-image { margin-top: 24px; margin-bottom: 40px; border-radius: 32px; height: 524px; overflow: hidden;
+                  img { width: 100%; height: 100%; object-fit: cover; }
+                }
+                .action-btn-wrap { margin-top: 24px;
+                  button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 5px 24px 5px; margin: 0 auto; height: 39px; color: #111;
+                    background-color: transparent; border: 1px solid #111111; border-radius: 40px; font-weight: 500; font-size: 14rem; min-width: 100px;
+                    .twitter { display: inline-block; width: 24px; height: 24px; margin-left: 4px; text-indent: -9999px;
+                      background: url("../images/contact_channel_tiwtter.png") center center no-repeat; background-size: 18px;
                     }
                   }
                 }
@@ -508,7 +567,7 @@ img { object-fit: contain; }
       }
     }
     .cu-section-5 {
-      .section-wrap { padding-top: 280px ; padding-bottom: 200px;
+      .section-wrap {
         .section-inner-wrap {
           .channel-wrap { display: flex; flex-direction: row; justify-content: space-between;
             .channel { padding-top: 4px;
@@ -530,7 +589,7 @@ img { object-fit: contain; }
                     span { color: #0000FF; display: inline-block; padding-bottom: 12px; }
                   }
                   .action-btn-wrap { margin-top: 32px; display: flex; justify-content: space-between; align-items: flex-end;
-                    button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 24px 4px; margin: 0; height: 39px; color: #111;
+                    button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 5px 24px 5px; margin: 0; height: 39px; color: #111;
                       background-color: transparent; border: 1px solid #111111; border-radius: 40px; font-weight: 500; font-size: 14rem; min-width: 100px;
                       .telegram { display: inline-block; width: 24px; height: 24px; margin-left: 2px; margin-right: 2px; text-indent: -9999px;
                         background: url("../images/contact_channel_telegram.png") center center no-repeat; background-size: 16px; }
@@ -549,7 +608,7 @@ img { object-fit: contain; }
       }
     }
     .cu-section-6 {
-      .section-wrap { padding-top: 280px ; padding-bottom: 480px;
+      .section-wrap { 
         .section-inner-wrap {
           .channel-wrap { display: flex; flex-direction: row; justify-content: space-between;
             .channel { padding-top: 4px;
@@ -558,13 +617,13 @@ img { object-fit: contain; }
             .channel-info-wrap { width: 838px; position: relative; border-radius: 32px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); padding: 0 40px 40px; margin-top: 87px;
               .channel-contents-wrap { position: relative; display: flex; flex-direction: column;
                 .channel-image { margin-bottom: 44px; position: relative;
-                  img { width: 143px; border: 1px solid #fff; }
+                  img { width: 143px; border: 2px solid #fff; }
                 }
                 h4 { line-height: 1.1; margin-bottom: 16px;
                   p { margin: 8px 0; opacity: .5; }
                 }
                 .action-btn-wrap { margin-top: 32px;
-                  button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 6px 24px 4px; margin: 0; height: 39px; color: #111;
+                  button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 5px 24px 5px; margin: 0; height: 39px; color: #111;
                     background-color: transparent; border: 1px solid #111111; border-radius: 40px; font-weight: 500; font-size: 14rem; min-width: 100px;
                     .linkin { display: inline-block; width: 24px; height: 24px; margin-left: 2px; margin-right: 2px; text-indent: -9999px;
                       background: url("../images/contact_channel_linkedin.png") center 30% no-repeat; background-size: 16px; }
@@ -572,7 +631,7 @@ img { object-fit: contain; }
                 }
               }
               &:before { content: ""; display: block; position: absolute; left: 0; top: -87px; width: 100%; height: 200px; border-radius: 32px 32px 0 0;
-                background: #fff url("../images/contact_app.png") left center no-repeat; background-size: 100%; }
+                background: #fff url("../images/contact_app.png") center top no-repeat; background-size: cover; }
             }
           }
         }
@@ -612,19 +671,38 @@ img { object-fit: contain; }
   
   /*========== HEADER ==========*/
   .header .header-wrap {
-    .navbar-brand { width: 36px; height: 36px; }
+    .navbar-brand { width: 36px; height: 36px; background-size: 36px !important; }
     .navbar {
       ul { display: none;
         &.hide { display: none; }
-        &.show { display: flex; flex-direction: column; justify-content: flex-start; position: absolute; left: 0; right: 0; top: 84px; padding: 16px 0; background-color: rgba(252, 252, 252, .75); }
-        &.show li a { display: block; height: 47px; padding: 8px 12px 7px; margin: 0 4px; transition: all 100ms ease;}
-        &.show li a span { height: 32px; padding: 2px 4px; line-height: 30px; font-weight: 600; font-size: 16rem; color: #000; text-decoration: none; display: flex; align-items: center; }
-        &.show li a:after { content:''; display: block; width: 0; height: 2px; margin: 0 auto; transition: all 100ms ease; }
-        &.show li a:hover, &.show li.selected a { padding: 6px 12px 9px; }
-        &.show li a:hover:after, &.show li.selected a:after { width: 100%; background-color: transparent;}
+        &.show { display: flex; flex-direction: column; justify-content: flex-start; position: absolute; left: 0; right: 0; top: 0; padding: 108px 20px 20px;
+          background-color: #FAFAFA; height: 100vh;
+          li a { position: relative; display: block; height: unset; padding: 18px 52px 18px 20px; margin: 0 0 12px 0; border-radius: 24px; transition: all 100ms ease;
+            background: rgba(252, 252, 252, 0.3); box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); backdrop-filter: blur(54px);
+            span { height: 32px; padding: 2px 4px; line-height: 30px; font-weight: 700; font-size: 24rem; color: #000; text-decoration: none;
+              display: flex; align-items: center; margin-bottom: 10px; }
+            i { display: block; font-weight: 500; font-size: 11rem; font-style: normal; }
+            &:after { content:''; display: block; width: 28px; height: 28px; margin: 0 auto; transition: all 100ms ease;
+              background: url("../images/icon_arrow.png") center center no-repeat; background-size: 28px; position: absolute; right: 20px; top: 50%;
+              transform: translateY(-50%); background-color: transparent !important;
+            }
+          }
+          li a:hover, &.show li.selected a { padding:18px 52px 18px 20px; }
+          li:last-child a span:after { display: none; }
+          li:nth-of-type(4) a { box-shadow: none; backdrop-filter: none; }
+          li:nth-of-type(4) a:after { display: none; }
+        }
       }
-      .download-app-btn { height: 36px; padding: 9px 12px 7px 18px;
+    }
+    .download-app-btn-wrap {
+      .download-app-btn { height: 36px !important; padding: 9px 10px 7px 16px !important; font-size: 12rem !important;
         &:after { margin-top: -1px; }
+      }
+      ul { top: 27px !important; padding: 10px 12px 2px 16px !important;
+        li a { height: 28px !important;
+          span { font-size: 12rem !important;}
+          &:after { background-size: 8px !important;}
+        }
       }
     }
     .navbar-toggler { display: block; background: url("../images/gnb_menu_dark.png") center center no-repeat; background-size: 31px; }
@@ -648,8 +726,8 @@ img { object-fit: contain; }
         .fnb-etc { flex-direction: column; flex-wrap: unset; justify-content: flex-start; width: unset;
           li { margin-bottom: 10px;
             &:nth-of-type(1) { order: 1;}
-            &:nth-of-type(2) { order: 3; margin-bottom: 30px; }
-            &:nth-of-type(3) { order: 2;}
+            &:nth-of-type(2) { order: 3;}
+            &:nth-of-type(3) { order: 2; margin-bottom: 32px; }
             &:nth-of-type(4) { order: 4;}
           }
         }
@@ -671,7 +749,7 @@ img { object-fit: contain; }
   /*========== ABOUT US ==========*/
   #aboutus {
     .visual-banner .h-line { width: 100px !important; margin: 0 8px !important; }
-    
+
     .au-section-1 .movie { height: 470px !important; }
     .au-section-1 .info { margin: 48px 0 0 !important; }
     .au-section-2 { min-height: inherit !important; }
@@ -696,35 +774,180 @@ img { object-fit: contain; }
   
   /*========== CONTACT US ==========*/
   #contactus {
-    .header .header-wrap .navbar ul.show { background-color: rgba(107, 107, 107, 0.75); }
-    .header .header-wrap .navbar ul.show li a span { color: #FAFAFA; }
-    
-    .navbar-toggler { display: block; background: url("../images/gnb_menu_light.png") center center no-repeat; background-size: 31px; }
-    
-    .cu-section-1 .conttactus-title-wrap { padding: 24px; }
-    .cu-section-1 .conttactus-title-wrap h2 { margin-right: 0 !important; font-size: 24rem; }
-    .cu-section-1 .conttactus-title-wrap p { font-weight: 400 !important; font-size: 14rem !important; text-align: left !important; }
-    
-    .cu-section-1 .channel-wrap { margin-top: 120px !important; }
-    .cu-section-1 .channel-wrap .channel { padding: 20px; }
-    .cu-section-1 .channel-wrap .channel img { width: 28px !important; margin-bottom: 6px !important;}
-    .cu-section-1 .channel-wrap .channel h2 { font-size: 24rem !important; margin-bottom: 16px !important;}
-    .cu-section-1 .channel-wrap .channel-info-wrap { border-radius: 20px !important; padding: 20px !important;}
-    .cu-section-1 .channel-wrap .mailbox { position: absolute !important; right: 40px !important; top: 40px !important; }
-    .cu-section-1 .channel-wrap .mailbox a { display: block !important; padding: 4px 0 4px 28px !important; font-weight: 600 !important; font-size: 20rem !important; color: #111 !important; background: url("../images/contact_email.png") left center no-repeat !important; background-size: 19px !important; opacity: .4 !important; }
-    .cu-section-1 .channel-wrap .channel-user-info-wrap { background: url("../images/contact_bi.png") left top no-repeat !important; background-size: 78px !important; padding-left: 102px !important; min-height: 98px !important; }
-    .cu-section-1 .channel-wrap .channel-user-info-wrap h4 { margin-bottom: 6px !important;}
-    .cu-section-1 .channel-wrap .channel-user-info-wrap p { font-weight: 400 !important; font-size: 25rem !important; line-height: 1.4 !important; margin-bottom: 10px !important; }
-    .cu-section-1 .channel-wrap .channel-contents-wrap { border-top: 1px solid rgba(0, 0, 0, 0.1) !important; margin-top: 24px !important; padding-top: 20px !important; }
-    .cu-section-1 .channel-wrap .channel-contents-wrap h2 { }
-    .cu-section-1 .channel-wrap .channel-contents-wrap .action-btn-wrap { margin-top: 24px !important;}
-    .cu-section-1 .channel-wrap .channel-contents-wrap .action-btn-wrap button { display: flex !important; flex-direction: row !important; justify-content: center !important; align-items: center !important; padding: 7px 24px 6px !important;
-      background-color: transparent !important; border: 1px solid #111111 !important; border-radius: 40px !important; font-weight: 500 !important; font-size: 14rem !important; min-width: 100px !important; height: 39px !important; color: #111 !important; }
-    .cu-section-1 .channel-wrap .channel-contents-wrap .action-btn-wrap button .copy { display: inline-block !important; width: 20px !important; height: 20px !important; margin-right: 8px !important; text-indent: -9999px !important;
-      background: url("../images/contact_copy.png") center center no-repeat !important; background-size: 13px !important; }
-  
-  
-  
+    .header .navbar ul.show { background-color: #FAFAFA; }
+    .header .navbar ul.show li a span { color: #FAFAFA; }
+    .header .navbar-toggler { display: block; background: url("../images/gnb_menu_light.png") center center no-repeat; background-size: 31px; }
+    .header .download-app-btn-wrap ul li a:after { background-size: 11px !important;}
+
+    .section .channel { padding: 14px 20px;
+      h2 { font-size: 24rem !important; margin-bottom: 16px !important;}
+    }
+    .section .channel-info-wrap { width: unset !important; border-radius: 20px !important; padding: 20px !important;
+      .channel-user-info-wrap { background-size: 40px !important; padding-left: 56px !important; min-height: 56px !important;
+        h4 { font-size: 16rem !important; margin-bottom: 6px !important;}
+        p { font-weight: 500 !important; font-size: 14rem !important; margin-bottom: 4px !important; }
+        .dot { width: 2px !important; height: 2px !important; margin: 0px 2px 0 !important; }
+      }
+      .channel-contents-wrap {
+        h2, h3 { font-size: 28rem !important; }
+        P { font-weight: 500 !important; font-size: 14rem !important; }
+        .channel-image { margin-top: 20px !important; margin-bottom: 24px !important; }
+        .action-btn-wrap { margin-top: 20px !important;
+          button {  font-size: 12rem !important;}
+        }
+      }
+    }
+
+    .cu-section-1 {
+      .section-wrap { align-items: flex-start;
+        .section-inner-wrap {
+          .conttactus-title-wrap { padding: 24px;
+            h2 { margin-right: 0 !important; font-size: 24rem; }
+            p { font-size: 14rem !important; text-align: left !important; }
+          }
+          .channel-wrap { margin-top: 100px !important;
+            .channel {
+              img { width: 28px !important; }
+            }
+            .channel-info-wrap {
+              .mailbox { position: static !important; margin-top: -4px;
+                a { padding: 4px 0 4px 17px !important; font-size: 12rem !important; background-size: 11px !important; }
+              }
+              .channel-user-info-wrap {
+                h4 { margin-bottom: 2px !important;}
+                p { font-size: 12rem !important; }
+              }
+              .channel-contents-wrap { margin-top: 12px !important; padding-top: 16px !important;
+                h2 { font-size: 27rem; letter-spacing: -.02em; margin-bottom: 16px;}
+                .action-btn-wrap {
+                  button {
+                    .copy {  }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .cu-section-2 {
+      .section-wrap { padding-top: 40px !important; padding-bottom: 40px !important;
+        .channel img { width: 42px !important;}
+        .channel-image { height: 332px !important; }
+      }
+    }
+    .cu-section-3 {
+      .section-wrap { padding-top: 40px !important; padding-bottom: 40px !important;
+        .section-inner-wrap {
+          .channel-wrap {
+            .channel img { width: 29px !important; }
+            .channel-group {
+              .channel-info-wrap { padding: 0 0 0 20px !important;
+                .channel-user-info-wrap { background: url("../images/contact_bi.png") left top no-repeat; background-size: 78px; padding-left: 102px; min-height: 98px;
+                  h4 {
+                    span { font-size: 10rem !important; }
+                  }
+                }
+                .channel-contents-wrap { border-radius: 20px !important; padding: 20px !important; margin: 10px 0 18px 56px !important;
+                  h4 { font-weight: 700 !important; font-size: 22rem !important; margin-bottom: 2px !important; }
+                  p { margin-bottom: 4px !important;}
+                  .channel-image { margin-top: 0 !important; margin-bottom: 24px !important;
+                    img { width: 80px !important; }
+                  }
+                }
+                & + h4 {font-size: 14rem !important; margin-left: 76px !important; line-height: 1.3 !important; margin-top: -6px; }
+              }
+            }
+          }
+        }
+      }
+    }
+    .cu-section-4 {
+      .section-wrap {
+        .section-inner-wrap {
+          .channel-wrap {
+            .channel {
+              img { width: 30px !important; }
+            }
+            .channel-info-wrap {
+              .channel-user-info-wrap {
+                h4 {
+                  span { font-weight: 500 !important; font-size: 14rem !important; }
+                }
+              }
+              .channel-contents-wrap {
+                .channel-image { border-radius: 16px !important; height: 332px !important; }
+
+              }
+            }
+          }
+        }
+      }
+    }
+    .cu-section-5 {
+      .section-wrap {
+        .section-inner-wrap {
+          .channel-wrap {
+            .channel {
+              img { width: 30px !important; }
+            }
+            .channel-group {
+              .channel-info-wrap { padding: 0 0 0 20px !important;
+                .channel-user-info-wrap {
+                  h4 { margin-bottom: 4px !important; }
+                  p { font-size: 12rem !important; }
+                }
+                .channel-contents-wrap { border-radius: 16px !important; padding: 16px !important; margin: 4px 0 !important;
+                  h4 { font-size: 14rem !important; line-height: 1.3 !important;
+                    p { margin: 12px 0 !important; }
+                  }
+                  blockquote { font-size: 14rem !important; margin-bottom: 4px !important; border-left: 2px solid #0000FF !important; padding-left: 8px !important;
+                    span { }
+                  }
+                  .action-btn-wrap { margin-top: 24px !important; align-items: center !important;
+                    button {
+                      .telegram { }
+                    }
+                    .view { font-size: 12px !important; padding-left: 18px !important; background-size: 14px !important; }
+                  }
+                  &:after { width: 44px !important; height: 44px !important;; background-size: 44px !important; left: -26px !important;; bottom: -24px !important;; }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .cu-section-6 {
+      .section-wrap {
+        .section-inner-wrap {
+          .channel-wrap {
+            .channel {
+              img { width: 33px !important; }
+            }
+            .channel-info-wrap {
+              .channel-contents-wrap {
+                .channel-image { margin-top: 56px !important; margin-bottom: 20px !important;
+                  img { width: 76px !important; }
+                }
+                h4 { font-size: 14rem !important; margin-bottom: 12px;
+                  p { margin: 8px 0; opacity: .5; }
+                }
+                .action-btn-wrap { margin-top: 32px;
+                  button { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 5px 24px 5px; margin: 0; height: 39px; color: #111;
+                    background-color: transparent; border: 1px solid #111111; border-radius: 40px; font-weight: 500; font-size: 14rem; min-width: 100px;
+                    .linkin { display: inline-block; width: 24px; height: 24px; margin-left: 2px; margin-right: 2px; text-indent: -9999px;
+                      background: url("../images/contact_channel_linkedin.png") center 30% no-repeat; background-size: 16px; }
+                  }
+                }
+              }
+              &:before { content: ""; display: block; position: absolute; left: 0; top: -87px; width: 100%; height: 200px; border-radius: 32px 32px 0 0;
+                background: #fff url("../images/contact_app.png") left center no-repeat; background-size: 100%; }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -743,6 +966,12 @@ img { object-fit: contain; }
 @media (max-width: 1400px) {
 
 }
+@media (min-height: 0px) and (max-height: 735px) {
+  .header .header-wrap .navbar ul li a span { font-size: 20rem !important; margin-bottom: 0 !important; }
+  .header .header-wrap .navbar ul li a i { display: none !important; }
+  .header .header-wrap .navbar ul.show li a:after { right: 16px; background-size: 24px !important; }
+}
+
 
 /*========== Etc ==========*/
 
