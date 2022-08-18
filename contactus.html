@@ -9,11 +9,24 @@
     <link type="text/css" media="all" rel="stylesheet" href="css/style.css">
     <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
     <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
             $('.navbar-toggler').click(function () {
+                $(this).toggleClass('show');
+                $('.header').toggleClass('active');
                 $('.navbar ul').toggleClass('show');
+            });
+            $('.download-app-btn').click(function () {
+                $('.download-app-btn-wrap ul').toggleClass('show');
+            });
+
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 650) {
+                    $('.header').addClass('active');
+                } else {
+                    $('.header').removeClass('active');
+                }
             });
         });
     </script>
@@ -27,16 +40,53 @@
     <!-- ========== HEADER ========== -->
     <header class="header">
         <div class="header-wrap container">
-            <a class="navbar-brand" href="home.html"><img src="images/gnb_bi_metabeat_light.png" alt="Metabeat Logo"></a>
+            <a class="navbar-brand" href="home.html">Metabeat Logo</a>
             <nav class="navbar">
                 <ul>
-                    <li class="nav-item dropdown"><a href="aboutus.html"><span>About us </span></a></li>
-                    <li class="nav-item dropdown"><a href="contactus.html"><span>Contact us </span></a></li>
-                    <li class="nav-item dropdown"><a href="#"><span>Upcoming events </span></a></li>
-                    <li class="nav-item dropdown"><a href="#"><span>White Paper </span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="aboutus.html">
+                            <span>About us </span>
+                            <i>Here. We are the team who made<br>
+                                New - Distance</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="contactus.html">
+                            <span>Contact us </span>
+                            <i>Ring,Ring This is MetaBeat.<br>
+                                We are always awake.</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#">
+                            <span>Upcoming events </span>
+                            <i>Here are the events<br>
+                                we have prepared hard for you.</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="contactus.html">
+                            <span>App guide </span>
+                            <i>Sorry. This page is Under construction.<br>
+                                please wait for a moment!</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#">
+                            <span>White paper </span>
+                            <i>Typing hard ,For those of you who<br>
+                                want to know more about MetaBeat.</i>
+                        </a>
+                    </li>
                 </ul>
-                <a class="download-app-btn" href="./index.html" target="_blank">Download the app</a>
             </nav>
+            <div class="download-app-btn-wrap">
+                <a class="download-app-btn" href=”javascript:;" target="_blank">Download the app</a>
+                <ul>
+                    <li class="nav-item dropdown"><a href="#"><span>Google Play Store</span></a></li>
+                    <li class="nav-item dropdown"><a href="#"><span>Apple App Store</span></a></li>
+                </ul>
+            </div>
             <button class="navbar-toggler" type="button">Navigation Toggler</button>
         </div>
     </header>
@@ -57,7 +107,7 @@
     <!-- ========== MAIN CONTENT ========== -->
     <!-- <main class="main scroll">-->
     <main class="main">
-        <section class="section cu-section-1">
+        <section class="section section-1">
             <div class="section-wrap container">
                 <div class="section-inner-wrap  col-flex-column">
                     <div class="conttactus-title-wrap  col-flex-column">
@@ -95,7 +145,7 @@
             </div>
         </section>
 
-        <section class="section cu-section-2">
+        <section class="section section-2">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="channel-wrap col-flex-column">
@@ -125,7 +175,7 @@
             </div>
         </section>
 
-        <section class="section cu-section-3">
+        <section class="section section-3">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="channel-wrap col-flex-column">
@@ -164,7 +214,7 @@
             </div>
         </section>
 
-        <section class="section cu-section-4">
+        <section class="section section-4">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="channel-wrap col-flex-column">
@@ -191,7 +241,7 @@
             </div>
         </section>
 
-        <section class="section cu-section-5">
+        <section class="section section-5">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="channel-wrap col-flex-column">
@@ -229,7 +279,7 @@
             </div>
         </section>
 
-        <section class="section cu-section-6">
+        <section class="section section-6">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="channel-wrap col-flex-column">

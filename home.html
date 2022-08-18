@@ -13,7 +13,41 @@
     <script>
         $(document).ready(function () {
             $('.navbar-toggler').click(function () {
+                $(this).toggleClass('show');
+                $('.header').toggleClass('active');
                 $('.navbar ul').toggleClass('show');
+            });
+            $('.download-app-btn').click(function () {
+                $('.download-app-btn-wrap ul').toggleClass('show');
+            });
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 650) {
+                    $('.header').addClass('active');
+                } else {
+                    $('.header').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        let sections = [];
+
+        $(function(){
+            // Get Section Element
+            sections = $(".section");
+
+            // Bind Scroll Event
+            $(window).scroll(function(){
+                const nowTop = $(window).scrollTop();
+                if (nowTop === 0) {
+                    $(".home-section").removeClass("active");
+                } else {
+                    sections.each(function(idx, item){
+                        if ($(item).offset().top <= nowTop + 40 ) {
+                            $(this).addClass("active");
+                        }
+                    });
+                }
             });
         });
     </script>
@@ -27,16 +61,53 @@
     <!-- ========== HEADER ========== -->
     <header class="header">
         <div class="header-wrap container">
-            <a class="navbar-brand" href="home.html"><img src="images/gnb_bi_metabeat_dark.png" title="Metabeat Logo"></a>
+            <a class="navbar-brand" href="home.html">Metabeat Logo</a>
             <nav class="navbar">
                 <ul>
-                    <li class="nav-item dropdown"><a href="aboutus.html"><span>About us </span></a></li>
-                    <li class="nav-item dropdown"><a href="contactus.html"><span>Contact us </span></a></li>
-                    <li class="nav-item dropdown"><a href="#"><span>Upcoming events </span></a></li>
-                    <li class="nav-item dropdown"><a href="#"><span>White Paper </span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="aboutus.html">
+                            <span>About us </span>
+                            <i>Here. We are the team who made<br>
+                                New - Distance</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="contactus.html">
+                            <span>Contact us </span>
+                            <i>Ring,Ring This is MetaBeat.<br>
+                                We are always awake.</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#">
+                            <span>Upcoming events </span>
+                            <i>Here are the events<br>
+                                we have prepared hard for you.</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="contactus.html">
+                            <span>App guide </span>
+                            <i>Sorry. This page is Under construction.<br>
+                                please wait for a moment!</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#">
+                            <span>White paper </span>
+                            <i>Typing hard ,For those of you who<br>
+                                want to know more about MetaBeat.</i>
+                        </a>
+                    </li>
                 </ul>
-                <a class="download-app-btn" href="./index.html" target="_blank">Download the app</a>
             </nav>
+            <div class="download-app-btn-wrap">
+                <a class="download-app-btn" href=”javascript:;" target="_blank">Download the app</a>
+                <ul>
+                    <li class="nav-item dropdown"><a href="#"><span>Google Play Store</span></a></li>
+                    <li class="nav-item dropdown"><a href="#"><span>Apple App Store</span></a></li>
+                </ul>
+            </div>
             <button class="navbar-toggler" type="button">Navigation Toggler</button>
         </div>
     </header>
@@ -47,15 +118,31 @@
         <section class="section section-1">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
-                    <div class="service-title"><img src="images/home_title.png" title="Let's Experience New Distance"></div>
-                    <div class="service">
-                        <ul>
-                            <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                            <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
-                            <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>
-                            <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>
-                        </ul>
+                    <div class="service-title">
+<!--                        <h5>h5 24</h5>-->
+                        <img src="images/home_title.png" title="Let's Experience New Distance">
                     </div>
+                    <div class="card-wrap">
+<!--                        <h2>h2 52</h2>-->
+<!--                        <h3>h3 42</h3>-->
+<!--                        <h4>h3 32</h4>-->
+<!--                        <small>h2</small>-->
+<!--                        <p>ppp 28</p>-->
+                        <div class="service-items">
+                            <div class="service">
+                                <ul>
+                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
+                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>
+                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+<!--                    <div class="service-info">-->
+<!--                        <h3>h3 44</h3>-->
+<!--                        <p>pppp 24</p>-->
+<!--                    </div>-->
                 </div>
             </div>
         </section>
@@ -64,15 +151,24 @@
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="service-title"><img src="images/home_title.png" title="Let's Experience New Distance"></div>
-                    <div class="service">
-                        <ul>
-                            <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                            <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
-                            <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>
-                            <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>
-                        </ul>
+                    <div class="card-wrap">
+                        <!--                        <h2>h2 52</h2>-->
+                        <!--                        <h3>h3 42</h3>-->
+                        <!--                        <h4>h3 32</h4>-->
+                        <!--                        <small>h2</small>-->
+                        <!--                        <p>ppp 28</p>-->
+                        <div class="service-items">
+                            <div class="service">
+                                <ul>
+                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
+                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>
+                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-wrap aboutus">
+                    <div class="tile-wrap aboutus">
                         <h3>About us</h3>
                         <p>The team who made<br>
                             experience of new distance.</p>
@@ -80,7 +176,7 @@
                             <button class="" type="button">Meet the Team</button>
                         </div>
                     </div>
-                    <div class="card-wrap shitepaper">
+                    <div class="tile-wrap shitepaper">
                         <h3>White paper</h3>
                         <p>Language: <span>English</span></p>
                         <div class="action-btn-wrap">
@@ -95,10 +191,10 @@
         <section class="section section-3">
             <div class="section-wrap container">
                 <div class="section-inner-wrap type1">
-                    .card-style {}
-                    .card-style.large {}
-                    .card-style.midium {}
-                    .card-style.small {}
+<!--                    .card-style {}-->
+<!--                    .card-style.large {}-->
+<!--                    .card-style.midium {}-->
+<!--                    .card-style.small {}-->
 
                     <div class="service-title"><img src="images/home_title.png" alt="Let's Experience New Distance"></div>
                     <div class="card">
