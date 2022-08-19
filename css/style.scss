@@ -171,7 +171,7 @@ img { object-fit: contain; }
   .fnb-info { display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start;
     * { color: rgba(252, 252, 252, .65); font-size: 13rem; }
     .fnb-etc-info { display: flex; flex-direction: column;
-      .channel { display: flex; flex-direction: row; justify-content: space-between; width: 272px; margin-bottom: 32px;
+      .channel { display: flex; flex-direction: row; justify-content: space-between; width: 272px; margin-bottom: 57px;
         li {
           a { display: flex; width: 32px; height: 32px; border-radius: 50%; background: rgba(252, 252, 252, 0.15); justify-content: center; align-items: center; }
           &:nth-child(1) a img { width: 58%; }
@@ -180,12 +180,12 @@ img { object-fit: contain; }
           &:nth-child(5) a img { width: 46%; }
         }
       }
-      .fnb-etc { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; width: 285px;
-        li { margin-bottom: 9px; }
+      .fnb-etc { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; width: 285px; gap: 9px 32px;
+        li { width: 42%; }
       }
     }
-    .fnb { margin-left: 64px; margin-top: 8px;
-      li { margin-bottom: 10px; }
+    .fnb { margin-left: 64px; margin-top: 0px;
+      li { margin-bottom: 14px; }
     }
   }
   // LOGO
@@ -508,7 +508,7 @@ img { object-fit: contain; }
           .team-wrap, .advisor-wrap { position: relative; padding: 120px 32px 24px; overflow-x: auto; overflow-y: hidden;
             .team-list, .advisor-list { display: flex;
               .team { width: 400px; margin-right: 82px;
-                .team-photo { width: 400px; height: 582px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), url(Group.png);
+                .team-photo { width: 400px; height: 582px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) /*, url(Group.png)*/;
                   filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1)); backdrop-filter: blur(54px); border-radius: 32px; margin-bottom: 32px;
                   img { width: 100%; border-radius: 32px; overflow: hidden; }
                 }
@@ -522,7 +522,7 @@ img { object-fit: contain; }
                     &.linkedin { background: url("../images/contact_channel_linkedin.png") center center no-repeat; background-size: 27px; }
                   }
                 }
-                &:last-of-type {  width: 424px !important; padding-right: 24px;}
+                &:last-of-type {  width: 432px !important; padding-right: 32px;}
               }
               .advisor { width: 570px; margin-right: 82px;
                 .advisor-content { width: 480px; padding: 54px 34px 54px 54px; background: url("../images/about_quotes.png") left top no-repeat; background-size: 36px;
@@ -536,7 +536,7 @@ img { object-fit: contain; }
                     span { display: block; font-weight: 400; font-size: 12rem; opacity: .5; margin-top: 8px; }
                   }
                 }
-                &:last-of-type {  width: 594px !important; padding-right: 24px;}
+                &:last-of-type {  width: 603px !important; padding-right: 32px;}
               }
             }
             &::-webkit-scrollbar { width: 10px; }
@@ -940,10 +940,10 @@ img { object-fit: contain; }
   /*========== FOOTER ==========*/
   .footer { padding: 32px 24px 72px !important;
     .footer-wrap { flex-direction: column; justify-content: flex-start; }
-    .fnb-info { flex-direction: column; width: 100%; margin-bottom: 72px;
+    .fnb-info { flex-direction: column; width: 100%; margin-bottom: 84px;
       * { font-size: 10rem; }
       .fnb-etc-info { width: 100%;
-        .channel { width: unset;
+        .channel { width: unset; margin-bottom: 32px;
           li {
             a { }
             &:nth-child(1) a img { width: 58%; }
@@ -952,11 +952,11 @@ img { object-fit: contain; }
             &:nth-child(5) a img { width: 46%; }
           }
         }
-        .fnb-etc { flex-direction: column; flex-wrap: unset; justify-content: flex-start; width: unset;
-          li { margin-bottom: 10px;
+        .fnb-etc { flex-direction: column; flex-wrap: unset; justify-content: flex-start; width: unset; gap: 14px 0;
+          li {
             &:nth-of-type(1) { order: 1;}
             &:nth-of-type(2) { order: 3;}
-            &:nth-of-type(3) { order: 2; margin-bottom: 32px; }
+            &:nth-of-type(3) { order: 2; margin-bottom: 26px; }
             &:nth-of-type(4) { order: 4;}
           }
         }
@@ -996,7 +996,6 @@ img { object-fit: contain; }
       }
     }
     .section-3 .info { margin: 48px 0 0 !important; }
-
     .section-4, .section-5 { padding-left: 0 !important; padding-right: 0 !important;
       .section-wrap { width: 100% !important;
         .section-inner-wrap {
@@ -1008,12 +1007,12 @@ img { object-fit: contain; }
                   h4 { font-size: 20rem !important; margin-top: 7px !important;
                     span { font-size: 14rem !important;  }
                   }
-                  .email { background-size: 24px !important;  margin-left: 16px !important;}
+                  .email { background-size: 24px !important;  margin-left: 16px !important; }
                   .channel { margin-left: 16px !important;
                     &.linkedin { background-size: 24px !important; }
                   }
                 }
-                width: 274px !important; padding-right: 24px;}
+                &:last-of-type { width: 274px !important; padding-right: 24px;}
               }
               .advisor { width: 300px !important; margin-right: 21px !important;
                 .advisor-content { width: 300px !important; padding: 48px 0px 48px 32px !important; background-size: 24px !important;
@@ -1028,7 +1027,7 @@ img { object-fit: contain; }
                     span { display: block; font-weight: 400; font-size: 12rem; opacity: .5; margin-top: 8px; }
                   }
                 }
-                width: 324px !important; padding-right: 24px;}
+                &:last-of-type { width: 324px !important; padding-right: 24px;}
               }
             }
             &::-webkit-scrollbar { width: unset !important; }
