@@ -358,8 +358,7 @@ progress {
 }
 
 img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 /*========== LAYOUT  ==========*/
@@ -446,7 +445,6 @@ img {
 /* end Guide Line - 추후 주석처리 */
 /*========== HEADER ==========*/
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   padding: 24px 32px;
@@ -734,8 +732,7 @@ img {
   align-items: flex-start;
   background: #FCFCFC;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(54px);
-          backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
   border-radius: 32px;
 }
 #home .main .card-wrap h2 {
@@ -839,8 +836,7 @@ img {
   margin-top: -37px;
   background: unset;
   box-shadow: unset;
-  -webkit-backdrop-filter: unset;
-          backdrop-filter: unset;
+  backdrop-filter: unset;
   border-radius: 32px;
 }
 #home .main .section-1 .section-wrap .section-inner-wrap .card-wrap .service-items {
@@ -1103,8 +1099,7 @@ img {
   align-items: flex-start; /* padding: 20px 32px; */
   background: rgba(252, 252, 252, 0.3);
   box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.15);
-  -webkit-backdrop-filter: blur(54px);
-          backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
   border-radius: 24px;
 }
 #home .main .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li img, #home .main .section-7 .section-wrap .section-inner-wrap .tile-wrap.app ul li img {
@@ -1152,8 +1147,7 @@ img {
   line-height: 22px;
   background: rgba(0, 0, 255, 0.6);
   border: 1.5px solid rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   font-weight: 500;
   font-size: 14rem;
   color: #FCFCFC;
@@ -1222,8 +1216,7 @@ img {
   line-height: 30px;
   background: rgba(0, 0, 255, 0.6);
   border: 1.5px solid rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   font-weight: 500;
   font-size: 24rem;
   color: #FCFCFC;
@@ -1391,8 +1384,7 @@ img {
   z-index: 6;
   background: unset !important;
   box-shadow: unset !important;
-  -webkit-backdrop-filter: unset !important;
-          backdrop-filter: unset !important;
+  backdrop-filter: unset !important;
   border-radius: unset !important;
 }
 
@@ -1572,8 +1564,7 @@ img {
   height: 375px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1));
-  -webkit-backdrop-filter: blur(54px);
-          backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
   border-radius: 32px;
   margin-bottom: 34px;
 }
@@ -1920,8 +1911,7 @@ img {
   background: #FCFCFC;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
   padding: 40px;
-  -webkit-backdrop-filter: blur(54px);
-          backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
   border-radius: 32px;
 }
 #contactus .main .section-1 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .mailbox {
@@ -2001,8 +1991,7 @@ img {
   background: #FCFCFC;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
   padding: 40px;
-  -webkit-backdrop-filter: blur(54px);
-          backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
   border-radius: 32px;
 }
 #contactus .main .section-2 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .channel-user-info-wrap {
@@ -2050,8 +2039,7 @@ img {
 #contactus .main .section-2 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .channel-contents-wrap .channel-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #contactus .main .section-2 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .channel-contents-wrap .action-btn-wrap {
   margin-top: 24px;
@@ -2120,8 +2108,7 @@ img {
   position: relative;
   background: #FCFCFC;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(54px);
-          backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
   border-radius: 32px;
   padding: 40px;
   margin: 18px 0 24px 102px;
@@ -2192,8 +2179,7 @@ img {
   position: relative;
   background: #FCFCFC;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(54px);
-          backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
   border-radius: 32px;
   padding: 40px;
 }
@@ -2248,8 +2234,7 @@ img {
 #contactus .main .section-4 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .channel-contents-wrap .channel-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #contactus .main .section-4 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .channel-contents-wrap .action-btn-wrap {
   margin-top: 24px;
@@ -2314,8 +2299,7 @@ img {
   position: relative;
   background: #FCFCFC;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(54px);
-          backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
   border-radius: 32px;
   padding: 40px;
   margin: 40px 0 24px 0;
@@ -2575,8 +2559,7 @@ img {
     transition: all 100ms ease;
     background: rgba(252, 252, 252, 0.3);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-    -webkit-backdrop-filter: blur(54px);
-            backdrop-filter: blur(54px);
+    backdrop-filter: blur(54px);
   }
   .header .header-wrap .navbar ul.show li a span {
     height: 32px;
@@ -2619,8 +2602,7 @@ img {
   }
   .header .header-wrap .navbar ul.show li:nth-of-type(4) a {
     box-shadow: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
   }
   .header .header-wrap .navbar ul.show li:nth-of-type(4) a:after {
     display: none;
@@ -2734,8 +2716,7 @@ img {
   /*========== HOME ==========*/
   #home .main .card-wrap {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1) !important;
-    -webkit-backdrop-filter: blur(34px) !important;
-            backdrop-filter: blur(34px) !important;
+    backdrop-filter: blur(34px) !important;
     border-radius: 20px !important;
   }
   #home .main .card-wrap h2 {
@@ -3694,4 +3675,6 @@ img {
     background-size: 24px !important;
   }
 }
-/*========== Etc ==========*//*# sourceMappingURL=style.css.map */
+/*========== Etc ==========*/
+
+/*# sourceMappingURL=style.css.map */
