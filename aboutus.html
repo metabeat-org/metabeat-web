@@ -11,20 +11,38 @@
     <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function () {
+        let sections = [];
+        $(function() {            
             $('.navbar-toggler').click(function () {
                 $(this).toggleClass('show');
                 $('.header').toggleClass('active');
                 $('.navbar ul').toggleClass('show');
             });
-            $('.download-app-btn').click(function () {
-                $('.download-app-btn-wrap ul').toggleClass('show');
+            $('#header-download-btn').click(function () {
+                $('#header-download-btn ul').toggleClass('show');
+            });            
+            $('#section-download-btn').click(function () {
+                $('#section-download-btn ul').toggleClass('show');
             });
-            $(window).scroll(function() {
-                if ($(document).scrollTop() > 650) {
-                    $('.header').addClass('active');
-                } else {
+
+            // Get Section Element
+            sections = $(".section");
+
+            // Bind Scroll Event
+            $(window).scroll(function(){
+                const nowTop = $(window).scrollTop();
+                if (nowTop === 0) {                    
                     $('.header').removeClass('active');
+                    $(".home-section").removeClass("active");
+                } else if (nowTop <= 240) {
+                    $('.header').removeClass('active');
+                } else {
+                    $('.header').addClass('active');
+                    sections.each(function(idx, item){
+                        if ($(item).offset().top <= nowTop + 40 ) {
+                            $(this).addClass("active");
+                        }
+                    });
                 }
             });
         });
@@ -79,7 +97,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="download-app-btn-wrap">
+            <div class="download-app-btn-wrap" id="header-download-btn">
                 <button class="download-app-btn">Download the app</button>
                 <ul>
                     <li class="nav-item dropdown"><a href="#"><span>Google Play Store</span></a></li>
@@ -193,7 +211,7 @@
                                     <img src="images/about_team_2.png">
                                 </div>
                                 <div class="team-info">
-                                    <h4>Stephanie Kim <span>CEO & CTO</span></h4>
+                                    <h4>Stephanie Kim <span>CEO & CMO</span></h4>
                                     <a href="#" class="email">Email</a>
                                     <a href="#" class="channel linkedin">in</a>
                                 </div>
@@ -203,7 +221,7 @@
                                     <img src="images/about_team_3.png">
                                 </div>
                                 <div class="team-info">
-                                    <h4>Eunjun Choi <span>CEO & CTO</span></h4>
+                                    <h4>Eunjun Choi <span>Creative Director</span></h4>
                                     <a href="#" class="email">Email</a>
                                     <a href="#" class="channel linkedin">in</a>
                                 </div>
@@ -213,7 +231,7 @@
                                     <img src="images/about_team_4.png">
                                 </div>
                                 <div class="team-info">
-                                    <h4>Soogyeom Kim <span>CEO & CTO</span></h4>
+                                    <h4>Soogyeom Kim <span>UI/UX Specialist</span></h4>
                                     <a href="#" class="email">Email</a>
                                     <a href="#" class="channel linkedin">in</a>
                                 </div>
@@ -223,7 +241,7 @@
                                     <img src="images/about_team_5.png">
                                 </div>
                                 <div class="team-info">
-                                    <h4>Seokhee Nam <span>CEO & CTO</span></h4>
+                                    <h4>Seokhee Nam <span>Blockchain Dev</span></h4>
                                     <a href="#" class="email">Email</a>
                                     <a href="#" class="channel linkedin">in</a>
                                 </div>
@@ -233,7 +251,7 @@
                                     <img src="images/about_team_6.png">
                                 </div>
                                 <div class="team-info">
-                                    <h4>Najin Yang <span>CEO & CTO</span></h4>
+                                    <h4>Najin Yang <span>Blockchain Dev</span></h4>
                                     <a href="#" class="email">Email</a>
                                     <a href="#" class="channel linkedin">in</a>
                                 </div>
@@ -243,7 +261,7 @@
                                     <img src="images/about_team_7.png">
                                 </div>
                                 <div class="team-info">
-                                    <h4>Minseok Kim <span>CEO & CTO</span></h4>
+                                    <h4>Minseok Kim <span>Front-end Dev</span></h4>
                                     <a href="#" class="email">Email</a>
                                     <a href="#" class="channel linkedin">in</a>
                                 </div>
@@ -253,7 +271,7 @@
                                     <img src="images/about_team_8.png">
                                 </div>
                                 <div class="team-info">
-                                    <h4>Dajung Yang <span>CEO & CTO</span></h4>
+                                    <h4>Dajung Yang <span>Front-end Dev</span></h4>
                                     <a href="#" class="email">Email</a>
                                     <a href="#" class="channel linkedin">in</a>
                                 </div>
@@ -263,7 +281,7 @@
                                     <img src="images/about_team_9.png">
                                 </div>
                                 <div class="team-info">
-                                    <h4>Kyusuk Jung <span>CEO & CTO</span></h4>
+                                    <h4>Kyusuk Jung <span>Service Planner</span></h4>
                                     <a href="#" class="email">Email</a>
                                     <a href="#" class="channel linkedin">in</a>
                                 </div>

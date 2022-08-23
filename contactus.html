@@ -11,21 +11,38 @@
     <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function () {
+        let sections = [];
+        $(function() {            
             $('.navbar-toggler').click(function () {
                 $(this).toggleClass('show');
                 $('.header').toggleClass('active');
                 $('.navbar ul').toggleClass('show');
             });
-            $('.download-app-btn').click(function () {
-                $('.download-app-btn-wrap ul').toggleClass('show');
+            $('#header-download-btn').click(function () {
+                $('#header-download-btn ul').toggleClass('show');
+            });            
+            $('#section-download-btn').click(function () {
+                $('#section-download-btn ul').toggleClass('show');
             });
 
-            $(window).scroll(function() {
-                if ($(document).scrollTop() > 650) {
-                    $('.header').addClass('active');
-                } else {
+            // Get Section Element
+            sections = $(".section");
+
+            // Bind Scroll Event
+            $(window).scroll(function(){
+                const nowTop = $(window).scrollTop();
+                if (nowTop === 0) {                    
                     $('.header').removeClass('active');
+                    $(".home-section").removeClass("active");
+                } else if (nowTop <= 240) {
+                    $('.header').removeClass('active');
+                } else {
+                    $('.header').addClass('active');
+                    sections.each(function(idx, item){
+                        if ($(item).offset().top <= nowTop + 40 ) {
+                            $(this).addClass("active");
+                        }
+                    });
                 }
             });
         });
@@ -80,7 +97,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="download-app-btn-wrap">
+            <div class="download-app-btn-wrap" id="header-download-btn">
                 <button class="download-app-btn">Download the app</button>
                 <ul>
                     <li class="nav-item dropdown"><a href="#"><span>Google Play Store</span></a></li>
