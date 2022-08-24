@@ -16,6 +16,7 @@ $(function() {
             }
         }
 
+
         // Section
         var $sections = $(".section");
 
