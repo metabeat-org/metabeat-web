@@ -33,11 +33,11 @@
                 const nowTop = $(window).scrollTop();
                 if (nowTop === 0) {                    
                     $('.header').removeClass('active');
+                    $('.main').addClass('scroll');
                     $(".home-section").removeClass("active");
-                } else if (nowTop <= 240) {
-                    $('.header').removeClass('active');
                 } else {
                     $('.header').addClass('active');
+                    $('.main').removeClass('scroll');
                     sections.each(function(idx, item){
                         if ($(item).offset().top <= nowTop + 40 ) {
                             $(this).addClass("active");
@@ -123,7 +123,7 @@
 
     <!-- ========== MAIN CONTENT ========== -->
     <!-- <main class="main scroll">-->
-    <main class="main">
+    <main class="main scroll">
         <section class="section section-1">
             <div class="section-wrap container">
                 <div class="section-inner-wrap  col-flex-column">
@@ -354,7 +354,7 @@
                         <li>Contact us</li>
                         <li>Upcoming events</li>
                         <li>App guide</li>
-                        <li>Terms and Policy</li>
+                        <li>Terms and Conditions</li>
                     </ul>
                 </div>
             </div>
