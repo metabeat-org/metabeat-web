@@ -12,6 +12,10 @@
     <script type="text/javascript" async src="js/scroll.js"></script>
     <!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
     <script>
+        $(document).ready(function () {
+            $('.visual-banner').addClass('scroll');
+        });
+
         $(function() {
             // Contact Us 페이지에 대한 스크립트만 적어주세요
 
@@ -20,8 +24,10 @@
 
                 if (nowScrollTop === 0) {
                     $('.main').addClass('scroll');
+                    $('.visual-banner').addClass('scroll');
                 } else {
                     $('.main').removeClass('scroll');
+                    $('.visual-banner').removeClass('scroll');
                 }
 
 
@@ -62,13 +68,13 @@
                                 we have prepared hard for you.</i>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="contactus.html">
-                            <span>App guide </span>
-                            <i>Sorry. This page is Under construction.<br>
-                                please wait for a moment!</i>
-                        </a>
-                    </li>
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a href="contactus.html">-->
+<!--                            <span>App guide </span>-->
+<!--                            <i>Sorry. This page is Under construction.<br>-->
+<!--                                please wait for a moment!</i>-->
+<!--                        </a>-->
+<!--                    </li>-->
                     <li class="nav-item dropdown">
                         <a href="#">
                             <span>White paper </span>
@@ -90,13 +96,17 @@
     </header>
     <!-- ========== END HEADER ========== -->
 
-    <section class="section visual-banner">
+    <section class="visual-banner">
         <div class="section-wrap container">
             <div class="section-inner-wrap">
                 <h1>
-                    Ring, Ring<br>
-                    This is MetaBeat.<br>
-                    We are always awake
+                    <span class="int-1">Ring, </span>
+                    <span class="int-2">Ring </span> <br>
+                    <span class="int-3">This is</span>
+                    <span class="int-4">MetaBeat.</span> <br>
+                    <span class="int-5">We are </span>
+                    <span class="int-6">always </span>
+                    <span class="int-7">awake </span>
                 </h1>
             </div>
         </div>
@@ -181,25 +191,23 @@
                             <img src="images/contact_channel_discord.png">
                             <h2>Discord</h2>
                         </div>
-                        <div class="channel-group col-full">
-                            <div class="channel-info-wrap">
-                                <div class="channel-user-info-wrap">
-                                    <h4>
-                                        <strong>METABEAT</strong>
-                                        <span>2022.07.27</span>
-                                    </h4>
-                                    <p>Hi 👋<br>
-                                        MetaBeat Discord Channel is<br>
-                                        here.
-                                    </p>
-                                </div>
-                                <div class="channel-contents-wrap">
-                                    <div class="channel-image"><img src="images/contact_album2.png"></div>
-                                    <p>invited by metabeat</p>
-                                    <h4><strong>MetaBeat</strong></h4>
-                                    <div class="action-btn-wrap">
-                                        <button class="" type="button">Join our <i class="icon discord">Icon</i> Channel</button>
-                                    </div>
+                        <div class="channel-info-wrap col-full">
+                            <div class="channel-user-info-wrap">
+                                <h4>
+                                    <strong>METABEAT</strong>
+                                    <span>2022.07.27</span>
+                                </h4>
+                                <p>Hi 👋<br>
+                                    MetaBeat Discord Channel is<br>
+                                    here.
+                                </p>
+                            </div>
+                            <div class="channel-contents-wrap">
+                                <div class="channel-image"><img src="images/contact_album2.png"></div>
+                                <p>invited by metabeat</p>
+                                <h4><strong>MetaBeat</strong></h4>
+                                <div class="action-btn-wrap">
+                                    <button class="" type="button">Join our <i class="icon discord">Icon</i> Channel</button>
                                 </div>
                             </div>
                             <h4>MetaBeat Discord Channel is<br>
