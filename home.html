@@ -12,7 +12,8 @@
     <script src="js/jquery-3.6.0.js"></script>
     <script>
         let sections = [];
-        $(function() {            
+        $(function() {
+
             $('.navbar-toggler').click(function () {
                 $(this).toggleClass('show');
                 $('.header').toggleClass('active');
@@ -31,7 +32,8 @@
             // Bind Scroll Event
             $(window).scroll(function(){
                 const nowTop = $(window).scrollTop();
-                if (nowTop === 0) {                    
+                if (nowTop === 0) {
+                    // 최상단 이동시 Class 초기화
                     $('.header').removeClass('active');
                     $(".home-section").removeClass("active");
                 } else if (nowTop <= 240) {
@@ -45,6 +47,16 @@
                     });
                 }
             });
+
+            // Bind App Menu
+            $("#appMenu").on("click", "a", function(e) {
+                e.preventDefault(); // Remove Anchor Tag Action
+                $("#appMenu a").removeClass("selected");
+                $(this).addClass("selected");
+            })
+
+
+
         });
     </script>
 </head>
@@ -154,7 +166,7 @@
                                 <li class="nav-item dropdown"><a href="#"><span>Apple App Store</span></a></li>
                             </ul>
                         </div>
-                        <div class="app-menu">
+                        <div id="appMenu" class="app-menu">
                             <ul>
                                 <li><a href="#" class="selected"><i>home</i> <span>Home <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
                                 <li><a href="#"><i>Shout out</i> <span>Shout out <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
