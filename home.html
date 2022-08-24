@@ -7,54 +7,36 @@
     <meta name="description" content="A corporate Bootstrap theme by Medium Rare">
     <title> </title>
     <link type="text/css" media="all" rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>
     <script src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" async src="js/header.js"></script>
+    <script type="text/javascript" async src="js/scroll.js"></script>
+<!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
+    <script src="js/bodymovin.js" type="text/javascript"></script>
+
     <script>
-        let sections = [];
         $(function() {
-
-            $('.navbar-toggler').click(function () {
-                $(this).toggleClass('show');
-                $('.header').toggleClass('active');
-                $('.navbar ul').toggleClass('show');
-            });
-            $('#header-download-btn').click(function () {
-                $('#header-download-btn ul').toggleClass('show');
-            });            
-            $('#section-download-btn').click(function () {
-                $('#section-download-btn ul').toggleClass('show');
-            });
-
-            // Get Section Element
-            sections = $(".section");
-
-            // Bind Scroll Event
-            $(window).scroll(function(){
-                const nowTop = $(window).scrollTop();
-                if (nowTop === 0) {
-                    // 최상단 이동시 Class 초기화
-                    $('.header').removeClass('active');
-                    $(".home-section").removeClass("active");
-                } else if (nowTop <= 240) {
-                    $('.header').removeClass('active');
-                } else {
-                    $('.header').addClass('active');
-                    sections.each(function(idx, item){
-                        if ($(item).offset().top <= nowTop + 40 ) {
-                            $(this).addClass("active");
-                        }
-                    });
-                }
-            });
+            // Home 페이지에 대한 스크립트만 적어주세요
 
             // Bind App Menu
             $("#appMenu").on("click", "a", function(e) {
                 e.preventDefault(); // Remove Anchor Tag Action
+                var $selected = $(this);
                 $("#appMenu a").removeClass("selected");
-                $(this).addClass("selected");
+                $selected.addClass("selected");
+
+                var selectedId = $selected.attr("id");
+                $("#appMenuViewSection > li").hide();
+                $("#" + selectedId + "View").show();
             })
 
+            var animation = bodymovin.loadAnimation({
+                container: document.getElementById('lottie'), // Required
+                path: './lottie/home.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+                name: "Hello World", // Name for future reference. Optional.
+            })
 
 
         });
@@ -127,7 +109,11 @@
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="service-title">
+
                         <img src="images/home_title.png" title="Let's Experience New Distance">
+
+                        <div id="lottie"></div>
+
                     </div>
                     <div class="card-wrap">
                         <div class="service-items">
@@ -148,11 +134,11 @@
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="tile-wrap app">
-                        <ul class="app-screen">
-                            <li><img src="images/home_app_1.png" title="App - home"></li>
-                            <li><img src="images/home_app_1.png" title="App - Shout out"></li>
-                            <li><img src="images/home_app_1.png" title="App - Notification"></li>
-                            <li><img src="images/home_app_1.png" title="App - My Beat"></li>
+                        <ul id="appMenuViewSection" class="app-screen">
+                            <li id="appMenuHomeView"><img src="images/home_app_1.png" title="App - home"></li>
+                            <li id="appMenuShoutOutView" style="display: none;"><img src="images/home_app_2.png" title="App - Shout out"></li>
+                            <li id="appMenuNotificationView" style="display: none;"><img src="images/home_app_3.png" title="App - Notification"></li>
+                            <li id="appMenuMyBeatView" style="display: none;"><img src="images/home_app_4.png" title="App - My Beat"></li>
                         </ul>
                     </div>
                     <div class="service-info">
@@ -168,10 +154,10 @@
                         </div>
                         <div id="appMenu" class="app-menu">
                             <ul>
-                                <li><a href="#" class="selected"><i>home</i> <span>Home <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
-                                <li><a href="#"><i>Shout out</i> <span>Shout out <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
-                                <li><a href="#"><i>Notification</i> <span>Notification <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
-                                <li><a href="#"><i>My Beat</i> <span>My Beat <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
+                                <li><a id="appMenuHome" href="#" class="selected"><i>home</i> <span>Home <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
+                                <li><a id="appMenuShoutOut" href="#"><i>Shout out</i> <span>Shout out <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
+                                <li><a id="appMenuNotification" href="#"><i>Notification</i> <span>Notification <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
+                                <li><a id="appMenuMyBeat" href="#"><i>My Beat</i> <span>My Beat <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
                             </ul>
                         </div>
                     </div>

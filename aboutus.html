@@ -7,44 +7,15 @@
     <meta name="description" content="A corporate Bootstrap theme by Medium Rare">
     <title> </title>
     <link type="text/css" media="all" rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" async src="js/header.js"></script>
+    <script type="text/javascript" async src="js/scroll.js"></script>
+    <!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
     <script>
-        let sections = [];
-        $(function() {            
-            $('.navbar-toggler').click(function () {
-                $(this).toggleClass('show');
-                $('.header').toggleClass('active');
-                $('.navbar ul').toggleClass('show');
-            });
-            $('#header-download-btn').click(function () {
-                $('#header-download-btn ul').toggleClass('show');
-            });            
-            $('#section-download-btn').click(function () {
-                $('#section-download-btn ul').toggleClass('show');
-            });
+        $(function() {
+            // About Us 페이지에 대한 스크립트만 적어주세요
 
-            // Get Section Element
-            sections = $(".section");
 
-            // Bind Scroll Event
-            $(window).scroll(function(){
-                const nowTop = $(window).scrollTop();
-                if (nowTop === 0) {                    
-                    $('.header').removeClass('active');
-                    $(".home-section").removeClass("active");
-                } else if (nowTop <= 240) {
-                    $('.header').removeClass('active');
-                } else {
-                    $('.header').addClass('active');
-                    sections.each(function(idx, item){
-                        if ($(item).offset().top <= nowTop + 40 ) {
-                            $(this).addClass("active");
-                        }
-                    });
-                }
-            });
         });
     </script>
 </head>
@@ -109,7 +80,7 @@
     </header>
     <!-- ========== END HEADER ========== -->
 
-    <section class="section visual-banner">
+    <section class="visual-banner">
         <div class="section-wrap container">
             <div class="section-inner-wrap">
                 <h1>
