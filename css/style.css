@@ -416,31 +416,6 @@ img {
 /* Guide Line - 추후 주석처리 */
 /* Guide Line - 추후 주석처리 */
 /* Guide Line - 추후 주석처리 */
-.container:before, .container:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%;
-  border-left: 1px dashed rgba(0, 0, 0, 0.2);
-  position: absolute;
-  left: 50%;
-  top: 0;
-  z-index: 9999;
-}
-
-.container {
-  border: 1px dashed rgba(0, 0, 0, 0.2);
-  border-width: 0 1px;
-}
-
-.container:before {
-  left: 25%;
-}
-
-.container:after {
-  left: 75%;
-}
-
 /* end Guide Line - 추후 주석처리 */
 /* end Guide Line - 추후 주석처리 */
 /* end Guide Line - 추후 주석처리 */
@@ -449,7 +424,7 @@ img {
   position: sticky;
   top: 0;
   padding: 24px 32px;
-  transition: background-color 800ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background-color 800ms cubic-bezier(0.25, 1, 0.45, 1);
 }
 .header .header-wrap {
   display: flex;
@@ -574,7 +549,7 @@ img {
   padding: 12px 18px 6px 20px;
   background-color: #0000FF;
   border-radius: 0 0 11px 11px;
-  transition: all 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 500ms cubic-bezier(0.25, 1, 0.45, 1);
   margin-top: -30px;
   opacity: 0;
 }
@@ -972,7 +947,7 @@ img {
   padding: 12px 18px 6px 20px;
   background-color: #0000FF;
   border-radius: 0 0 11px 11px;
-  transition: all 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 500ms cubic-bezier(0.25, 1, 0.45, 1);
   margin-top: -30px;
   opacity: 0;
 }
@@ -1018,7 +993,7 @@ img {
   font-size: 22rem;
   color: #111;
   width: 310px;
-  transition: all 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 500ms cubic-bezier(0.25, 1, 0.45, 1);
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1405,7 +1380,7 @@ img {
   height: 100vh;
 }
 #aboutus .visual-banner .section-wrap {
-  padding-bottom: 15vh;
+  padding-bottom: 29vh;
 }
 #aboutus .visual-banner .section-wrap .section-inner-wrap {
   display: flex;
@@ -1415,49 +1390,156 @@ img {
 }
 #aboutus .visual-banner .section-wrap .section-inner-wrap h1 {
   text-align: center;
+  position: relative;
+}
+#aboutus .visual-banner .section-wrap .section-inner-wrap h1 span {
+  position: relative;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+}
+#aboutus .visual-banner .section-wrap .section-inner-wrap h1 span.int-1 {
+  top: -200px;
+  opacity: 0;
+}
+#aboutus .visual-banner .section-wrap .section-inner-wrap h1 span.int-2 {
+  top: -200px;
+  opacity: 0;
+}
+#aboutus .visual-banner .section-wrap .section-inner-wrap h1 span.int-3 {
+  left: -200px;
+  opacity: 0;
+}
+#aboutus .visual-banner .section-wrap .section-inner-wrap h1 span.int-4 {
+  left: 200px;
+  opacity: 0;
+}
+#aboutus .visual-banner .section-wrap .section-inner-wrap h1 span.int-5 {
+  top: 200px;
+  opacity: 0;
+}
+#aboutus .visual-banner .section-wrap .section-inner-wrap h1 span.int-6 {
+  top: 200px;
+  opacity: 0;
 }
 #aboutus .visual-banner .section-wrap .section-inner-wrap h1 .h-line {
   display: inline-block;
   height: 2px;
-  width: 140px;
+  width: 0;
   background-color: #111;
   vertical-align: super;
-  margin: 0 8px;
+  margin: 0 0;
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 2000ms;
+}
+#aboutus .visual-banner.scroll h1 span.int-1 {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 0ms;
+}
+#aboutus .visual-banner.scroll h1 span.int-2 {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 350ms;
+}
+#aboutus .visual-banner.scroll h1 span.int-3 {
+  left: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 250ms;
+}
+#aboutus .visual-banner.scroll h1 span.int-4 {
+  left: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 250ms;
+}
+#aboutus .visual-banner.scroll h1 span.int-5 {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 500ms;
+}
+#aboutus .visual-banner.scroll h1 span.int-6 {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 650ms;
+}
+#aboutus .visual-banner.scroll h1 .h-line {
+  width: 140px !important;
+  margin: 0 8px !important;
+  opacity: 1 !important;
+  transition-delay: 700ms;
 }
 #aboutus .main {
-  margin-top: 57vh; /* background-color: #FCFCFC; */
+  margin-top: 38vh; /* background-color: #FCFCFC; */
   border-radius: 12px;
-  transition: width 800ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1);
   transform-origin: center top;
 }
+#aboutus .main .section-1 {
+  margin-top: -100px;
+}
 #aboutus .main .section-1 .section-wrap {
-  padding-top: 0;
+  width: unset;
+  padding-top: 300px;
 }
 #aboutus .main .section-1 .section-wrap .section-inner-wrap .movie {
   background-color: #D9D9D9;
   border-radius: 12px;
-  height: 690px;
+  width: 1190px;
+  height: 670px;
+  margin: 0 auto;
+  position: relative;
 }
 #aboutus .main .section-1 .section-wrap .section-inner-wrap .info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 72px 0 50px;
+  width: 1190px;
+  margin: 72px auto 50px;
 }
 #aboutus .main .section-1 .section-wrap .section-inner-wrap .info h5 {
   width: 700px;
   margin: 10px 0;
 }
+#aboutus .main .section-1.now .movie {
+  animation: scale 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  -webkit-animation: scale 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  transform-origin: center;
+  margin-top: 200px;
+}
 #aboutus .main .section-2 .section-wrap .section-inner-wrap {
+  position: relative;
   background-color: #D9D9D9;
   border-radius: 12px;
   padding: 182px 64px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  top: 100px;
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+}
+#aboutus .main .section-2 .section-wrap .section-inner-wrap .photo {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 250ms;
 }
 #aboutus .main .section-2 .section-wrap .section-inner-wrap h5 {
+  position: relative;
+  top: 100px;
   width: 700px;
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 450ms;
+}
+#aboutus .main .section-2.now .section-inner-wrap {
+  top: 0 !important;
+  opacity: 1 !important;
+}
+#aboutus .main .section-2.now .section-inner-wrap .photo {
+  top: 0 !important;
+  opacity: 1 !important;
+}
+#aboutus .main .section-2.now .section-inner-wrap h5 {
+  top: 0 !important;
+  opacity: 1 !important;
 }
 #aboutus .main .section-3 .section-wrap .section-inner-wrap .service-items {
   position: relative;
@@ -1487,6 +1569,7 @@ img {
   width: 460px;
   height: 460px;
   position: absolute;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
 }
 #aboutus .main .section-3 .section-wrap .section-inner-wrap .service-items .service li img {
   margin: auto auto;
@@ -1494,25 +1577,25 @@ img {
 }
 #aboutus .main .section-3 .section-wrap .section-inner-wrap .service-items .service li.service-shoutout {
   left: 560px;
-  top: 0;
+  top: 100px;
   transform: rotate(0deg);
   z-index: 4;
 }
 #aboutus .main .section-3 .section-wrap .section-inner-wrap .service-items .service li.service-drop {
   left: -30px;
-  top: 0;
+  top: 100px;
   transform: rotate(-180deg);
   z-index: 2;
 }
 #aboutus .main .section-3 .section-wrap .section-inner-wrap .service-items .service li.service-mingle {
   left: 880px;
-  top: 0;
+  top: 100px;
   transform: rotate(0deg);
   z-index: 1;
 }
 #aboutus .main .section-3 .section-wrap .section-inner-wrap .service-items .service li.service-marketplace {
   left: 305px;
-  top: 4px;
+  top: 100px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 3;
 }
@@ -1525,6 +1608,26 @@ img {
 #aboutus .main .section-3 .section-wrap .section-inner-wrap .info h5 {
   width: 700px;
   margin: 10px 0;
+}
+#aboutus .main .section-3.now .service li.service-shoutout {
+  top: 0 !important;
+  transform: rotate(0deg);
+  transition-delay: 0ms !important;
+}
+#aboutus .main .section-3.now .service li.service-drop {
+  top: 0 !important;
+  transform: rotate(-180deg);
+  transition-delay: 250ms !important;
+}
+#aboutus .main .section-3.now .service li.service-mingle {
+  top: 0 !important;
+  transform: rotate(0deg);
+  transition-delay: 500ms !important;
+}
+#aboutus .main .section-3.now .service li.service-marketplace {
+  top: 0 !important;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  transition-delay: 750ms !important;
 }
 #aboutus .main .section-4, #aboutus .main .section-5 {
   padding: 0;
@@ -1541,20 +1644,21 @@ img {
   text-align: center;
   margin-bottom: 0px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap {
   position: relative;
   padding: 100px 64px 24px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  width: 100%;
+  height: 620px;
+  margin: 20px auto;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list {
   display: flex;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team {
-  width: 400px;
-  margin-right: 100px;
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team {
+  width: 260px;
+  margin: 0 50px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-photo {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo {
   width: 255px;
   height: 375px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
@@ -1563,29 +1667,29 @@ img {
   border-radius: 32px;
   margin-bottom: 34px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-photo img {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo img {
   width: 100%;
   border-radius: 32px;
   overflow: hidden;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info {
   display: flex;
   justify-content: space-between;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info h4 {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 {
   font-weight: 800;
   font-size: 22rem;
   margin-right: auto;
   margin-top: 2px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info h4 span {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 span {
   display: block;
   font-weight: 500;
   font-size: 16rem;
   opacity: 0.5;
   margin-top: 8px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .email, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .email, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .email, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .email {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .email {
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -1594,76 +1698,69 @@ img {
   text-indent: -9999px;
   margin-left: 16px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .channel, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .channel, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .channel {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel {
   display: inline-block;
   width: 28px;
   height: 28px;
   text-indent: -9999px;
   margin-left: 12px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .channel.linkedin, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .channel.linkedin {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin {
   background: url("../images/contact_channel_linkedin.png") center center no-repeat;
   background-size: 22px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team:last-of-type {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type {
   width: 432px !important;
   padding-right: 64px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor {
-  width: 480px;
-  margin-right: 82px;
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap {
+  position: relative;
+  padding: 100px 64px 24px;
+  width: 100%;
+  height: 460px;
+  margin: 20px auto;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-content, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-content, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-content, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list {
+  display: flex;
+}
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor {
+  width: 500px;
+  margin: 0 40px;
+}
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content {
   width: 480px;
   padding: 44px 34px 44px 54px;
   background: url("../images/about_quotes.png") left top no-repeat;
   background-size: 27px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-content h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-content h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-content h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content h4 {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content h4 {
   font-weight: 500;
   font-size: 32rem;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info {
   display: flex;
   justify-content: flex-start;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo {
   width: 82px;
   height: 82px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 54px 0 54px;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo img {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo img {
   width: 100%;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 {
   font-weight: 800;
   font-size: 22rem;
 }
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 span {
+#aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 span {
   display: block;
   font-weight: 400;
   font-size: 12rem;
   opacity: 0.5;
   margin-top: 8px;
-}
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor:last-of-type {
-  width: 603px !important;
-  padding-right: 32px;
-}
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar-thumb, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar-thumb, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar-thumb, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 8px;
-}
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar-track, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar-track, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar-track, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar-track {
-  background-color: #FCFCFC;
-  border-radius: 8px;
-  box-shadow: inset 0px 0px 4px #eee;
 }
 #aboutus .main .section-5 .section-wrap .section-inner-wrap .swiper {
   margin: 10px 0;
@@ -1688,6 +1785,85 @@ img {
 }
 #aboutus .main .section-6 .section-wrap .section-inner-wrap .partners div {
   width: 180px;
+  position: relative;
+  top: 100px;
+  opacity: 1;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(1) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 0ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(2) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 100ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(3) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 200ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(4) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 300ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(5) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 400ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(6) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 500ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(7) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 600ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(8) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 700ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(9) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 800ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(10) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 900ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(11) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1000ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(12) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1100ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(13) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1200ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(14) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1300ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(15) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1400ms !important;
 }
 #aboutus .main .section-7 .section-wrap {
   min-height: 70vh;
@@ -1720,9 +1896,13 @@ img {
   width: 124px;
   height: 124px;
   text-indent: -9999px;
-  margin-left: 8px;
+  margin-left: 4px;
   background: url("../images/about_arrow_right.png") center center no-repeat;
   background-size: 96px;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+}
+#aboutus .main .section-7 .section-wrap .section-inner-wrap .action-btn-wrap button:hover i.arrow-r {
+  margin-left: 36px;
 }
 #aboutus .main .section-7 .section-wrap .section-inner-wrap p {
   font-size: 24rem;
@@ -1836,7 +2016,7 @@ img {
   background-color: #111;
 }
 #contactus .visual-banner .section-wrap {
-  padding-bottom: 20vh;
+  padding-bottom: 29vh;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap {
   display: flex;
@@ -1849,37 +2029,42 @@ img {
   color: #FFF;
   position: relative;
 }
+#contactus .visual-banner .section-wrap .section-inner-wrap h1 b span {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 52rem;
+}
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 span {
   color: #FFF;
   position: relative;
-  transition: all 800ms cubic-bezier(0.22, 1, 0.36, 1) 0ms;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 span.int-1 {
-  top: -100px;
+  top: -200px;
   opacity: 0;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 span.int-2 {
-  top: -100px;
+  top: -200px;
   opacity: 0;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 span.int-3 {
-  left: -100px;
+  left: -200px;
   opacity: 0;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 span.int-4 {
-  left: 100px;
+  left: 200px;
   opacity: 0;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 span.int-5 {
-  top: 100px;
+  top: 200px;
   opacity: 0;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 span.int-6 {
-  top: 100px;
+  top: 200px;
   opacity: 0;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 span.int-7 {
-  top: 100px;
+  top: 200px;
   opacity: 0;
 }
 #contactus .visual-banner .section-wrap .section-inner-wrap h1 .h-line {
@@ -1888,8 +2073,9 @@ img {
   width: 140px;
   background-color: #111;
   vertical-align: super;
-  margin: 0 16px;
-  transition: all 800ms cubic-bezier(0.22, 1, 0.36, 1) 0ms;
+  margin: 0 8px;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+  display: none;
 }
 #contactus .visual-banner.scroll h1 span.int-1 {
   top: 0 !important;
@@ -1899,41 +2085,41 @@ img {
 #contactus .visual-banner.scroll h1 span.int-2 {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 500ms;
+  transition-delay: 300ms;
 }
 #contactus .visual-banner.scroll h1 span.int-3 {
   left: 0 !important;
   opacity: 1 !important;
-  transition-delay: 250ms;
+  transition-delay: 350ms;
 }
 #contactus .visual-banner.scroll h1 span.int-4 {
   left: 0 !important;
   opacity: 1 !important;
-  transition-delay: 250ms;
+  transition-delay: 400ms;
 }
 #contactus .visual-banner.scroll h1 span.int-5 {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 400ms;
+  transition-delay: 500ms;
 }
 #contactus .visual-banner.scroll h1 span.int-6 {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 350ms;
+  transition-delay: 650ms;
 }
 #contactus .visual-banner.scroll h1 span.int-7 {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 250ms;
+  transition-delay: 750ms;
 }
 #contactus .main {
   background-color: #FCFCFC;
   border-radius: 0;
   width: 100%;
-  margin-top: 62vh;
+  margin-top: 56vh;
   margin-left: auto;
   margin-right: auto;
-  transition: width 800ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1);
   transform-origin: center top;
 }
 #contactus .main.scroll {
@@ -1954,7 +2140,7 @@ img {
 }
 #contactus .main .section .channel {
   position: relative;
-  transition: all 800ms cubic-bezier(0.22, 1, 0.36, 1) 0ms;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
   top: 120px;
   opacity: 0;
 }
@@ -2564,6 +2750,179 @@ img {
 
 /*========== UPCOMING EVENTS ==========*/
 /*========== APP GYUDE ==========*/
+/*========== ANIMATION ==========*/
+.slideup {
+  animation: slideup 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  -webkit-animation: slideup 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+}
+
+.slidedown {
+  animation: slidedown 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  -webkit-animation: slidedown 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+}
+
+.slideleft {
+  animation: slideleft 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  -webkit-animation: slideleft 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+}
+
+.slideright {
+  animation: slideright 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  -webkit-animation: slideright 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+}
+
+.bottomsheetup {
+  animation: bottomsheetup 500ms cubic-bezier(0.25, 1, 0, 1);
+  -webkit-animation: bottomsheetup 500ms cubic-bezier(0.25, 1, 0, 1);
+}
+
+.bottomsheetdown {
+  animation: bottomsheetup 500ms cubic-bezier(0.7, 0, 0.75, 0);
+  -webkit-animation: bottomsheetup 500ms cubic-bezier(0.7, 0, 0.75, 0);
+}
+
+.fadein {
+  animation: fadein 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  -webkit-animation: fadein 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+}
+
+.fadeout {
+  animation: fadeout 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  -webkit-animation: fadeout 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+}
+
+.scale {
+  animation: scale 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+  -webkit-animation: scale 800ms cubic-bezier(0.25, 1, 0.45, 1) 1ms;
+}
+
+@keyframes slideupfull {
+  0% {
+    opacity: 1;
+    transform: translateY(200%);
+    -webkit-transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes slidedown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+  }
+}
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes slideright {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+}
+@keyframes bottomsheetup {
+  0% {
+    opacity: 1;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes bottomsheetdown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.6);
+    -webkit-transform: scale(1.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.6);
+    -webkit-transform: scale(1.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
 /*========== MEDIAQUERY ==========*/
 @media (max-width: 576px) {
   body {
@@ -3311,12 +3670,14 @@ img {
     width: 76vw !important;
   }
   /*========== ABOUT US ==========*/
-  #aboutus .visual-banner h1 .h-line {
-    width: 80px !important;
+  #aboutus .visual-banner.scroll .section-wrap .section-inner-wrap h1 .h-line {
+    width: 70px !important;
     margin: 0 4px !important;
+    opacity: 1 !important;
   }
   #aboutus .main .section-1 .movie {
-    height: 470px !important;
+    width: 100% !important;
+    height: 49.2vw !important;
   }
   #aboutus .main .section-1 .info {
     margin: 48px 0 0 !important;
@@ -3330,6 +3691,9 @@ img {
   }
   #aboutus .main .section-2 .section-inner-wrap {
     padding: 24px !important;
+  }
+  #aboutus .main .section-2 .photo {
+    margin-bottom: 32px;
   }
   #aboutus .main .section-3 .service-items {
     height: 120px !important;
@@ -3368,93 +3732,86 @@ img {
   #aboutus .main .section-4 .section-wrap, #aboutus .main .section-5 .section-wrap {
     width: 100% !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap {
-    padding: 70px 24px 24px !important;
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap {
+    padding: 60px 24px 24px !important;
+    height: 460px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team {
     width: 220px !important;
-    margin-right: 46px !important;
+    margin: 0 20px !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-photo {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo {
     width: 200px !important;
     height: 300px !important;
     margin-bottom: 16px !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info h4 {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 {
     font-size: 18rem !important;
     margin-top: 7px !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info h4 span {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info h4 span {
     font-size: 14rem !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .email, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .email, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .email, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .email {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .email, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .email {
     background-size: 20px !important;
     margin-left: 8px !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .channel, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .channel, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .channel {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel {
     margin-left: 8px !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .channel.linkedin, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team .team-info .channel.linkedin {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin {
     background-size: 20px !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .team:last-of-type {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type {
     width: 274px !important;
     padding-right: 24px;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor {
-    width: 300px !important;
-    margin-right: 21px !important;
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap {
+    padding: 65px 24px 24px !important;
+    height: 360px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-content, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-content, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-content, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor {
+    width: 300px !important;
+    margin: 0 10px !important;
+  }
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content {
     width: 300px !important;
     padding: 48px 0px 48px 32px !important;
     background-size: 24px !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-content h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-content h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-content h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content h4 {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-content h4 {
     font-size: 20rem !important;
     line-height: 1.2 !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info {
     display: flex;
     justify-content: flex-start;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo {
     width: 72px !important;
     height: 72px !important;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 16px 0 32px !important;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo img {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo img, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info .advisor-photo img {
     width: 100%;
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info h4, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 {
     font-weight: 800;
     font-size: 18rem !important;
     width: calc(100% - 120px);
   }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info h4 span, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 span {
+  #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 span, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor .advisor-info h4 span {
     display: block;
     font-weight: 400;
     font-size: 12rem;
     opacity: 0.5;
     margin-top: 8px;
-  }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor:last-of-type, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .advisor:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .advisor-list .advisor:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .team-list .advisor:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap .advisor-list .advisor:last-of-type {
-    width: 324px !important;
-    padding-right: 24px;
-  }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar {
-    width: unset !important;
-  }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar-thumb, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar-thumb, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar-thumb, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar-thumb {
-    background-color: unset !important;
-    border-radius: unset !important;
-  }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar-track, #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar-track, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap::-webkit-scrollbar-track, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap::-webkit-scrollbar-track {
-    background-color: unset !important;
-    border-radius: unset !important;
-    box-shadow: unset !important;
   }
   #aboutus .main .section-5 .section-inner-wrap {
     padding: 0 !important;
@@ -3506,6 +3863,12 @@ img {
   }
   #contactus .header .download-app-btn-wrap ul li a:after {
     background-size: 11px !important;
+  }
+  #contactus .visual-banner .section-wrap .section-inner-wrap h1 b {
+    display: block;
+  }
+  #contactus .visual-banner .section-wrap .section-inner-wrap h1 b span {
+    font-size: 34rem;
   }
   #contactus .main.scroll {
     width: calc(100vw - 48px);
