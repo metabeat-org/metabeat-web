@@ -25,8 +25,12 @@
                 $selected.addClass("selected");
 
                 var selectedId = $selected.attr("id");
-                $("#appMenuViewSection > li").hide();
-                $("#" + selectedId + "View").show();
+                // $("#appMenuViewSection > li").hide();
+                // $("#" + selectedId + "View").show();
+
+                $("#appMenuViewSection > li").removeClass();
+                $("#" + selectedId + "View").addClass("slideup");
+
             })
 
             // Lottie
@@ -119,24 +123,24 @@
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="service-title">
-
                         <img src="images/home_title.png" title="Let's Experience New Distance">
-
+                    </div>
+                    <div class="home-banner">
                         <div id="lottie"></div>
-
+                        <img src="images/home_item.png" title="Service Item">
                     </div>
-                    <div class="card-wrap">
-                        <div class="service-items">
-                            <div class="service">
-                                <ul>
-                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
-                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>
-                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="card-wrap">-->
+<!--                        <div class="service-items">-->
+<!--                            <div class="service">-->
+<!--                                <ul>-->
+<!--                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>-->
+<!--                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+<!--                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+<!--                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </section>
@@ -145,10 +149,10 @@
                 <div class="section-inner-wrap">
                     <div class="tile-wrap app">
                         <ul id="appMenuViewSection" class="app-screen">
-                            <li id="appMenuHomeView"><img src="images/home_app_1.png" title="App - home"></li>
-                            <li id="appMenuShoutOutView" style="display: none;"><img src="images/home_app_2.png" title="App - Shout out"></li>
-                            <li id="appMenuNotificationView" style="display: none;"><img src="images/home_app_3.png" title="App - Notification"></li>
-                            <li id="appMenuMyBeatView" style="display: none;"><img src="images/home_app_4.png" title="App - My Beat"></li>
+                            <li id="appMenuHomeView" class="show"><img src="images/home_app_1.png" title="App - home"></li>
+                            <li id="appMenuShoutOutView"><img src="images/home_app_2.png" title="App - Shout out"></li>
+                            <li id="appMenuNotificationView"><img src="images/home_app_3.png" title="App - Notification"></li>
+                            <li id="appMenuMyBeatView"><img src="images/home_app_4.png" title="App - My Beat"></li>
                         </ul>
                     </div>
                     <div class="service-info">
@@ -218,6 +222,7 @@
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="card-wrap lg">
+                            <h2>The <br><strong>SHOUT OUT</strong></h2>
                             <h2>Shout out Loud to <br>increase the rewards</h2>
                             <div class="service-items">
                                 <div class="service">
@@ -246,6 +251,7 @@
                     <div class="section-inner-wrap">
                         <div class="card-wrap sm">
                             <h2>Reward for <br> fanship</h2>
+                            <h2>Fan Mission <br> and Challenge</h2>
                             <div class="service-items">
                                 <div class="service">
                                     <ul>
@@ -263,41 +269,41 @@
                                 <p>With SHOUT OUT, you’ll be getting tokenized rewards for what you’ve already been doing this entire time!</p>
                                 <p>When you register your personal social media accounts into the MetaBeat platform, our Shout_Out Bot will calculate your rewards based on engagement.</p>
                             </div>
-                            <!--<p>But the rewards don’t stop there. <br>-->
-                            <!--    You can continue receiving $BEAT Tokens by participating in all the missions and challenges that will be launched within the platform.</p>-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section-5">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap sm">
-                            <h2>Fan Mission <br> and Challenge</h2>
-                            <div class="service-items">
-                                <div class="service">
-                                    <ul>
-                                        <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                                        <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                        <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                        <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-info">
-                            <!--<div>-->
-                            <!--    <h3>Rewarding you for <br> being a fan:</h3>-->
-                            <!--    <p>With SHOUT OUT, you’ll be getting tokenized rewards for what you’ve already been doing this entire time!</p>-->
-                            <!--    <p>When you register your personal social media accounts into the MetaBeat platform, our Shout_Out Bot will calculate your rewards based on engagement.</p>-->
-                            <!--</div>-->
                             <p>But the rewards don’t stop there. <br>
                                 You can continue receiving $BEAT Tokens by participating in all the missions and challenges that will be launched within the platform.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="section section-6">
+<!--            <section class="section section-5">-->
+<!--                <div class="section-wrap container">-->
+<!--                    <div class="section-inner-wrap">-->
+<!--                        <div class="card-wrap sm">-->
+<!--                            <h2>Fan Mission <br> and Challenge</h2>-->
+<!--                            <div class="service-items">-->
+<!--                                <div class="service">-->
+<!--                                    <ul>-->
+<!--                                        <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>-->
+<!--                                        &lt;!&ndash;<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>&ndash;&gt;-->
+<!--                                        &lt;!&ndash;<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>&ndash;&gt;-->
+<!--                                        &lt;!&ndash;<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>&ndash;&gt;-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="service-info">-->
+<!--                            &lt;!&ndash;<div>&ndash;&gt;-->
+<!--                            &lt;!&ndash;    <h3>Rewarding you for <br> being a fan:</h3>&ndash;&gt;-->
+<!--                            &lt;!&ndash;    <p>With SHOUT OUT, you’ll be getting tokenized rewards for what you’ve already been doing this entire time!</p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;    <p>When you register your personal social media accounts into the MetaBeat platform, our Shout_Out Bot will calculate your rewards based on engagement.</p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                            <p>But the rewards don’t stop there. <br>-->
+<!--                                You can continue receiving $BEAT Tokens by participating in all the missions and challenges that will be launched within the platform.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+            <section class="section section-5">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="service-title">
@@ -350,7 +356,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-7">
+            <section class="section section-6">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="card-wrap md">
@@ -383,6 +389,7 @@
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="card-wrap lg">
+                            <h2>The <br><strong>DROP</strong></h2>
                             <h2>The $BEATS are <br> Yours with Drops</h2>
                             <div class="service-items">
                                 <div class="service">
@@ -433,7 +440,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-6">
+            <section class="section section-5">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="service-title">
@@ -486,7 +493,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-7">
+            <section class="section section-6">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="card-wrap md">
@@ -521,6 +528,7 @@
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="card-wrap lg">
+                            <h2>The <br><strong>Mingle</strong></h2>
                             <h2>BIG or small: <br>Drop beats in your own way</h2>
                             <div class="service-items">
                                 <div class="service">
@@ -550,6 +558,7 @@
                     <div class="section-inner-wrap">
                         <div class="card-wrap sm">
                             <h2>Be free <br> with your BEAT</h2>
+                            <h2>Build with <br> your Fave</h2>
                             <div class="service-items">
                                 <div class="service">
                                     <ul>
@@ -566,41 +575,13 @@
                                 <h3>The sky’s the limit <br> when you’re in control:</h3>
                                 <p>With MINGLE, you can stake your $BEAT tokens without a direct purchase of NFT to support your artists and receive rewards.</p>
                             </div>
-                            <!--<p>But the rewards don’t stop there. <br>-->
-                            <!--    You can continue receiving $BEAT Tokens by participating in all the missions and challenges that will be launched within the platform.</p>-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section-5">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap sm">
-                            <h2>Build with <br> your Fave</h2>
-                            <div class="service-items">
-                                <div class="service">
-                                    <ul>
-                                        <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <li class="service-mingle"><img src="images/home_mingle_sm.png" title="Mingle"></li>
-                                        <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-info">
-                            <!--<div>-->
-                            <!--    <h3>Rewarding you for <br> being a fan:</h3>-->
-                            <!--    <p>With SHOUT OUT, you’ll be getting tokenized rewards for what you’ve already been doing this entire time!</p>-->
-                            <!--    <p>When you register your personal social media accounts into the MetaBeat platform, our Shout_Out Bot will calculate your rewards based on engagement.</p>-->
-                            <!--</div>-->
                             <p>Increase your $BEAT tokens by participating in Mingles of your favorite artists and build your MINGLE portfolio.</p>
                             <p>Whether it’s a big or small show of support, control how much you’d like to stake and when.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="section section-6">
+            <section class="section section-5">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="service-title">
@@ -653,7 +634,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-7">
+            <section class="section section-6">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="card-wrap md">
@@ -680,14 +661,13 @@
             </section>
         </div>        
 
-
-
         <!-- MARKETPLACE -->
         <div class="section-group section-group-4">
             <section class="section section-3">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
                         <div class="card-wrap lg">
+                            <h2>The <br><strong>Marketplace</strong></h2>
                             <h2>Taking SHOW and TELL <br> to a whole new level</h2>
                             <div class="service-items">
                                 <div class="service">
@@ -718,6 +698,7 @@
                     <div class="section-inner-wrap">
                         <div class="card-wrap sm">
                             <h2>From Fan <br> to NFT Creator</h2>
+                            <h2>Discover <br>and Trade</h2>
                             <div class="service-items">
                                 <div class="service">
                                     <ul>
@@ -734,39 +715,12 @@
                                 <h3>Turn your creations <br> into official pieces:</h3>
                                 <p>On MetaBeat’s MARKETPLACE, you’ll be able to trade your already acquired MetaBeat NFTs with other users, giving you more opportunities to be a part of your favorite creator/artist’s NFTs but wait, there’s more.</p>
                             </div>
-                            <!--<p>But the rewards don’t stop there. <br>-->
-                            <!--    You can continue receiving $BEAT Tokens by participating in all the missions and challenges that will be launched within the platform.</p>-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section-5">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap sm">
-                            <h2>Discover <br>and Trade</h2>
-                            <div class="service-items">
-                                <div class="service">
-                                    <ul>
-                                        <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                        <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-info">
-                            <!--<div>-->
-                            <!--    <h3>Rewarding you for <br> being a fan:</h3>-->
-                            <!--    <p>With SHOUT OUT, you’ll be getting tokenized rewards for what you’ve already been doing this entire time!</p>-->
-                            <!--    <p>When you register your personal social media accounts into the MetaBeat platform, our Shout_Out Bot will calculate your rewards based on engagement.</p>-->
-                            <!--</div>-->
                             <p>In the Marketplace, Fanart can become validated NFTs, which can then be sold and traded within the platform. Fans from all over the world will be able to see your fanart as well as show theirs off!</p>
                         </div>
                     </div>
                 </div>
             </section>
+
         </div>
 
     </main>
