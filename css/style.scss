@@ -250,12 +250,12 @@ img { object-fit: contain; }
     }
 
     .section-1 {
-      .section-wrap { padding-bottom: 100px;
+      .section-wrap { padding-bottom: 100px; width: 100% !important;
         .section-inner-wrap { display: flex; flex-direction: column; align-items: center;
-          .service-title { position: relative; width: 674px; transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1); transform-origin: center top;
+          .service-title { position: relative; width: 674px; transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1); transform-origin: center;
             img { width: 100%; }
           }
-          .home-banner { transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1); transform-origin: center top;
+          .home-banner { width: 1664px; transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1); transform-origin: center top;
             #lottie { width: 500px; height: 500px; margin: 0 auto; position: absolute; left: 50%; transform: translateX(-50%); z-index: 10; }
             img {}
 
@@ -276,8 +276,8 @@ img { object-fit: contain; }
         }
       }
       &.now {
-        .service-title { transform: scale(.7); }
-        .home-banner img { transform: scale(.7); }
+        .service-title { transform: scale(.7); transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms !important; }
+        .home-banner { transform: scale(.7); transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1) 350ms !important; }
       }
     }
     .section-2 {
@@ -441,6 +441,27 @@ img { object-fit: contain; }
         }
       }
     }
+    //.section-4 {
+    //  .section-wrap { padding-bottom: 100px;
+    //    .section-inner-wrap { display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start;
+    //      position: relative;
+    //      .card-wrap { order: 2;
+    //        h2 { position: absolute;
+    //          &:nth-of-type(1) { opacity: 1; top: 50px; }
+    //          &:nth-of-type(2) { opacity: 0; top: 70px;  }
+    //        }
+    //      }
+    //      .service-info { order: 1; width: 484px;
+    //        h3 { font-weight: 700; font-size: 44rem; line-height: 1.1; margin-bottom: 44px; }
+    //        p { font-weight: 400; font-size: 24rem; line-height: 1.1; margin-bottom: 24px; }
+    //        &>div { margin: 24vh 0 50vh;
+    //          &+p { margin-bottom: 24vh; }
+    //        }
+    //      }
+    //    }
+    //  }
+    //}
+
     .section-4 {
       .section-wrap { padding-bottom: 100px;
         .section-inner-wrap { display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start;
@@ -544,15 +565,15 @@ img { object-fit: contain; }
         &:nth-of-type(4) { left: 763px !important; top: 226px !important; z-index: 4; border-radius: 12px !important; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 300ms; }
         &:nth-of-type(5) { left: 838px !important; top: 410px !important; z-index: 5; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 400ms; }
       }
-      .section-4.now {
-        .section-inner-wrap { align-items: center !important;
-          .service-info > div { margin: unset !important; }
-          .card-wrap { position: unset !important; top: unset !important; right: unset !important;
-            h2:nth-of-type(1) { opacity: 1 !important; top: 50px !important; transition: unset !important; }
-            h2:nth-of-type(2) { display: none; transition: unset !important; }
-          }
-        }
-      }
+      //.section-4.now {
+      //  .section-inner-wrap { align-items: center !important;
+      //    .service-info > div { margin: unset !important; }
+      //    .card-wrap { position: unset !important; top: unset !important; right: unset !important;
+      //      h2:nth-of-type(1) { opacity: 1 !important; top: 50px !important; transition: unset !important; }
+      //      h2:nth-of-type(2) { display: none; transition: unset !important; }
+      //    }
+      //  }
+      //}
     }
     // SERVICE ITEM : MINGLE
     .section-group-3 {
@@ -704,7 +725,7 @@ img { object-fit: contain; }
         }
       }
     }
-    .section-4, .section-5 { padding: 0;
+    .section-4, .section-5 { margin-top: 100px; opacity: 0; transition: all 500ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
       .section-wrap { width: 100% !important;
         .section-inner-wrap { display: flex; flex-direction: column; justify-content: flex-start;
           h2 { text-align: center; margin-bottom: 0px; }
@@ -748,6 +769,7 @@ img { object-fit: contain; }
           }
         }
       }
+      &.now { margin-top: 0 !important; opacity: 1 !important; }
     }
     .section-5 {
       .section-wrap {
@@ -785,7 +807,7 @@ img { object-fit: contain; }
         }
       }
     }
-    .section-7 {
+    .section-7 { margin-top: 100px; opacity: 1; transition: all 500ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
       .section-wrap { min-height: 70vh;
         .section-inner-wrap { display: flex; flex-direction: column; justify-content: center; align-items: center;
           .action-btn-wrap { display: flex; justify-content: center;
@@ -801,6 +823,7 @@ img { object-fit: contain; }
           p { font-size: 24rem; }
         }
       }
+      &.now { margin-top: 0 !important; opacity: 1 !important; }
     }
   }
 }
@@ -1140,7 +1163,6 @@ img { object-fit: contain; }
 /*========== UPCOMING EVENTS ==========*/
 
 /*========== APP GYUDE ==========*/
-
 
 /*========== ANIMATION ==========*/
 
