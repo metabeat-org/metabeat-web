@@ -11,7 +11,9 @@
     <script type="text/javascript" async src="js/header.js"></script>
     <script type="text/javascript" async src="js/scroll.js"></script>
 <!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
-    <script src="js/bodymovin.js" type="text/javascript"></script>
+<!--    <script src="js/bodymovin.js" type="text/javascript"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.5/lottie.min.js" type="text/javascript"></script>
+
 
     <script>
         $(function() {
@@ -36,13 +38,21 @@
             // Lottie
             var animation = bodymovin.loadAnimation({
                 container: document.getElementById('lottie'), // Required
-                path: './lottie/home.json', // Required
+                path: './lottie/home-loop.json', // Required
                 renderer: 'svg', // Required
                 loop: true, // Optional
                 autoplay: true, // Optional
                 name: "Hello World", // Name for future reference. Optional.
             })
 
+            var animation2 = bodymovin.loadAnimation({
+                container: document.getElementById('lottie2'), // Required
+                path: './lottie/home-once.json', // Required
+                renderer: 'svg', // Required
+                // loop: true, // Optional
+                autoplay: true, // Optional
+                name: "Hello World", // Name for future reference. Optional.
+            })
 
             // Section Download Button
             $('#section-download-btn')
@@ -127,6 +137,8 @@
                     </div>
                     <div class="home-banner">
                         <div id="lottie"></div>
+                        <div id="lottie2"></div>
+                        <img src="images/title-graphic.gif" >
                         <img src="images/home_item.png" title="Service Item">
                     </div>
 <!--                    <div class="card-wrap">-->
