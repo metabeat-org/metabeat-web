@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="A corporate Bootstrap theme by Medium Rare">
+    <title> </title>
+    <link type="text/css" media="all" rel="stylesheet" href="css/style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" async src="js/header.js"></script>
+    <script type="text/javascript" async src="js/scroll.js"></script>
+    <!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
+    <script>
+        $(document).ready(function () {
+            $('.visual-banner').addClass('scroll');
+        });
+
+        $(function() {
+            // Contact Us 페이지에 대한 스크립트만 적어주세요
+            $('.faq-wrap dd').hide();
+            $('.faq-wrap dt').click(function() {
+                $(this).addClass('show');
+                $(this).siblings().removeClass('show');
+                $('.faq-wrap dd').not($(this).next('.faq-wrap dd').slideToggle(500)).slideUp();
+
+            });
+
+            $(window).scroll(function(){
+                const nowScrollTop = $(window).scrollTop();
+
+                if (nowScrollTop === 0) {
+                    $('.main').addClass('scroll');
+                    $('.visual-banner').addClass('scroll');
+                } else {
+                    $('.main').removeClass('scroll');
+                    $('.visual-banner').removeClass('scroll');
+                }
+
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="loader">
+    <div class="loading-animation"></div>
+</div>
+<div class="page-wrapper" id="faq">
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="header-wrap container">
+            <a class="navbar-brand" href="home.html">Metabeat Logo</a>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item dropdown">
+                        <a href="aboutus.html">
+                            <span>About us </span>
+                            <i>Here. We are the team who made<br>
+                                New - Distance</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="contactus.html">
+                            <span>Contact us </span>
+                            <i>Ring,Ring This is MetaBeat.<br>
+                                We are always awake.</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#">
+                            <span>Upcoming events </span>
+                            <i>Here are the events<br>
+                                we have prepared hard for you.</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="faq.html">
+                            <span>FAQ </span>
+                            <i>Sorry. This page is Under construction.<br>
+                                please wait for a moment!</i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#">
+                            <span>White paper </span>
+                            <i>Typing hard ,For those of you who<br>
+                                want to know more about MetaBeat.</i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="download-app-btn-wrap" id="header-download-btn">
+                <button class="download-app-btn">Download the app</button>
+                <ul>
+                    <li class="nav-item dropdown"><a href="#"><span>Google Play Store</span></a></li>
+                    <li class="nav-item dropdown"><a href="#"><span>Apple App Store</span></a></li>
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button">Navigation Toggler</button>
+        </div>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+    <section class="visual-banner">
+        <div class="section-wrap container">
+            <div class="section-inner-wrap">
+                <h1>
+                    <span class="int-1">FAQ </span><br>
+                    <span class="int-2">Everything </span>
+                    <span class="int-3">you </span>
+                    <span class="int-4">want to </span>  <br>
+                    <span class="int-5">know</span>
+                    <span class="int-6">about Metabeat </span>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main">
+        <section class="section section-1">
+            <div class="section-wrap container">
+                <div class="section-inner-wrap">
+                    <div class="faq-wrap">
+                        <dl>
+                            <dt class="faq-title">What is a MetaBeat?</dt>
+                            <dd class="faq-content">
+                                <p>The MetaBeat platform is built around NFT creations, participants, and rewards related to an artist's intellectual property (IP).</p>
+                                <p>As NFT creations and users grow on the platform, partnerships between creators or artists and fans are strengthened through positive
+                                    symbiotic experiences facilitated by the MetaBeat ecosystem that reflect the values ​​and contributions of users in the MetaBeat community.</p>
+                                <p>Participants will have a special experience of being rewarded with Beat, a token of MetaBeat, through three business models: Drops,
+                                    Mingle, and Shout-out, and further contribute to the revival of the entertainment industry.</p>
+                            </dd>
+                            <dt class="faq-title">What are Drops?</dt>
+                            <dd class="faq-content">
+                                <p>The NFTs are generated by diverse projects such as music albums, singles, metaverse concerts, fan meetings, etc.</p>
+                                <p>Users purchase direct ownership of community NFTs through auctions at MetaBeat Drops and winners of the auction can enjoy
+                                    rewards based on their FANomance Index generated from the ownership.</p>
+                            </dd>
+                            <dt class="faq-title">How can I join Drops?</dt>
+                            <dd class="faq-content">
+                                <p>You can participate in Drops by selecting a product on the MetaBeat app HOME > DROPS page and clicking the Open Run (participation) button. </p>
+                                <p>After the end of Drops, among the number of participants who participated in the open run, the winning bid is decided by the
+                                    lowest winning bid method, starting with the user who participated with the highest amount according to the amount of NFT issuance.</p>
+                            </dd>
+                            <dt class="faq-title">What if I want to sell my Drops?</dt>
+                            <dd class="faq-content">
+                                <p>You can sell the NFT you want in the NFT section of the MY BEAT > MY WALLET page of the MetaBeat app, and secondary transactions are
+                                    possible through the sale and purchase list on the HOME > MARKETPLACE page.</p>
+                            </dd>
+                            <dt class="faq-title">In the case of drops, are there any other benefits other than owning NFTs when participating?</dt>
+                            <dd class="faq-content">
+                                <p>For NFT holders who have already participated in our Drops, we plan to offer pre-sale benefits related to the artist's NFT or pre-purchase
+                                    limited edition NFT to be released later, and we will provide concert tickets or fan meeting tickets through consultation with the artist. The expected.</p>
+                            </dd>
+                            <dt class="faq-title">How to Safely trade and store Drop (NFT)?</dt>
+                            <dd class="faq-content">
+                                <p>Never do any trading other than the trading method not announced by MetaBeat.</p>
+                                <p>Do not click on suspicious files or links received through SCR files or DMs.</p>
+                                <p>Do not sign suspicious MetaMask transactions, and do not disclose your seed phrases to anyone other than yourself. Most DMs are likely to be scams. Always be careful.</p>
+                            </dd>
+                            <dt class="faq-title">What is Mingle?</dt>
+                            <dd class="faq-content">
+                                <p>Stake and get rewarded for artist activity!</p>
+                                <p>Each Mingle is backed by real assets, music IP, and by staking BEAT on an open Mingle, you can receive rewards according to Mingle's  FANomance Index.</p>
+                                <p>Create your own portfolio with free and diverse Mingle participation.</p>
+                            </dd>
+                            <dt class="faq-title">How can I join Mingle?</dt>
+                            <dd class="faq-content">
+                                <p>You can participate in Mingle by selecting a product from the HOME > MINGLE page of the MetaBeat app and matching the available pieces (PCS).</p>
+                                <p>Mingle who has completed participation can modify and cancel the pieces at any time.</p>
+                            </dd>
+                            <dt class="faq-title">What is a Shout Out?</dt>
+                            <dd class="faq-content">
+                                <p>Cheer on the artist on my social media and get rewards!</p>
+                                <p>Shout-out is a participatory reward program that rewards users for promotional and marketing activities for their artists.</p>
+                                <p>You can receive BEAT rewards according to performance by directly uploading posts about artist activities on MetaBeat or uploading them to various
+                                    personal social media accounts and authenticating them to MetaBeat.</p>
+                            </dd>
+                            <dt class="faq-title">What is FANomance Index?</dt>
+                            <dd class="faq-content">
+                                <p>MetaBeat created the FANomance Index.</p>
+                                <p>The FANomance Index is a customized index uniquely designed by MetaBeat, based on key criteria of artists and fan community performance.</p>
+                                <p>Though simple, the index represents MetaBeat’s philosophy that lies in the shared distribution of a value system. The index criteria includes:</p>
+
+                                <p>1. Commitment to Hold and Stake<br>
+                                    2. Performance data gathered from social media buzz on artists<br>
+                                    3. Performance data gathered from ShoutOut Fandom buzz on platform</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-wrap container">
+            <div class="fnb-info">
+                <div class="fnb-etc-info">
+                    <ul class="channel">
+                        <li><a href="#"><img src="/images/fnb_channel_medium.png" alt="Go to Medium"></a></li>
+                        <li><a href="#"><img src="/images/fnb_channel_discord.png" alt="Go to Discord"></a></li>
+                        <li><a href="#"><img src="/images/fnb_channel_twitter.png" alt="Go to Twitter"></a></li>
+                        <li><a href="#"><img src="/images/fnb_channel_telegram.png" alt="Go to Telegram"></a></li>
+                        <li><a href="#"><img src="/images/fnb_channel_linkedin.png" alt="Go to Linked In"></a></li>
+                    </ul>
+                    <ul class="fnb-etc">
+                        <li>IOS Download</li>
+                        <li>White Paper</li>
+                        <li>Android Download</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div class="fnb">
+                    <ul>
+                        <li>About us</li>
+                        <li>Contact us</li>
+                        <li>Upcoming events</li>
+                        <li>App guide</li>
+                        <li>Terms and Conditions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fnb-logo-info">
+                <a href="#"><img src="images/fnb_bi.png" alt="Metabeat Logo"></a>
+            </div>
+            <div class="copyright-info">
+                <p class="company-name">MetaBeat<br> 06103</p>
+                <p class="address"> 6-3, Bongeunsa-ro 43-gil<br> Gangnam-gu<br>Seoul, Republic of Korea</p>
+                <p class="copyright">© 2022, Metabeat all right reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
+</div>
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 0,
+        grabCursor: true
+    });
+</script>
+</body>
+</html>
