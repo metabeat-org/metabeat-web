@@ -12,8 +12,8 @@
     <script src="js/jquery-3.6.0.js"></script>
     <script type="text/javascript" async src="js/header.js"></script>
     <script type="text/javascript" async src="js/scroll.js"></script>
-<!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
-<!--    <script src="js/bodymovin.js" type="text/javascript"></script>-->
+    <!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
+    <!--    <script src="js/bodymovin.js" type="text/javascript"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.5/lottie.min.js" type="text/javascript"></script>
 
     <script>
@@ -33,7 +33,6 @@
 
                 $("#appMenuViewSection > li").removeClass();
                 $("#" + selectedId + "View").addClass("slideup");
-
             })
 
             // Lottie
@@ -57,17 +56,13 @@
 
             // Section Download Button
             $('#section-download-btn')
-            .on("click", "", function () {
-                $('#section-download-btn ul').toggleClass('show');
+                .on("click", "", function () {
+                    $('#section-download-btn ul').toggleClass('show');
+                })
+                .on("mouseleave", "", function(){
+                    $('#section-download-btn ul').removeClass('show');
+                });
             })
-            .on("mouseleave", "", function(){
-                $('#section-download-btn ul').removeClass('show');
-            });
-
-            $('.swiper-slide').mouseover(function() {
-                $(this).css('z-index','1');
-                $(this).siblings().css('z-index','0');
-            });
         });
     </script>
 </head>
@@ -145,18 +140,18 @@
                         <div id="lottie2"></div>
                         <img src="images/title-graphic.gif" >
                     </div>
-<!--                    <div class="card-wrap">-->
-<!--                        <div class="service-items">-->
-<!--                            <div class="service">-->
-<!--                                <ul>-->
-<!--                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>-->
-<!--                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-<!--                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-<!--                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="card-wrap">-->
+                    <!--                        <div class="service-items">-->
+                    <!--                            <div class="service">-->
+                    <!--                                <ul>-->
+                    <!--                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>-->
+                    <!--                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                    <!--                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                    <!--                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                    <!--                                </ul>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                 </div>
             </div>
         </section>
@@ -194,43 +189,43 @@
                 </div>
             </div>
         </section>
-<!--        <section class="section section-2">-->
-<!--            <div class="section-wrap container">-->
-<!--                <div class="section-inner-wrap">-->
-<!--                    <div class="service-title"><img src="images/home_title.png" title="Let's Experience New Distance"></div>-->
-<!--                    <div class="card-wrap">-->
-<!--                        <div class="service-items">-->
-<!--                            <div class="service">-->
-<!--                                <ul>-->
-<!--                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>-->
-<!--                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-<!--                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-<!--                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="tile-wrap">-->
-<!--                        <div class="aboutus">-->
-<!--                            <h3>About us</h3>-->
-<!--                            <p>The team who made<br>-->
-<!--                                experience of new distance.</p>-->
-<!--                            <div class="action-btn-wrap">-->
-<!--                                <button class="" type="button">Meet the Team</button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="shitepaper">-->
-<!--                            <h3>White paper</h3>-->
-<!--                            <p>Language: <span>Eng and KOR</span></p>-->
-<!--                            <div class="action-btn-wrap">-->
-<!--                                <button class="" type="button"><i class="icon read">Icon</i>Read the White Paper</button>-->
-<!--&lt;!&ndash;                                <button class="" type="button"><i class="icon download">Icon</i>Download the White Paper</button>&ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
+        <!--        <section class="section section-2">-->
+        <!--            <div class="section-wrap container">-->
+        <!--                <div class="section-inner-wrap">-->
+        <!--                    <div class="service-title"><img src="images/home_title.png" title="Let's Experience New Distance"></div>-->
+        <!--                    <div class="card-wrap">-->
+        <!--                        <div class="service-items">-->
+        <!--                            <div class="service">-->
+        <!--                                <ul>-->
+        <!--                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>-->
+        <!--                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+        <!--                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+        <!--                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+        <!--                                </ul>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                    <div class="tile-wrap">-->
+        <!--                        <div class="aboutus">-->
+        <!--                            <h3>About us</h3>-->
+        <!--                            <p>The team who made<br>-->
+        <!--                                experience of new distance.</p>-->
+        <!--                            <div class="action-btn-wrap">-->
+        <!--                                <button class="" type="button">Meet the Team</button>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                        <div class="shitepaper">-->
+        <!--                            <h3>White paper</h3>-->
+        <!--                            <p>Language: <span>Eng and KOR</span></p>-->
+        <!--                            <div class="action-btn-wrap">-->
+        <!--                                <button class="" type="button"><i class="icon read">Icon</i>Read the White Paper</button>-->
+        <!--&lt;!&ndash;                                <button class="" type="button"><i class="icon download">Icon</i>Download the White Paper</button>&ndash;&gt;-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </section>-->
 
         <!-- SHOUT OUT -->
         <div class="section-group section-group-1">
@@ -265,14 +260,14 @@
             <section class="section section-4">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
-                        <div class="card-wrap sm">
+                        <div class="card-wrap md">
                             <h2>Reward for <br> fanship</h2>
                             <h2>Fan Mission <br> and Challenge</h2>
                             <div class="service-items">
                                 <div class="service">
                                     <ul>
-                                        <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                                        <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                        <li class="service-shoutout"><img src="images/home_shoutout_9.png" title="Shout Out"></li>
+                                        <li class="service-drop"><img src="images/home_shoutout_5.png" title="Shout Out"></li>
                                         <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                         <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
                                     </ul>
@@ -308,10 +303,11 @@
                                             <div class="front">
                                                 <div class="card-wrap sm" id="card1">
                                                     <h2>Unimaginable <br> Reality</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout_6.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -328,7 +324,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout_6.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -345,11 +341,12 @@
                                         <div id="" class="flip">
                                             <div class="front">
                                                 <div class="card-wrap sm" id="card2">
-                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <h2>Reward upgrade <br> with badge</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout_7.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -360,13 +357,13 @@
                                             </div>
                                             <div class="back">
                                                 <div class="card-wrap md">
-                                                    <h4>Unimaginable <br> Reality</h4>
-                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
-                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <h4>Reward upgrade <br> with badge</h4>
+                                                    <p>Not only do users get the opportunity to earn while supporting their favorite artist(s) through Fan activities, but also with challenges and missions that will be pushed through Shout Out!</p>
+                                                    <p>As users earn $BEAT, they will be able to invest these earnings toward their favorite songs and artists on Mingle! Fans will continue to earn the more they participate with MetaBeat’s badge system on Shout Out; if your level is to the roof, so will the additional compensations!</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout_7.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -383,11 +380,12 @@
                                         <div id="" class="flip">
                                             <div class="front">
                                                 <div class="card-wrap sm" id="card3">
-                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <h2>VIF <br> Very Important Fan</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout_8.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -398,13 +396,13 @@
                                             </div>
                                             <div class="back">
                                                 <div class="card-wrap md">
-                                                    <h4>Unimaginable <br> Reality</h4>
-                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
-                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <h4>VIF <br> Very Important Fan</h4>
+                                                    <p>Shout Out exists to finally value the activities that the Fans pour their hearts into in order to support their favorite artist(s).</p>
+                                                    <p>This Fan activity is what has led the revitalization of pop culture and what has allowed it to become borderless! MetaBeat has created a reward system in Web3, where the connections between artist and Fans are truly valued! </p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout_8.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -499,7 +497,7 @@
                         <div class="tile-wrap app">
                             <ul>
                                 <li><img src="images/home_drop_1.png" title="App - Drop"></li>
-                                <li><img src="images/home_drop_2.png" title="App - Drop"></li>
+<!--                                <li><img src="images/home_drop_2.png" title="App - Drop"></li>-->
                                 <li><img src="images/home_drop_3.png" title="App - Drop"></li>
                                 <li><img src="images/home_drop_4.png" title="App - Drop"></li>
                                 <li><img src="images/home_drop_5.png" title="App - Drop"></li>
@@ -511,13 +509,13 @@
             <section class="section section-4">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
-                        <div class="card-wrap sm">
+                        <div class="card-wrap md">
                             <h2>Make the BEAT <br> yours</h2>
                             <div class="service-items">
                                 <div class="service">
                                     <ul>
                                         <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
+                                        <li class="service-drop"><img src="images/home_drop_6.png" title="Drop"></li>
                                         <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
                                         <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                     </ul>
@@ -527,7 +525,7 @@
                         <div class="service-info">
                             <div>
                                 <h3>Become a true partner <br>with true ownership:</h3>
-                                <p>Receive your share of the reward generated from your IP ownerships.</p>                                    
+                                <p>Receive your share of the reward generated from your IP ownerships.</p>
                                 <p>Through DROPS, fans have direct access to own a piece of music IP, amongst many other creative projects, from their favorite creators/artists through NFT auctions. </p>
                             </div>
                         </div>
@@ -549,12 +547,12 @@
                                     <div class="flip-wrap">
                                         <div id="" class="flip">
                                             <div class="front">
-                                                <div class="card-wrap sm" id="card1">
+                                                <div class="card-wrap sm">
                                                     <h2>Unimaginable <br> Reality</h2>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_drop_7.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -571,7 +569,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_drop_7.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -587,12 +585,12 @@
                                     <div class="flip-wrap">
                                         <div id="" class="flip">
                                             <div class="front">
-                                                <div class="card-wrap sm" id="card2">
+                                                <div class="card-wrap sm">
                                                     <h2>Unimaginable <br> Reality</h2>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_drop_8.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -609,7 +607,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_drop_8.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -625,12 +623,12 @@
                                     <div class="flip-wrap">
                                         <div id="" class="flip">
                                             <div class="front">
-                                                <div class="card-wrap sm" id="card3">
+                                                <div class="card-wrap sm">
                                                     <h2>Unimaginable <br> Reality</h2>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_drop_9.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -647,7 +645,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/home_drop_9.png" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -834,7 +832,7 @@
                     </div>
                 </div>
             </section>
-        </div>        
+        </div>
 
         <!-- MARKETPLACE -->
         <div class="section-group section-group-4">
@@ -960,14 +958,14 @@
 <script src="js/swiper.min.js"></script>
 <script>
     // section-group-1
-        var swiper1 = new Swiper('.section-group-1 .section-5 .swiper-container', {
-            // scrollbar: '.swiper-scrollbar',
-            scrollbarHide: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 0,
-            grabCursor: true
-        });
+    var swiper1 = new Swiper('.section-group-1 .section-5 .swiper-container', {
+        // scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 32,
+        grabCursor: true
+    });
 
     $('#shoutOutCardBtn').on("click", "", function () {
         $('.section-group-1 .section-5 .shoutout-swiper').removeClass('card-unfold');
@@ -981,14 +979,14 @@
     })
 
     // section-group-2
-        var swiper2 = new Swiper('.section-group-2 .section-5 .swiper-container', {
-            // scrollbar: '.swiper-scrollbar',
-            scrollbarHide: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 0,
-            grabCursor: true
-        });
+    var swiper2 = new Swiper('.section-group-2 .section-5 .swiper-container', {
+        // scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 32,
+        grabCursor: true
+    });
 
     $('#dropCardBtn').on("click", "", function () {
         $('.section-group-2 .section-5 .shoutout-swiper').removeClass('card-unfold');
@@ -1002,14 +1000,14 @@
     })
 
     // section-group-3
-        var swiper2 = new Swiper('.section-group-3 .section-5 .swiper-container', {
-            // scrollbar: '.swiper-scrollbar',
-            scrollbarHide: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 0,
-            grabCursor: true
-        });
+    var swiper2 = new Swiper('.section-group-3 .section-5 .swiper-container', {
+        // scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 32,
+        grabCursor: true
+    });
 
     $('#dropCardBtn').on("click", "", function () {
         $('.section-group-3 .section-5 .shoutout-swiper').removeClass('card-unfold');
