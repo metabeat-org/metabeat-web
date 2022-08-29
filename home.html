@@ -63,6 +63,10 @@
                 $('#section-download-btn ul').removeClass('show');
             });
 
+            $('.swiper-slide').mouseover(function() {
+                $(this).css('z-index','1');
+                $(this).siblings().css('z-index','0');
+            });
         });
     </script>
 </head>
@@ -286,34 +290,6 @@
                     </div>
                 </div>
             </section>
-<!--            <section class="section section-5">-->
-<!--                <div class="section-wrap container">-->
-<!--                    <div class="section-inner-wrap">-->
-<!--                        <div class="card-wrap sm">-->
-<!--                            <h2>Fan Mission <br> and Challenge</h2>-->
-<!--                            <div class="service-items">-->
-<!--                                <div class="service">-->
-<!--                                    <ul>-->
-<!--                                        <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>-->
-<!--                                        &lt;!&ndash;<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>&ndash;&gt;-->
-<!--                                        &lt;!&ndash;<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>&ndash;&gt;-->
-<!--                                        &lt;!&ndash;<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>&ndash;&gt;-->
-<!--                                    </ul>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="service-info">-->
-<!--                            &lt;!&ndash;<div>&ndash;&gt;-->
-<!--                            &lt;!&ndash;    <h3>Rewarding you for <br> being a fan:</h3>&ndash;&gt;-->
-<!--                            &lt;!&ndash;    <p>With SHOUT OUT, you’ll be getting tokenized rewards for what you’ve already been doing this entire time!</p>&ndash;&gt;-->
-<!--                            &lt;!&ndash;    <p>When you register your personal social media accounts into the MetaBeat platform, our Shout_Out Bot will calculate your rewards based on engagement.</p>&ndash;&gt;-->
-<!--                            &lt;!&ndash;</div>&ndash;&gt;-->
-<!--                            <p>But the rewards don’t stop there. <br>-->
-<!--                                You can continue receiving $BEAT Tokens by participating in all the missions and challenges that will be launched within the platform.</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
             <section class="section section-5">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
@@ -322,57 +298,133 @@
                             <img src="images/home_shoutout_title.png" title="And here a furtber look into shout out...">
                             <span class="badge">3</span>
                         </div>
-                        <div class="card-slider">
-                            <div class="card-wrap sm">
-                                <h2>Unimaginable <br> Reality</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                                            <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                            <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                            <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                        </ul>
+                        <!-- Swiper -->
+                        <div class="swiper-container shoutout-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="flip-wrap">
+                                        <div id="" class="flip">
+                                            <div class="front">
+                                                <div class="card-wrap sm" id="card1">
+                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="card-wrap md">
+                                                    <h4>Unimaginable <br> Reality</h4>
+                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
+                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-wrap sm">
-                                <h2>Unimaginable <br> Reality</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                                            <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                            <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                            <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                        </ul>
+                                <div class="swiper-slide">
+                                    <div class="flip-wrap">
+                                        <div id="" class="flip">
+                                            <div class="front">
+                                                <div class="card-wrap sm" id="card2">
+                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="card-wrap md">
+                                                    <h4>Unimaginable <br> Reality</h4>
+                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
+                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-wrap sm">
-                                <h2>Unimaginable <br> Reality</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                                            <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                            <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                            <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                        </ul>
+                                <div class="swiper-slide">
+                                    <div class="flip-wrap">
+                                        <div id="" class="flip">
+                                            <div class="front">
+                                                <div class="card-wrap sm" id="card3">
+                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="card-wrap md">
+                                                    <h4>Unimaginable <br> Reality</h4>
+                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
+                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tooltip">Click to open these card </div>
+                        <div class="tooltip">Mouse over to open these card </div>
                     </div>
                 </div>
             </section>
 
-
             <section class="section section-6">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
-
                         <div class="flip-wrap">
                             <div id="" class="flip">
                                 <div class="front">
@@ -489,48 +541,126 @@
                             <img src="images/home_drop_title.png" title="And here a furtber look into shout out...">
                             <span class="badge">3</span>
                         </div>
-                        <div class="card-slider">
-                            <div class="card-wrap sm">
-                                <h2>Fan 2Earn</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                            <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
-                                            <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                            <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                        </ul>
+                        <!-- Swiper -->
+                        <div class="swiper-container shoutout-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="flip-wrap">
+                                        <div id="" class="flip">
+                                            <div class="front">
+                                                <div class="card-wrap sm" id="card1">
+                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="card-wrap md">
+                                                    <h4>Unimaginable <br> Reality</h4>
+                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
+                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-wrap sm">
-                                <h2>Fan 2Earn</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                            <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
-                                            <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                            <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                        </ul>
+                                <div class="swiper-slide">
+                                    <div class="flip-wrap">
+                                        <div id="" class="flip">
+                                            <div class="front">
+                                                <div class="card-wrap sm" id="card2">
+                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="card-wrap md">
+                                                    <h4>Unimaginable <br> Reality</h4>
+                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
+                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-wrap sm">
-                                <h2>Fan 2Earn</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                            <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
-                                            <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                            <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                        </ul>
+                                <div class="swiper-slide">
+                                    <div class="flip-wrap">
+                                        <div id="" class="flip">
+                                            <div class="front">
+                                                <div class="card-wrap sm" id="card3">
+                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="card-wrap md">
+                                                    <h4>Unimaginable <br> Reality</h4>
+                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
+                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
+                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tooltip">Click to open these card </div>
+                        <div class="tooltip">Mouse over to open these card </div>
                     </div>
                 </div>
             </section>
@@ -553,7 +683,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                         <div class="btn-wrap">
                             <button class="next-btn">Next button</button>
                             <span class="badge">2</span>
@@ -630,43 +760,45 @@
                             <img src="images/home_mingle_title.png" title="And here a furtber look into shout out...">
                             <span class="badge">3</span>
                         </div>
-                        <div class="card-slider">
-                            <div class="card-wrap sm">
-                                <h2>Collect’em all!</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <li class="service-mingle"><img src="images/home_mingle_sm.png" title="Mingle"></li>
-                                            <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-wrap sm">
-                                <h2>Collect’em all!</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <li class="service-mingle"><img src="images/home_mingle_sm.png" title="Mingle"></li>
-                                            <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-wrap sm">
-                                <h2>Collect’em all!</h2>
-                                <div class="service-items">
-                                    <div class="service">
-                                        <ul>
-                                            <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <li class="service-mingle"><img src="images/home_mingle_sm.png" title="Mingle"></li>
-                                            <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                        </ul>
+                        <!-- Swiper -->
+                        <div class="swiper-container shoutout-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="flip-wrap">
+                                        <div id="" class="flip">
+                                            <div class="front">
+                                                <div class="card-wrap sm">
+                                                    <h2>Collect’em all!</h2>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
+                                                                <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
+                                                                <li class="service-mingle"><img src="images/home_mingle_sm.png" title="Mingle"></li>
+                                                                <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="card-wrap md">
+                                                    <h4>Collect’em all!</h4>
+                                                    <p>At MetaBeat, we want our platform to be enjoyed by everyone not only as fans, but also, as collectors. After all this time supporting your favorite artist, isn’t it time for you to hold an even deeper connection? </p>
+                                                    <p>That’s why, regardless of the amount of the support, MetaBeat wants you to join in, via its own music NFT staking service, Mingle!</p>
+                                                    <div class="service-items">
+                                                        <div class="service">
+                                                            <ul>
+                                                                <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
+                                                                <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
+                                                                <li class="service-mingle"><img src="images/home_mingle_sm.png" title="Mingle"></li>
+                                                                <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -675,6 +807,7 @@
                     </div>
                 </div>
             </section>
+
             <section class="section section-6">
                 <div class="section-wrap container">
                     <div class="section-inner-wrap">
@@ -761,9 +894,7 @@
                     </div>
                 </div>
             </section>
-
         </div>
-
     </main>
     <!-- ========== END MAIN CONTENT ========== -->
 
