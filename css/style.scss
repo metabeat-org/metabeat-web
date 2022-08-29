@@ -485,7 +485,7 @@ img { object-fit: contain; }
           .service-info { order: 1; width: 484px;
             h3 { font-weight: 700; font-size: 44rem; line-height: 1.1; margin-bottom: 44px; }
             p { font-weight: 400; font-size: 24rem; line-height: 1.1; margin-bottom: 24px; }
-            &>div { margin: 10vh 0 30vh;
+            &>div { margin: 20vh 0 20vh;
               &+p { margin-bottom: 24vh; }
             }
           }
@@ -597,7 +597,7 @@ img { object-fit: contain; }
       }
     }
 
-    .section-group-1, .section-group-3 {
+    .section-group-1, .section-group-3, .section-group-4 {
       .section-4 {
         .section-wrap { padding-bottom: 100px;
           .section-inner-wrap { display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start;
@@ -613,7 +613,7 @@ img { object-fit: contain; }
             .service-info { order: 1; width: 484px;
               h3 { font-weight: 700; font-size: 44rem; line-height: 1.1; margin-bottom: 44px; }
               p { font-weight: 400; font-size: 24rem; line-height: 1.1; margin-bottom: 24px; }
-              &>div { margin: 10vh 0 30vh;
+              &>div { margin: 20vh 0 50vh;
                 &+p { margin-bottom: 24vh; }
               }
             }
@@ -632,9 +632,6 @@ img { object-fit: contain; }
 
     // SERVICE ITEM : DROP
     .section-group-2 {
-      .card-wrap.sm .service-items .service {  }
-      .card-wrap.sm .service-items .service ul { }
-            .card-wrap.md .service-items .service {  }
 
       .section-3 .tile-wrap li { border-radius: 12px !important;
         img { border-radius: 12px !important;}
@@ -673,7 +670,8 @@ img { object-fit: contain; }
       .section-4 {
         .card-wrap { top: 400px !important; }
         .service-info > div { margin: 20vh 0 50vh !important;}
-        .service-info > div+p { margin-bottom: 24px !important; }
+        .service-info > div + p:nth-of-type(1) { margin-bottom: 24px !important; }
+        .service-info > p:last-child { margin-bottom: 24vh !important; }
       }
       .section-5 {
         .swiper-slide:nth-of-type(1) { transform: rotate(0deg) translate(0,0) !important; }
@@ -685,29 +683,26 @@ img { object-fit: contain; }
     }
     // SERVICE ITEM : MARKETPLACE
     .section-group-4 {
-      .card-wrap.sm .service-items .service { width: 380px !important; height: 412px !important; }
-      .card-wrap.sm .service-items .service ul { margin-top: -10px;}
-      .card-wrap.md .service-items .service { width: 380px !important; height: 412px !important; }
 
-      .section-3 .tile-wrap li {
-        &:nth-of-type(1) { left: 0px !important; top: 264px !important; z-index: 1; opacity: 0; }
-        &:nth-of-type(2) { left: 100px !important; top: 508px !important; z-index: 2; opacity: 0;}
-        &:nth-of-type(3) { left: 278px !important; top: 406px !important; z-index: 3; opacity: 0;}
-        &:nth-of-type(4) { left: 763px !important; top: 136px !important; z-index: 4; border-radius: 12px !important; opacity: 0;}
-        &:nth-of-type(5) { left: 821px !important; top: 290px !important; z-index: 5; opacity: 0;}
-        &:nth-of-type(6) { left: 838px !important; top: 487px !important; z-index: 6; background: unset !important; box-shadow: unset !important;
-          backdrop-filter: unset !important; border-radius: unset !important; opacity: 0;}
+      .section-3 .tile-wrap li { border-radius: 20px !important;
+        img { border-radius: 20px !important;}
+        &:nth-of-type(1) { left: 0px !important; top: 200px !important; z-index: 1; opacity: 0; }
+        &:nth-of-type(2) { left: 202px !important; top: 346px !important; z-index: 2; opacity: 0;}
+        &:nth-of-type(3) { left: 793px !important; top: 70px !important; z-index: 4; opacity: 0; background: unset !important; box-shadow: unset !important;
+          backdrop-filter: unset !important; border-radius: unset !important; }
+        &:nth-of-type(4) { left: 737px !important; top: 372px !important; z-index: 5; opacity: 0; border-radius: 12px;
+          img { border-radius: 12px;}
+        }
+        &:nth-of-type(5) { left: 817px !important; top: 512px !important; z-index: 6; opacity: 0;}
       }
       .section-3.now .tile-wrap li {
-        &:nth-of-type(1) { left: 0px !important; top: 364px !important; z-index: 1; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;}
-        &:nth-of-type(2) { left: 100px !important; top: 608px !important; z-index: 2; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 100ms;}
-        &:nth-of-type(3) { left: 278px !important; top: 506px !important; z-index: 3; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 200ms;}
-        &:nth-of-type(4) { left: 763px !important; top: 236px !important; z-index: 4; border-radius: 12px !important; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 300ms;}
-        &:nth-of-type(5) { left: 821px !important; top: 390px !important; z-index: 5; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 400ms;}
-        &:nth-of-type(6) { left: 838px !important; top: 587px !important; z-index: 6; background: unset !important; box-shadow: unset !important;
-          backdrop-filter: unset !important; border-radius: unset !important; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 500ms;}
+        &:nth-of-type(1) { left: 0px !important; top: 300px !important; z-index: 1; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;}
+        &:nth-of-type(2) { left: 202px !important; top: 446px !important; z-index: 2; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 100ms;}
+        &:nth-of-type(3) { left: 793px !important; top: 170px !important; z-index: 4; border-radius: 12px !important; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 300ms;}
+        &:nth-of-type(4) { left: 737px !important; top: 472px !important; z-index: 5; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 400ms;}
+        &:nth-of-type(5) { left: 817px !important; top: 612px !important; z-index: 6; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 500ms;}
       }
-      .section-4 .section-wrap { padding-bottom: 300px; }
+      .section-4 .section-wrap { padding-bottom: 500px; }
     }
   }
 }
