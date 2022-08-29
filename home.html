@@ -54,6 +54,149 @@
                 name: "Hello World", // Name for future reference. Optional.
             })
 
+            var shoutOut1 = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut1'), // Required
+                path: './lottie/shout-out-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var shoutOut2 = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut2'), // Required
+                path: './lottie/shout-out-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var shoutOut3_2_front = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut3_2_front'), // Required
+                path: './lottie/shout-out-3-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+            var shoutOut3_2_back = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut3_2_back'), // Required
+                path: './lottie/shout-out-3-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var shoutOut3_3_front = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut3_3_front'), // Required
+                path: './lottie/shout-out-3-3.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var shoutOut3_3_back = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut3_3_back'), // Required
+                path: './lottie/shout-out-3-3.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var drop3_1_front = bodymovin.loadAnimation({
+                container: document.getElementById('drop3_1_front'), // Required
+                path: './lottie/drop-3-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var drop3_1_back = bodymovin.loadAnimation({
+                container: document.getElementById('drop3_1_back'), // Required
+                path: './lottie/drop-3-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle1 = bodymovin.loadAnimation({
+                container: document.getElementById('mingle1'), // Required
+                path: './lottie/mingle-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle2 = bodymovin.loadAnimation({
+                container: document.getElementById('mingle2'), // Required
+                path: './lottie/mingle-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_1_front = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_1_front'), // Required
+                path: './lottie/mingle-3-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_1_back = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_1_back'), // Required
+                path: './lottie/mingle-3-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_2_front = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_2_front'), // Required
+                path: './lottie/mingle-3-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_2_back = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_2_back'), // Required
+                path: './lottie/mingle-3-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_3_front = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_3_front'), // Required
+                path: './lottie/mingle-3-3.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_3_back = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_3_back'), // Required
+                path: './lottie/mingle-3-3.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var marketplace1 = bodymovin.loadAnimation({
+                container: document.getElementById('marketplace1'), // Required
+                path: './lottie/marketplace-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var marketplace2 = bodymovin.loadAnimation({
+                container: document.getElementById('marketplace2'), // Required
+                path: './lottie/marketplace-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
             // Section Download Button
             $('#section-download-btn')
                 .on("click", "", function () {
@@ -62,7 +205,6 @@
                 .on("mouseleave", "", function(){
                     $('#section-download-btn ul').removeClass('show');
                 });
-            })
         });
     </script>
 </head>
@@ -266,8 +408,8 @@
                             <div class="service-items">
                                 <div class="service">
                                     <ul>
-                                        <li class="service-shoutout"><img src="images/home_shoutout_9.png" title="Shout Out"></li>
-                                        <li class="service-drop"><img src="images/home_shoutout_5.png" title="Shout Out"></li>
+                                        <li class="service-shoutout"><div id="shoutOut1"></div></li>
+                                        <li class="service-drop"><div id="shoutOut2"></div></li>
                                         <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                         <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
                                     </ul>
@@ -307,7 +449,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout_6.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/shout-out-3-1.gif" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -324,7 +466,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout_6.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/shout-out-3-1.gif" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -346,7 +488,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout_7.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><div id="shoutOut3_2_front"></div></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -363,7 +505,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout_7.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><div id="shoutOut3_2_back"></div></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -385,7 +527,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout_8.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><div id="shoutOut3_3_front"></div></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -402,7 +544,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_shoutout_8.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><div id="shoutOut3_3_back"></div></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -515,7 +657,7 @@
                                 <div class="service">
                                     <ul>
                                         <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <li class="service-drop"><img src="images/home_drop_6.png" title="Drop"></li>
+                                        <li class="service-drop"><img src="images/drop-1.gif" title="Drop"></li>
                                         <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
                                         <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                     </ul>
@@ -552,7 +694,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_drop_7.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><div id="drop3_1_front"></div></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -569,7 +711,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_drop_7.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><div id="drop3_1_back"></div></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -590,7 +732,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_drop_8.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/drop3-2.gif" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -607,7 +749,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_drop_8.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/drop3-2.gif" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -628,7 +770,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_drop_9.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/drop3-3.gif" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -645,7 +787,7 @@
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
-                                                                <li class="service-shoutout"><img src="images/home_drop_9.png" title="Shout Out"></li>
+                                                                <li class="service-shoutout"><img src="images/drop3-3.gif" title="Shout Out"></li>
                                                                 <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
                                                                 <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
                                                                 <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
@@ -733,8 +875,8 @@
                                     <ul>
                                         <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
                                         <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <li class="service-mingle"><img src="images/home_mingle_5.png" title="Mingle"></li>
-                                        <li class="service-mingle"><img src="images/home_mingle_6.png" title="Mingle"></li>
+                                        <li class="service-mingle"><div id="mingle1"></div></li>
+                                        <li class="service-mingle"><div id="mingle2"></div></li>
                                         <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                     </ul>
                                 </div>
@@ -773,7 +915,7 @@
                                                             <ul>
                                                                 <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
                                                                 <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><img src="images/home_mingle_7.png" title="Mingle"></li>
+                                                                <li class="service-mingle"><div id="mingle3_1_front"></div></li>
                                                                 <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                                             </ul>
                                                         </div>
@@ -790,7 +932,7 @@
                                                             <ul>
                                                                 <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
                                                                 <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><img src="images/home_mingle_7.png" title="Mingle"></li>
+                                                                <li class="service-mingle"><div id="mingle3_1_back"></div></li>
                                                                 <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                                             </ul>
                                                         </div>
@@ -811,7 +953,7 @@
                                                             <ul>
                                                                 <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
                                                                 <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><img src="images/home_mingle_8.png" title="Mingle"></li>
+                                                                <li class="service-mingle"><div id="mingle3_2_front"></div></li>
                                                                 <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                                             </ul>
                                                         </div>
@@ -828,7 +970,7 @@
                                                             <ul>
                                                                 <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
                                                                 <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><img src="images/home_mingle_8.png" title="Mingle"></li>
+                                                                <li class="service-mingle"><div id="mingle3_2_back"></div></li>
                                                                 <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                                             </ul>
                                                         </div>
@@ -849,7 +991,7 @@
                                                             <ul>
                                                                 <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
                                                                 <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><img src="images/home_mingle_9.png" title="Mingle"></li>
+                                                                <li class="service-mingle"><div id="mingle3_3_front"></div></li>
                                                                 <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                                             </ul>
                                                         </div>
@@ -866,7 +1008,7 @@
                                                             <ul>
                                                                 <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
                                                                 <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><img src="images/home_mingle_9.png" title="Mingle"></li>
+                                                                <li class="service-mingle"><div id="mingle3_3_back"></div></li>
                                                                 <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
                                                             </ul>
                                                         </div>
@@ -953,8 +1095,8 @@
                                         <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
                                         <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
                                         <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                        <li class="service-marketplace"><img src="images/home_marketplace_6.png" title="Marketplace"></li>
-                                        <li class="service-marketplace"><img src="images/home_marketplace_7.png" title="Marketplace"></li>
+                                        <li class="service-marketplace"><div id="marketplace1"></div></li>
+                                        <li class="service-marketplace"><div id="marketplace2"></div></li>
                                     </ul>
                                 </div>
                             </div>
@@ -989,16 +1131,16 @@
                         <li>IOS Download</li>
                         <li>White Paper</li>
                         <li>Android Download</li>
-                        <li>FAQ</li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="fnb">
                     <ul>
-                        <li>About us</li>
-                        <li>Contact us</li>
-                        <li>Upcoming events</li>
-                        <li>App guide</li>
-                        <li>Terms and Conditions</li>
+                        <li><a href="aboutus.html">About us</a></li>
+                        <li><a href="contactus.html">Contact us</a></li>
+                        <li><a href="#">App guide</a></li>
+                        <li><a href="#">Upcoming events</a></li>
+                        <li><a href="#">Terms and Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -1075,6 +1217,7 @@
 
     })
 
+
     // section-group-3
     var swiper2 = new Swiper('.section-group-3 .section-5 .swiper-container', {
         // scrollbar: '.swiper-scrollbar',
@@ -1085,7 +1228,7 @@
         grabCursor: true
     });
 
-    $('#dropCardBtn').on("click", "", function () {
+    $('#mingleCardBtn').on("click", "", function () {
         $('.section-group-3 .section-5 .shoutout-swiper').removeClass('card-unfold');
 
         $('.section-group-3 .section-5 .shoutout-swiper .flip').hover(function () {
