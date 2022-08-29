@@ -1266,10 +1266,10 @@ img {
 #home .main .flip .back {
   transform: rotateY(-180deg);
 }
-#home .main .flip:hover .front {
+#home .main .flip.hover .front {
   transform: rotateY(180deg);
 }
-#home .main .flip:hover .back {
+#home .main .flip.hover .back {
   transform: rotateY(0deg);
 }
 #home .main .section-5 .section-wrap {
@@ -1346,20 +1346,20 @@ img {
   font-size: 24rem;
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-wrapper .swiper-slide:nth-of-type(1) {
-  transform: rotate(-5deg) translate(100px, 30px);
+  /*transform: rotate(-5deg) translate(100px, 30px);*/
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-wrapper .swiper-slide:nth-of-type(2) {
   z-index: 1;
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-wrapper .swiper-slide:nth-of-type(3) {
-  transform: rotate(5deg) translate(-100px, 30px);
+  /*transform: rotate(5deg) translate(-100px, 30px);*/
 }
-#home .main .section-5 .section-wrap .section-inner-wrap .swiper-wrapper .swiper-slide:nth-of-type(1):hover {
-  transform: rotate(-2deg) translate(180px, 0px);
-}
-#home .main .section-5 .section-wrap .section-inner-wrap .swiper-wrapper .swiper-slide:nth-of-type(3):hover {
-  transform: rotate(2deg) translate(-180px, 0px);
-}
+/*#home .main .section-5 .section-wrap .section-inner-wrap .swiper-wrapper .swiper-slide:nth-of-type(1):hover {*/
+/*  transform: rotate(-2deg) translate(180px, 0px);*/
+/*}*/
+/*#home .main .section-5 .section-wrap .section-inner-wrap .swiper-wrapper .swiper-slide:nth-of-type(3):hover {*/
+/*  transform: rotate(2deg) translate(-180px, 0px);*/
+/*}*/
 #home .main .section-5 .section-wrap .section-inner-wrap .tooltip {
   font-weight: 400;
   font-size: 18rem;
