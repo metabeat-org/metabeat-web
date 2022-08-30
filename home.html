@@ -1061,7 +1061,10 @@
 
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
-        alert(isMobile)
+        if (!isMobile) {
+            shoutOutCard.slideTo(1)
+        }
+
         $('.section-group-1 .section-5 .shoutout-swiper .flip').hover(function () {
             $(this).addClass("hover")
         }, function () {
