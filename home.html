@@ -1051,7 +1051,7 @@
         $('.section-group-1 .section-5 .shoutout-swiper').removeClass('card-unfold');
         $('.shout-out-card').addClass('tooltip-hide');
 
-        new Swiper('.section-group-1 .section-5 .swiper-container', {
+        var shoutOutCard = new Swiper('.section-group-1 .section-5 .swiper-container', {
             scrollbarHide: true,
             slidesPerView: 'auto',
             centeredSlides: true,
@@ -1059,6 +1059,9 @@
             grabCursor: true
         });
 
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
+        alert(isMobile)
         $('.section-group-1 .section-5 .shoutout-swiper .flip').hover(function () {
             $(this).addClass("hover")
         }, function () {
