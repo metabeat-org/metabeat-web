@@ -4203,19 +4203,19 @@ img {
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(3) {
     left: 0 !important;
     top: 52vw !important;
-    z-index: 3;
+    z-index: 0;
     width: 74vw !important;
   }
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(4) {
     left: 0 !important;
     top: 11vw !important;
-    z-index: 0;
+    z-index: 4;
     width: 74vw !important;
   }
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(5) {
     left: unset !important;
     top: 114vw !important;
-    z-index: 4;
+    z-index: 3;
     width: 83vw !important;
     right: 0;
   }

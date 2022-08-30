@@ -1686,7 +1686,7 @@ img { object-fit: contain; }
         }
       }
       // SERVICE ITEM : MARKETPLACE
-      .section-group-4 {
+      .section-group-4 { 
 
         .section-3 {
           .section-wrap {
@@ -1697,9 +1697,9 @@ img { object-fit: contain; }
                     li {
                       &:nth-of-type(1) { left: 8vw !important; top: 40vw !important; z-index: 1; width: 66vw !important; }
                       &:nth-of-type(2) { left: unset !important; top: 18vw !important; z-index: 2; width: 32vw !important; right: 5vw;}
-                      &:nth-of-type(3) { left: 0 !important; top: 52vw !important; z-index: 3; width: 74vw !important; }
-                      &:nth-of-type(4) { left: 0 !important; top: 11vw !important; z-index: 0; width: 74vw !important; }
-                      &:nth-of-type(5) { left: unset !important; top: 114vw !important; z-index: 4; width: 83vw !important; right: 0;}
+                      &:nth-of-type(3) { left: 0 !important; top: 52vw !important; z-index: 0; width: 74vw !important; }
+                      &:nth-of-type(4) { left: 0 !important; top: 11vw !important; z-index: 4; width: 74vw !important; }
+                      &:nth-of-type(5) { left: unset !important; top: 114vw !important; z-index: 3; width: 83vw !important; right: 0;}
                     }
                   }
                 }
