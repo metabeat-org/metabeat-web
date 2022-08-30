@@ -44,7 +44,7 @@
             })
 
             // Lottie
-            var animation = bodymovin.loadAnimation({
+            var homeLoop = bodymovin.loadAnimation({
                 container: document.getElementById('lottie'), // Required
                 path: './lottie/home-loop.json', // Required
                 renderer: 'svg', // Required
@@ -53,11 +53,11 @@
                 name: "Hello World", // Name for future reference. Optional.
             })
 
-            var animation2 = bodymovin.loadAnimation({
+            var homeOnce = bodymovin.loadAnimation({
                 container: document.getElementById('lottie2'), // Required
                 path: './lottie/home-once.json', // Required
                 renderer: 'svg', // Required
-                // loop: true, // Optional
+                loop: false, // Optional
                 autoplay: true, // Optional
                 name: "Hello World", // Name for future reference. Optional.
             })
@@ -66,7 +66,7 @@
                 container: document.getElementById('shoutOut1'), // Required
                 path: './lottie/shout-out-1.json', // Required
                 renderer: 'svg', // Required
-                loop: true, // Optional
+                loop: false, // Optional
                 autoplay: true, // Optional
             })
 
@@ -74,7 +74,7 @@
                 container: document.getElementById('shoutOut2'), // Required
                 path: './lottie/shout-out-2.json', // Required
                 renderer: 'svg', // Required
-                loop: true, // Optional
+                loop: false, // Optional
                 autoplay: true, // Optional
             })
 
@@ -193,7 +193,7 @@
                 container: document.getElementById('marketplace1'), // Required
                 path: './lottie/marketplace-1.json', // Required
                 renderer: 'svg', // Required
-                loop: true, // Optional
+                loop: false, // Optional
                 autoplay: true, // Optional
             })
 
@@ -201,7 +201,7 @@
                 container: document.getElementById('marketplace2'), // Required
                 path: './lottie/marketplace-2.json', // Required
                 renderer: 'svg', // Required
-                loop: true, // Optional
+                loop: false, // Optional
                 autoplay: true, // Optional
             })
 
