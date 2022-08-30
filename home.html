@@ -1036,17 +1036,17 @@
 <script src="js/swiper.min.js"></script>
 <script>
     // section-group-1
-    var swiper1 = new Swiper('.section-group-1 .section-5 .swiper-container', {
-        // scrollbar: '.swiper-scrollbar',
-        scrollbarHide: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 32,
-        grabCursor: true
-    });
-
     $('#shoutOutCardBtn').on("click", "", function () {
         $('.section-group-1 .section-5 .shoutout-swiper').removeClass('card-unfold');
+
+        new Swiper('.section-group-1 .section-5 .swiper-container', {
+            // scrollbar: '.swiper-scrollbar',
+            scrollbarHide: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 32,
+            grabCursor: true
+        });
 
         $('.section-group-1 .section-5 .shoutout-swiper .flip').hover(function () {
             $(this).addClass("hover")
@@ -1057,17 +1057,17 @@
     })
 
     // section-group-2
-    var swiper2 = new Swiper('.section-group-2 .section-5 .swiper-container', {
-        // scrollbar: '.swiper-scrollbar',
-        scrollbarHide: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 32,
-        grabCursor: true
-    });
-
     $('#dropCardBtn').on("click", "", function () {
         $('.section-group-2 .section-5 .shoutout-swiper').removeClass('card-unfold');
+
+        new Swiper('.section-group-2 .section-5 .swiper-container', {
+            // scrollbar: '.swiper-scrollbar',
+            scrollbarHide: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 32,
+            grabCursor: true
+        });
 
         $('.section-group-2 .section-5 .shoutout-swiper .flip').hover(function () {
             $(this).addClass("hover")
@@ -1079,17 +1079,17 @@
 
 
     // section-group-3
-    var swiper2 = new Swiper('.section-group-3 .section-5 .swiper-container', {
-        // scrollbar: '.swiper-scrollbar',
-        scrollbarHide: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 32,
-        grabCursor: true
-    });
-
     $('#mingleCardBtn').on("click", "", function () {
         $('.section-group-3 .section-5 .shoutout-swiper').removeClass('card-unfold');
+
+        new Swiper('.section-group-3 .section-5 .swiper-container', {
+            // scrollbar: '.swiper-scrollbar',
+            scrollbarHide: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 32,
+            grabCursor: true
+        });
 
         $('.section-group-3 .section-5 .shoutout-swiper .flip').hover(function () {
             $(this).addClass("hover")

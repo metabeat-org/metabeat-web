@@ -390,11 +390,11 @@
             document.body.removeChild(textarea);
         }
 
-        var copyBtn = $(this);
-        copyBtn.addClass("copy-success").empty().append("<i class=\"icon copy\">Icon</i> Copy Complete!");
+        var $copyBtn = $(this);
+        $copyBtn.addClass("copy-success").empty().append("<i class=\"icon copy\">Icon</i> Copy Complete!");
 
         setTimeout(function () {
-            copyBtn.removeClass("copy-success").empty().append("<i class=\"icon copy\">Icon</i> Copy address");
+            $copyBtn.removeClass("copy-success").empty().append("<i class=\"icon copy\">Icon</i> Copy address");
         }, 3000)
     })
 </script>
