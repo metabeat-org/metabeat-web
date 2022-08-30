@@ -1528,7 +1528,7 @@ img { object-fit: contain; }
               h5 { font-size: 14rem !important; margin-bottom: 20px !important; }
               h2 { margin-bottom: 24px !important; }
               p { font-size: 20rem !important; }
-              .download-app-btn-wrap { width: 148px !important; margin-bottom: 34px !important;
+              .download-app-btn-wrap { width: 148px !important; margin-bottom: 70px !important;
                 .download-app-btn { height: 36px !important; padding: 9px 10px 8px 16px !important; font-size: 13rem !important;
                   &:after { margin-top: -1px; }
                 }
@@ -1539,18 +1539,20 @@ img { object-fit: contain; }
                   }
                 }
               }
-              .app-menu { min-height: 140px !important; position: absolute;
-                ul { display: flex; flex-direction: column; justify-content: flex-start; width: 100%; width: 100vw; overflow-y: hidden; overflow-x: auto; padding: 20px 0; margin: 0 -24px;;
-                  li { padding-left: 24px;
-                    a { padding: 20px !important; font-size: 18rem !important; width: 66.5vw;
-                      i { }
+              .app-menu { position: absolute;
+                ul { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: unset; overflow-y: hidden; overflow-x: auto; padding: 20px 0; margin: 0 -24px;
+                  li { padding-left: 0px;
+                    a { padding: 16px 8px !important; font-size: 18rem !important; width: 13vw;
+                      i { margin-right: 0px !important; }
                       span { font-size: 18rem !important; display: none; }
                       em { font-size: 12rem !important; }
-                      &:hover, &.selected { box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important; border-radius: 20px;
+                      &:hover, &.selected { box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important; border-radius: 20px; padding: 16px !important; width: 49vw !important; margin-left: 8px !important; margin-right: 8px !important;
+                        i { margin-right: 12px !important; }
                         span { display: inline-block;}
                         em { display: none !important; }
                       }
                     }
+                    &:first-child { padding-left: 16px;}
                   }
                 }
               }
@@ -1797,8 +1799,8 @@ img { object-fit: contain; }
       .section-7 { min-height: inherit !important; }
       .section-7 .section-wrap {min-height: 52vh !important; padding-top: 40px !important; align-items: flex-start !important; }
       .section-7 .section-inner-wrap { padding: 0 !important; }
-      .section-7 .action-btn-wrap button { padding: 9px 8px 9px 8px !important; font-size: 48rem !important; }
-      .section-7 .action-btn-wrap button i.arrow-r { width: 48px !important; height: 48px !important; background-size: 42px !important; }
+      .section-7 .action-btn-wrap button { padding: 9px 8px 9px 8px !important; font-size: 46rem !important; }
+      .section-7 .action-btn-wrap button i.arrow-r { width: 46px !important; height: 46px !important; background-size: 40px !important; }
       .section-7 p { font-size: 14rem !important; }
     }
   }

@@ -3912,7 +3912,7 @@ img {
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .download-app-btn-wrap {
     width: 148px !important;
-    margin-bottom: 34px !important;
+    margin-bottom: 70px !important;
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .download-app-btn-wrap .download-app-btn {
     height: 36px !important;
@@ -3936,27 +3936,29 @@ img {
     background-size: 11px !important;
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu {
-    min-height: 140px !important;
     position: absolute;
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    width: 100%;
-    width: 100vw;
+    align-items: center;
+    width: unset;
     overflow-y: hidden;
     overflow-x: auto;
     padding: 20px 0;
     margin: 0 -24px;
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li {
-    padding-left: 24px;
+    padding-left: 0px;
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a {
-    padding: 20px !important;
+    padding: 16px 8px !important;
     font-size: 18rem !important;
-    width: 66.5vw;
+    width: 13vw;
+  }
+  #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a i {
+    margin-right: 0px !important;
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a span {
     font-size: 18rem !important;
@@ -3968,12 +3970,22 @@ img {
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a:hover, #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a.selected {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     border-radius: 20px;
+    padding: 16px !important;
+    width: 49vw !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+  }
+  #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a:hover i, #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a.selected i {
+    margin-right: 12px !important;
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a:hover span, #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a.selected span {
     display: inline-block;
   }
   #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a:hover em, #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li a.selected em {
     display: none !important;
+  }
+  #home .main .section-2 .section-wrap .section-inner-wrap .service-info .app-menu ul li:first-child {
+    padding-left: 16px;
   }
   #home .main .section-3 .section-wrap .section-inner-wrap {
     position: unset !important;
@@ -4489,12 +4501,12 @@ img {
   }
   #aboutus .main .section-7 .action-btn-wrap button {
     padding: 9px 8px 9px 8px !important;
-    font-size: 48rem !important;
+    font-size: 46rem !important;
   }
   #aboutus .main .section-7 .action-btn-wrap button i.arrow-r {
-    width: 48px !important;
-    height: 48px !important;
-    background-size: 42px !important;
+    width: 46px !important;
+    height: 46px !important;
+    background-size: 40px !important;
   }
   #aboutus .main .section-7 p {
     font-size: 14rem !important;
