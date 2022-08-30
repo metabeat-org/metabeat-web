@@ -821,9 +821,6 @@ img {
   width: 431px;
   height: 415px;
 }
-#home .main .section-1 {
-  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1);
-}
 #home .main .section-1 .section-wrap {
   padding-top: 0;
   padding-bottom: 100px;
@@ -840,20 +837,22 @@ img {
   position: relative;
   width: 674px;
   top: 80px;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1);
 }
 #home .main .section-1 .section-wrap .section-inner-wrap .service-title img {
   width: 100%;
 }
 #home .main .section-1 .section-wrap .section-inner-wrap .home-banner {
-  width: 100%;
+  width: 1860px;
   height: 1080px;
   position: absolute;
   margin-top: -100px;
   overflow: hidden;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1);
 }
 #home .main .section-1 .section-wrap .section-inner-wrap .home-banner > * {
-  width: 1860px;
-  height: 1080px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -867,10 +866,15 @@ img {
 #home .main .section-1 .section-wrap .section-inner-wrap .home-banner img {
   z-index: 1;
 }
-#home .main .section-1.now {
+#home .main .section-1.now .service-title, #home .main .section-1.prev .service-title {
   transform: scale(0.57);
-  margin-top: 100px;
-  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+  margin-top: 400px !important;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 400ms !important;
+}
+#home .main .section-1.now .home-banner, #home .main .section-1.prev .home-banner {
+  transform: scale(0.57);
+  margin-top: 160px !important;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 400ms !important;
 }
 #home .main .section-2 .section-wrap {
   padding-bottom: 100px;
@@ -1201,7 +1205,6 @@ img {
   order: 2;
   position: sticky;
   top: 300px;
-  right: 0;
   z-index: 3;
 }
 #home .main .section-4 .section-wrap .section-inner-wrap .service-info {
@@ -1282,7 +1285,6 @@ img {
   width: 270px;
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .service-title .badge {
-  display: none;
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -1294,9 +1296,12 @@ img {
   color: #FCFCFC;
   border-radius: 50%;
   text-align: center;
+  opacity: 0;
   position: absolute;
-  left: 50vw;
   top: 65px;
+  left: 50%;
+  top: 80px;
+  transform: translateX(82px);
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper {
   position: relative;
@@ -1386,6 +1391,7 @@ img {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  white-space: nowrap;
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .tooltip:before {
   display: inline-block;
@@ -1397,6 +1403,10 @@ img {
   position: absolute;
   top: -2px;
   left: 50%;
+}
+#home .main .section-5.prev .service-title .badge {
+  opacity: 1 !important;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
 }
 #home .main .section-6 {
   display: none;
@@ -1891,7 +1901,7 @@ img {
   transition-delay: 700ms;
 }
 #aboutus .main {
-  margin-top: 38vh; /* background-color: #FCFCFC; */
+  margin-top: 40vh; /* background-color: #FCFCFC; */
   border-radius: 12px;
   transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1);
   transform-origin: center top;
@@ -1930,7 +1940,7 @@ img {
 }
 #aboutus .main .section-2 .section-wrap .section-inner-wrap {
   position: relative;
-  background-color: #D9D9D9;
+  background-color: #0000FF;
   border-radius: 12px;
   padding: 182px 64px;
   display: flex;
@@ -1951,7 +1961,11 @@ img {
   top: 100px;
   width: 700px;
   opacity: 0;
+  color: #FAFAFA;
   transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 450ms;
+}
+#aboutus .main .section-2 .section-wrap .section-inner-wrap h5 p {
+  color: #FAFAFA;
 }
 #aboutus .main .section-2.now .section-inner-wrap {
   top: 0 !important;
@@ -2403,7 +2417,7 @@ img {
   border-bottom: 1px solid rgba(107, 107, 107, 0.4);
 }
 #contactus .header.active .navbar-brand {
-  background: url("../images/gnb_bi_metabeat_blue.png") center 0 no-repeat;
+  background: url("../images/gnb_bi_metabeat_blue.png") center center no-repeat;
 }
 #contactus .header.active .navbar ul li a span {
   color: #111 !important;
@@ -3267,16 +3281,12 @@ img {
   transition-delay: 650ms;
 }
 #faq .main {
-  margin-top: 38vh; /* background-color: #FCFCFC; */
+  margin-top: 35vh; /* background-color: #FCFCFC; */
   border-radius: 12px;
   transition: width 800ms cubic-bezier(0.25, 1, 0.45, 1);
   transform-origin: center top;
 }
-#faq .main .section-1 {
-  margin-top: -100px;
-}
 #faq .main .section-1 .section-wrap {
-  padding-top: 300px;
   padding-bottom: 400px;
 }
 #faq .main .section-1 .section-wrap .section-inner-wrap .faq-wrap dl dt {
@@ -3563,7 +3573,9 @@ img {
     width: 100%;
   }
   .col-full {
-    width: 100% !important;
+    width: calc(100vw - 48px) !important;
+    margin-left: auto;
+    margin-right: auto;
   }
   .col-flex-column {
     flex-direction: column !important;
@@ -3575,6 +3587,7 @@ img {
   .header .header-wrap .navbar-brand {
     width: 36px;
     height: 36px;
+    background: url("../images/gnb_bi_metabeat_blue_m.png") center center no-repeat;
     background-size: 36px !important;
   }
   .header .header-wrap .navbar ul {
@@ -4302,12 +4315,19 @@ img {
     margin: 0 4px !important;
     opacity: 1 !important;
   }
+  #aboutus .main {
+    margin-top: 31vh;
+  }
   #aboutus .main .section-1 .movie {
     width: 100% !important;
     height: 49.2vw !important;
   }
   #aboutus .main .section-1 .info {
     margin: 48px 0 0 !important;
+  }
+  #aboutus .main .section-1 .info h2 {
+    margin-left: unset !important;
+    margin-right: unset !important;
   }
   #aboutus .main .section-2 {
     min-height: inherit !important;
@@ -4318,6 +4338,9 @@ img {
   }
   #aboutus .main .section-2 .section-inner-wrap {
     padding: 24px !important;
+  }
+  #aboutus .main .section-2 .section-inner-wrap > h5 {
+    width: calc(100vw - 96px) !important;
   }
   #aboutus .main .section-2 .photo {
     margin-bottom: 32px;
@@ -4477,11 +4500,20 @@ img {
     font-size: 14rem !important;
   }
   /*========== CONTACT US ==========*/
-  #contactus .header .navbar ul.show {
-    background-color: #FAFAFA;
+  #contactus .header .navbar-brand {
+    width: 36px;
+    height: 36px;
+    background: url("../images/gnb_bi_metabeat_light_m.png") center center no-repeat;
+    background-size: 36px !important;
   }
-  #contactus .header .navbar ul.show li a span {
-    color: #FAFAFA;
+  #contactus .header.active .navbar-brand {
+    width: 36px;
+    height: 36px;
+    background: url("../images/gnb_bi_metabeat_blue_m.png") center center no-repeat;
+    background-size: 36px !important;
+  }
+  #contactus .header .navbar ul li a span {
+    color: #111 !important;
   }
   #contactus .header .navbar-toggler {
     display: block;
@@ -4765,6 +4797,34 @@ img {
     border-radius: 32px 32px 0 0;
     background: #fff url("../images/contact_app.png") left center no-repeat;
     background-size: 100%;
+  }
+  /*========== FAQ ==========*/
+  #faq .visual-banner .section-wrap .section-inner-wrap h1 b {
+    display: block;
+  }
+  #faq .visual-banner .section-wrap .section-inner-wrap h1 b span {
+    font-size: 34rem;
+  }
+  #faq .main {
+    margin-top: 40vh; /* background-color: #FCFCFC; */
+    border-radius: 0px;
+  }
+  #faq .main .section-1 .section-wrap .section-inner-wrap .faq-wrap dl dt {
+    font-size: 22rem;
+    margin-top: 50px;
+  }
+  #faq .main .section-1 .section-wrap .section-inner-wrap .faq-wrap dl dt:after {
+    width: 24px;
+    height: 24px;
+    background-size: 30px;
+    margin-left: 24px;
+  }
+  #faq .main .section-1 .section-wrap .section-inner-wrap .faq-wrap dl dd {
+    font-size: 16rem;
+    padding: 24px 0;
+  }
+  #faq .main .section-1 .section-wrap .section-inner-wrap .faq-wrap dl dd p {
+    font-size: 16rem;
   }
 }
 @media (max-width: 360px) {
