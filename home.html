@@ -1046,6 +1046,8 @@
 
 <script src="js/swiper.min.js"></script>
 <script>
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
     // section-group-1
     $('#shoutOutCardBtn').on("click", "", function () {
         $('.section-group-1 .section-5 .shoutout-swiper').removeClass('card-unfold');
@@ -1058,8 +1060,6 @@
             spaceBetween: 32,
             grabCursor: true
         });
-
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
         if (!isMobile) {
             shoutOutCard.slideTo(1)
@@ -1078,13 +1078,17 @@
         $('.section-group-2 .section-5 .shoutout-swiper').removeClass('card-unfold');
         $('.drop-card').addClass('tooltip-hide');
 
-        new Swiper('.section-group-2 .section-5 .swiper-container', {
+        var dropCard = new Swiper('.section-group-2 .section-5 .swiper-container', {
             scrollbarHide: true,
             slidesPerView: 'auto',
             centeredSlides: true,
             spaceBetween: 32,
             grabCursor: true
         });
+
+        if (!isMobile) {
+            dropCard.slideTo(1)
+        }
 
         $('.section-group-2 .section-5 .shoutout-swiper .flip').hover(function () {
             $(this).addClass("hover")
@@ -1100,13 +1104,17 @@
         $('.section-group-3 .section-5 .shoutout-swiper').removeClass('card-unfold');
         $('.mingle-card').addClass('tooltip-hide');
 
-        new Swiper('.section-group-3 .section-5 .swiper-container', {
+        var mingleCard = new Swiper('.section-group-3 .section-5 .swiper-container', {
             scrollbarHide: true,
             slidesPerView: 'auto',
             centeredSlides: true,
             spaceBetween: 32,
             grabCursor: true
         });
+
+        if (!isMobile) {
+            mingleCard.slideTo(1)
+        }
 
         $('.section-group-3 .section-5 .shoutout-swiper .flip').hover(function () {
             $(this).addClass("hover")
