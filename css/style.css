@@ -802,8 +802,8 @@ img {
   font-size: 42rem;
 }
 #home .main .card-wrap.md .service-items .service {
-  width: 431px;
-  height: 415px;
+  width: 430px;
+  height: 430px;
 }
 #home .main .card-wrap.sm {
   width: 400px;
@@ -818,8 +818,8 @@ img {
   opacity: 0.3;
 }
 #home .main .card-wrap.sm .service-items .service {
-  width: 431px;
-  height: 415px;
+  width: 340px;
+  height: 340px;
 }
 #home .main .section-1 .section-wrap {
   padding-top: 0;
@@ -1337,10 +1337,6 @@ img {
   margin: 0 0 2px 4px;
   background: url("../images/icon_rewind.png") center center no-repeat;
   background-size: 13px;
-}
-#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.sm .service {
-  width: 340px;
-  height: 340px;
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md {
   width: 400px !important;
@@ -1862,7 +1858,7 @@ img {
   vertical-align: super;
   margin: 0 0;
   opacity: 0;
-  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 2000ms;
+  transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 1000ms;
 }
 #aboutus .visual-banner.scroll h1 span.int-1 {
   top: 0 !important;
@@ -1892,13 +1888,12 @@ img {
 #aboutus .visual-banner.scroll h1 span.int-6 {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 650ms;
+  transition-delay: 600ms;
 }
 #aboutus .visual-banner.scroll h1 .h-line {
   width: 140px !important;
   margin: 0 8px !important;
   opacity: 1 !important;
-  transition-delay: 700ms;
 }
 #aboutus .main {
   margin-top: 40vh; /* background-color: #FCFCFC; */
@@ -1962,10 +1957,13 @@ img {
   width: 700px;
   opacity: 0;
   color: #FAFAFA;
+  margin: auto;
+  text-align: center;
   transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 450ms;
 }
 #aboutus .main .section-2 .section-wrap .section-inner-wrap h5 p {
   color: #FAFAFA;
+  font-size: 24rem;
 }
 #aboutus .main .section-2.now .section-inner-wrap {
   top: 0 !important;
@@ -2702,12 +2700,21 @@ img {
 }
 #contactus .main .section-1 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .channel-contents-wrap .action-btn-wrap button .copy {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 4px;
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
   text-indent: -9999px;
   background: url("../images/contact_copy.png") center center no-repeat;
   background-size: 13px;
+}
+#contactus .main .section-1 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .channel-contents-wrap .action-btn-wrap button.copy-success {
+  background-color: #0000FF;
+  border: none;
+  color: #FAFAFA;
+}
+#contactus .main .section-1 .section-wrap .section-inner-wrap .channel-wrap .channel-info-wrap .channel-contents-wrap .action-btn-wrap button.copy-success .copy {
+  background: url("../images/icon_check.png") center center no-repeat;
+  background-size: 20px;
 }
 #contactus .main .section-2 .section-wrap .section-inner-wrap .channel-wrap {
   display: flex;
@@ -3821,35 +3828,34 @@ img {
   }
   #home .main .card-wrap.lg {
     width: 100%;
-    min-height: 117.2vw;
-    padding: 28px 28px 0;
+    min-height: 110.3vw;
+    padding: 28px 28px 14px;
   }
   #home .main .card-wrap.lg h2 {
     font-size: 28rem !important;
   }
   #home .main .card-wrap.lg .service-items .service {
     width: 70vw;
-    height: 76vw;
-    margin-left: 0;
+    height: 70vw;
   }
   #home .main .card-wrap.md {
-    width: 75vw;
-    min-height: 124vw;
+    width: 79.4vw;
+    min-height: 108.4vw;
     padding: 24px;
   }
   #home .main .card-wrap.md h2 {
-    font-size: 16rem !important;
+    font-size: 22rem !important;
   }
   #home .main .card-wrap.md h4 {
-    font-size: 16rem !important;
+    font-size: 18rem !important;
     margin-bottom: 24px !important;
   }
   #home .main .card-wrap.md .service-items {
     margin: auto auto 0;
   }
   #home .main .card-wrap.md .service-items .service {
-    width: 40vw;
-    height: 40vw;
+    width: 65vw;
+    height: 65vw;
   }
   #home .main .card-wrap.sm {
     width: 73.4vw;
@@ -3999,27 +4005,26 @@ img {
   }
   #home .main .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(1) {
     left: 0px !important;
-    top: 38.5vw !important;
+    top: 52vw !important;
     z-index: 4;
     width: 76vw;
   }
   #home .main .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(2) {
     left: 13vw !important;
-    top: 66vw !important;
+    top: 83vw !important;
     z-index: 1;
     width: 68vw;
   }
   #home .main .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(3) {
     left: unset !important;
-    top: 26.8vw !important;
+    top: 33vw !important;
     z-index: 3;
     width: 71vw;
-    border-radius: 30px;
     right: 0;
   }
   #home .main .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(4) {
     left: 2vw !important;
-    top: 7vw !important;
+    top: 11vw !important;
     z-index: 2;
     width: 53vw;
   }
@@ -4029,6 +4034,10 @@ img {
   }
   #home .main .section-4 .section-wrap .section-inner-wrap .card-wrap {
     order: 2;
+    margin: auto;
+    position: static;
+    top: unset;
+    right: unset;
   }
   #home .main .section-4 .section-wrap .section-inner-wrap .service-info {
     width: 100% !important;
@@ -4040,6 +4049,15 @@ img {
   }
   #home .main .section-4 .section-wrap .section-inner-wrap .service-info p {
     font-size: 20rem !important;
+  }
+  #home .main .section-4 .section-wrap .section-inner-wrap .service-info div {
+    margin: 0 !important;
+  }
+  #home .main .section-4 .section-wrap .section-inner-wrap .service-info div + p {
+    margin-bottom: 24px !important;
+  }
+  #home .main .section-4 .section-wrap .section-inner-wrap .service-info > p:last-child {
+    margin-bottom: 24px !important;
   }
   #home .main .section-5 .section-wrap .section-inner-wrap {
     padding-bottom: 60px !important;
@@ -4089,72 +4107,6 @@ img {
     width: 16px !important;
     height: 16px !important;
   }
-  #home .main .section-6 .section-wrap .section-inner-wrap {
-    position: unset !important;
-    height: unset !important;
-    justify-content: space-between !important;
-  }
-  #home .main .section-6 .section-wrap .section-inner-wrap .tile-wrap {
-    position: relative !important;
-    top: unset !important;
-    width: 100%;
-    min-height: 120vw !important;
-  }
-  #home .main .section-6 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(1) {
-    left: 0px !important;
-    top: 38.5vw !important;
-    z-index: 4;
-    width: 76vw;
-  }
-  #home .main .section-6 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(2) {
-    left: 13vw !important;
-    top: 66vw !important;
-    z-index: 1;
-    width: 68vw;
-  }
-  #home .main .section-6 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(3) {
-    left: unset !important;
-    top: 26.8vw !important;
-    z-index: 3;
-    width: 71vw;
-    border-radius: 30px;
-    right: 0;
-  }
-  #home .main .section-6 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(4) {
-    left: 2vw !important;
-    top: 7vw !important;
-    z-index: 2;
-    width: 53vw;
-  }
-  #home .main .section-6 .section-wrap .section-inner-wrap .btn-wrap {
-    margin-left: 12px !important;
-    display: block;
-  }
-  #home .main .section-6 .section-wrap .section-inner-wrap .btn-wrap .next-btn {
-    width: 32px !important;
-    height: 32px !important;
-    background-size: 32px !important;
-  }
-  #home .main .section-6 .section-wrap .section-inner-wrap .btn-wrap .badge {
-    display: block;
-  }
-  #home .main .section-group-2 .card-wrap.lg .service-items .service {
-    height: 79.4vw !important;
-  }
-  #home .main .section-group-2 .card-wrap.md {
-    padding-bottom: 8px !important;
-  }
-  #home .main .section-group-2 .card-wrap.md .service-items .service {
-    width: 38.5vw !important;
-    height: 43.5vw !important;
-  }
-  #home .main .section-group-2 .card-wrap.sm {
-    padding-bottom: 36px !important;
-  }
-  #home .main .section-group-2 .card-wrap.sm .service-items .service {
-    width: 61vw !important;
-    height: 63vw !important;
-  }
   #home .main .section-group-2 .section-3 .section-wrap .section-inner-wrap {
     position: unset !important;
     height: unset !important;
@@ -4166,53 +4118,29 @@ img {
     min-height: 155vw !important;
   }
   #home .main .section-group-2 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(1) {
-    left: 0px !important;
-    top: 7vw !important;
-    z-index: 1;
+    left: 10vw !important;
+    top: 14vw !important;
+    z-index: 3;
     width: 66vw !important;
   }
   #home .main .section-group-2 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(2) {
-    left: 14vw !important;
-    top: 32vw !important;
-    z-index: 2;
-    width: 37vw !important;
-  }
-  #home .main .section-group-2 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(3) {
-    left: 42vw !important;
-    top: 18vw !important;
-    z-index: 3;
-    width: 37vw !important;
-    border-radius: 30px;
-  }
-  #home .main .section-group-2 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(4) {
-    left: 0vw !important;
-    top: 82vw !important;
-    z-index: 5;
-    width: 80vw !important;
-  }
-  #home .main .section-group-2 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(5) {
     left: unset !important;
-    top: 111vw !important;
-    z-index: 4;
-    width: 76vw !important;
+    top: 10vw !important;
+    z-index: 2;
+    width: 35vw !important;
     right: 0;
   }
-  #home .main .section-group-3 .card-wrap.lg .service-items .service {
-    height: 75.7vw !important;
+  #home .main .section-group-2 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(3) {
+    left: 0 !important;
+    top: 46vw !important;
+    z-index: 1;
+    width: 67vw !important;
   }
-  #home .main .section-group-3 .card-wrap.md {
-    padding-bottom: 8px !important;
-  }
-  #home .main .section-group-3 .card-wrap.md .service-items .service {
-    width: 38.5vw !important;
-    height: 38.5vw !important;
-  }
-  #home .main .section-group-3 .card-wrap.sm {
-    padding-bottom: 24px !important;
-  }
-  #home .main .section-group-3 .card-wrap.sm .service-items .service {
-    width: 61vw !important;
-    height: 61vw !important;
+  #home .main .section-group-2 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(4) {
+    left: 4vw !important;
+    top: 79vw !important;
+    z-index: 0;
+    width: 80vw !important;
   }
   #home .main .section-group-3 .section-3 .section-wrap .section-inner-wrap {
     position: unset !important;
@@ -4225,53 +4153,29 @@ img {
     min-height: 155vw !important;
   }
   #home .main .section-group-3 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(1) {
-    left: 0px !important;
-    top: 7vw !important;
-    z-index: 1;
-    width: 66vw !important;
+    left: 12vw !important;
+    top: 11vw !important;
+    z-index: 2;
+    width: 67vw !important;
   }
   #home .main .section-group-3 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(2) {
-    left: 14vw !important;
-    top: 32vw !important;
-    z-index: 2;
+    left: 0vw !important;
+    top: 25vw !important;
+    z-index: 3;
     width: 37vw !important;
   }
   #home .main .section-group-3 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(3) {
-    left: 42vw !important;
-    top: 18vw !important;
-    z-index: 3;
-    width: 37vw !important;
-    border-radius: 30px;
-  }
-  #home .main .section-group-3 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(4) {
-    left: 0vw !important;
-    top: 81vw !important;
-    z-index: 5;
-    width: 80vw !important;
-  }
-  #home .main .section-group-3 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(5) {
     left: unset !important;
-    top: 110vw !important;
+    top: 38vw !important;
     z-index: 4;
-    width: 76vw !important;
+    width: 64vw !important;
     right: 0;
   }
-  #home .main .section-group-4 .card-wrap.lg .service-items .service {
-    height: 75.7vw !important;
-  }
-  #home .main .section-group-4 .card-wrap.md {
-    padding-bottom: 8px !important;
-  }
-  #home .main .section-group-4 .card-wrap.md .service-items .service {
-    width: 38.5vw !important;
-    height: 38.5vw !important;
-  }
-  #home .main .section-group-4 .card-wrap.sm {
-    padding-bottom: 24px !important;
-  }
-  #home .main .section-group-4 .card-wrap.sm .service-items .service {
-    width: 61vw !important;
-    height: 61vw !important;
+  #home .main .section-group-3 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(4) {
+    left: 4vw !important;
+    top: 79vw !important;
+    z-index: 1;
+    width: 80vw !important;
   }
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap {
     position: unset !important;
@@ -4284,42 +4188,36 @@ img {
     min-height: 187vw !important;
   }
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(1) {
-    left: 0px !important;
-    top: 7vw !important;
+    left: 8vw !important;
+    top: 40vw !important;
     z-index: 1;
     width: 66vw !important;
   }
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(2) {
-    left: 14vw !important;
-    top: 32vw !important;
+    left: unset !important;
+    top: 18vw !important;
     z-index: 2;
     width: 32vw !important;
+    right: 5vw;
   }
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(3) {
-    left: 42vw !important;
-    top: 18vw !important;
+    left: 0 !important;
+    top: 52vw !important;
     z-index: 3;
-    width: 32vw !important;
-    border-radius: 30px;
+    width: 74vw !important;
   }
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(4) {
-    left: 3vw !important;
-    top: 75vw !important;
-    z-index: 5;
-    width: 80vw !important;
+    left: 0 !important;
+    top: 11vw !important;
+    z-index: 0;
+    width: 74vw !important;
   }
   #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(5) {
     left: unset !important;
-    top: 99vw !important;
+    top: 114vw !important;
     z-index: 4;
-    width: 76vw !important;
+    width: 83vw !important;
     right: 0;
-  }
-  #home .main .section-group-4 .section-3 .section-wrap .section-inner-wrap .tile-wrap.app ul li:nth-of-type(6) {
-    left: -4vw !important;
-    top: 127vw !important;
-    z-index: 1;
-    width: 76vw !important;
   }
   /*========== ABOUT US ==========*/
   #aboutus .visual-banner.scroll .section-wrap .section-inner-wrap h1 .h-line {
