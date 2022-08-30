@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="metabeat.io">
+    <meta property="og:title" content="Here. This is Metabeat.">
+    <meta property="og:image" content="images/og_image.png">
+    <meta property="og:description" content="Experience new distance with your favorite artists’ NFT!">
+    <meta property="og:site_name" content="METABEAT">
+
     <title> </title>
     <link type="text/css" media="all" rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.6.0.js"></script>
@@ -68,9 +76,9 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#">
+                        <a href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction" target="_blank">
                             <span>White paper </span>
-                            <i>Typing hard ,For those of you who<br>
+                            <i>Typing hard, For those of you who<br>
                                 want to know more about MetaBeat.</i>
                         </a>
                     </li>
@@ -79,8 +87,8 @@
             <div class="download-app-btn-wrap" id="header-download-btn">
                 <button class="download-app-btn">Download the app</button>
                 <ul>
-                    <li class="nav-item dropdown"><a href="#"><span>Google Play Store</span></a></li>
-                    <li class="nav-item dropdown"><a href="#"><span>Apple App Store</span></a></li>
+                    <li class="nav-item dropdown"><a href="https://metabeat.io/apps/and/app-release.apk"><span>Google Play Store</span></a></li>
+                    <li class="nav-item dropdown"><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist"><span>Apple App Store</span></a></li>
                 </ul>
             </div>
             <button class="navbar-toggler" type="button">Navigation Toggler</button>
@@ -130,7 +138,7 @@
                                 <p>Hi. This is MetaBeat Email address.</p>
                                 <p><strong>Recipient</strong><br>YOU</p>
                                 <div class="mailbox">
-                                    <a href="#">Received mailbox</a>
+                                    <a>Received mailbox</a>
                                 </div>
                             </div>
                             <div class="channel-contents-wrap">
@@ -316,30 +324,30 @@
             <div class="fnb-info">
                 <div class="fnb-etc-info">
                     <ul class="channel">
-                        <li><a href="#"><img src="/images/fnb_channel_medium.png" alt="Go to Medium"></a></li>
-                        <li><a href="#"><img src="/images/fnb_channel_discord.png" alt="Go to Discord"></a></li>
-                        <li><a href="#"><img src="/images/fnb_channel_twitter.png" alt="Go to Twitter"></a></li>
-                        <li><a href="#"><img src="/images/fnb_channel_telegram.png" alt="Go to Telegram"></a></li>
-                        <li><a href="#"><img src="/images/fnb_channel_linkedin.png" alt="Go to Linked In"></a></li>
+                        <li><a href="https://medium.com/@MetabeatOffl" target="_blank"><img src="./images/fnb_channel_medium.png" title="Go to Medium"></a></li>
+                        <li><a href="https://discord.com/invite/9X9GKFxRpH" target="_blank"><img src="./images/fnb_channel_discord.png" title="Go to Discord"></a></li>
+                        <li><a href="https://twitter.com/Metabeatoffl" target="_blank"><img src="./images/fnb_channel_twitter.png" title="Go to Twitter"></a></li>
+                        <li><a href="https://t.me/metabeatoffl" target="_blank"><img src="./images/fnb_channel_telegram.png" title="Go to Telegram"></a></li>
+                        <li><a href="https://t.me/metabeatoffl" target="_blank"><img src="./images/fnb_channel_linkedin.png" title="Go to Linked In"></a></li>
                     </ul>
                     <ul class="fnb-etc">
-                        <li class="disabled"><a href="#">IOS Download</a></li>
-                        <li><a href="#">White Paper</a></li>
-                        <li class="disabled"><a href="#">Android Download</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist">IOS Download</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="https://metabeat.io/apps/and/app-release.apk">Android Download</a></li>
+                        <li><a href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction" target="_blank">White Paper</a></li>
                     </ul>
                 </div>
                 <div class="fnb">
                     <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">App guide</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="home.html">Service System</a></li>
+                        <li><a href="aboutus.html">About us</a></li>
+                        <li><a href="contactus.html">Contact us</a></li>
+                        <li><a href="https://metabeat.gitbook.io/terms-and-conditions/" target="_blank">Terms and Conditions</a></li>
                     </ul>
                 </div>
             </div>
             <div class="fnb-logo-info">
-                <a href="#"><img src="images/fnb_bi.png" alt="Metabeat Logo"></a>
+                <a href="home.html"><img src="images/fnb_bi.png" title="Metabeat Logo"></a>
             </div>
             <div class="copyright-info">
                 <p class="company-name">MetaBeat<br> 06103</p>
@@ -382,11 +390,11 @@
             document.body.removeChild(textarea);
         }
 
-        var copyBtn = $(this);
-        copyBtn.addClass("copy-success").empty().append("<i class=\"icon copy\">Icon</i> Copy Complete!");
+        var $copyBtn = $(this);
+        $copyBtn.addClass("copy-success").empty().append("<i class=\"icon copy\">Icon</i> Copy Complete!");
 
         setTimeout(function () {
-            copyBtn.removeClass("copy-success").empty().append("<i class=\"icon copy\">Icon</i> Copy address");
+            $copyBtn.removeClass("copy-success").empty().append("<i class=\"icon copy\">Icon</i> Copy address");
         }, 3000)
     })
 </script>
