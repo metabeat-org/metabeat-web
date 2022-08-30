@@ -1229,38 +1229,6 @@ img {
 #home .main .section-4 .section-wrap .section-inner-wrap .service-info > div + p {
   margin-bottom: 24vh;
 }
-#home .main .flip-wrap {
-  perspective: 1000px;
-}
-#home .main .flip {
-  position: relative;
-  margin: 0 auto;
-  width: 400px;
-  min-height: 620px;
-  transform-style: preserve-3d;
-}
-#home .main .flip .front, #home .main .flip .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transition: 0.5s linear;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#home .main .flip .front {
-  z-index: 2;
-}
-#home .main .flip .back {
-  transform: rotateY(-180deg);
-}
-#home .main .flip.hover .front {
-  transform: rotateY(180deg);
-}
-#home .main .flip.hover .back {
-  transform: rotateY(0deg);
-}
 #home .main .section-5 .section-wrap {
   padding-bottom: 100px;
 }
@@ -1315,6 +1283,38 @@ img {
   min-height: 620px;
   margin: auto;
   transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip-wrap {
+  perspective: 1000px;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip {
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+  min-height: 620px;
+  transform-style: preserve-3d;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip .front, #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 0.5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip .front {
+  z-index: 2;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip .back {
+  transform: rotateY(-180deg);
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip.hover .front {
+  transform: rotateY(180deg);
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip.hover .back {
+  transform: rotateY(0deg);
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.sm {
   margin: auto auto;
@@ -4075,32 +4075,58 @@ img {
   #home .main .section-5 .section-wrap .section-inner-wrap .service-title .badge {
     display: block;
   }
-  #home .main .section-5 .section-wrap .section-inner-wrap .card-slider {
-    height: 110vw !important;
-    justify-content: center !important;
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
-  #home .main .section-5 .section-wrap .section-inner-wrap .card-slider .card-wrap {
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper {
+    height: 110vw;
+  }
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide {
     width: 73.4vw !important;
     min-height: 99.5vw !important;
-    margin: 0 !important;
-    position: absolute;
   }
-  #home .main .section-5 .section-wrap .section-inner-wrap .card-slider .card-wrap .service {
-    width: 60vw !important;
-    height: 60vw !important;
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .flip {
+    width: 73.4vw;
+    min-height: 99.5vw;
   }
-  #home .main .section-5 .section-wrap .section-inner-wrap .card-slider .card-wrap:nth-of-type(1) {
-    transform: matrix(1, -0.05, 0.05, 1, 0, 6);
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md {
+    width: 73.4vw !important;
+    min-height: 99.5vw !important;
+    padding: 24px !important;
   }
-  #home .main .section-5 .section-wrap .section-inner-wrap .card-slider .card-wrap:nth-of-type(2) {
-    z-index: 1;
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md h2 {
+    font-size: 22rem !important;
   }
-  #home .main .section-5 .section-wrap .section-inner-wrap .card-slider .card-wrap:nth-of-type(3) {
-    transform: matrix(1, 0.1, -0.1, 1, 0, 6);
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md .service-items .service {
+    width: 20vw !important;
+    height: 20vw !important;
+  }
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container.card-unfold .swiper-wrapper .swiper-slide:nth-of-type(1) {
+    transform: matrix(1, -0.06, 0.06, 1, 0, 0) !important;
+    z-index: 3;
+    transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+  }
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container.card-unfold .swiper-wrapper .swiper-slide:nth-of-type(2) {
+    transform: matrix(0.99, 0.1, -0.1, 0.99, 0, 0) translate(-82vw, 45px) !important;
+    z-index: 2;
+    transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+  }
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container.card-unfold .swiper-wrapper .swiper-slide:nth-of-type(2) .card-wrap.sm {
+    background-color: #F3F3F3;
+  }
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container.card-unfold .swiper-wrapper .swiper-slide:nth-of-type(3) {
+    transform: matrix(1, 0, 0, 1, 0, 0) translate(-162vw, 2px) !important;
+    transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
+  }
+  #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container.card-unfold .swiper-wrapper .swiper-slide:nth-of-type(3) .card-wrap.sm {
+    background-color: #EBEBEB;
   }
   #home .main .section-5 .section-wrap .section-inner-wrap .tooltip {
     height: 36px !important;
     font-size: 14rem !important;
+    bottom: 15px;
   }
   #home .main .section-5 .section-wrap .section-inner-wrap .tooltip:before {
     top: 0px !important;
