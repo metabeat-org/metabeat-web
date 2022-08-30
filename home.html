@@ -522,7 +522,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tooltip">Click to open these card</div>
+                        <div class="tooltip shout-out-card">Click to open these card</div>
                     </div>
                 </div>
             </section>
@@ -715,7 +715,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tooltip">Click to open these card</div>
+                        <div class="tooltip drop-card">Click to open these card</div>
                     </div>
                 </div>
             </section>
@@ -907,7 +907,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tooltip">Click to open these card </div>
+                        <div class="tooltip mingle-card">Click to open these card </div>
                     </div>
                 </div>
             </section>
@@ -1038,9 +1038,9 @@
     // section-group-1
     $('#shoutOutCardBtn').on("click", "", function () {
         $('.section-group-1 .section-5 .shoutout-swiper').removeClass('card-unfold');
+        $('.shout-out-card').addClass('tooltip-hide');
 
         new Swiper('.section-group-1 .section-5 .swiper-container', {
-            // scrollbar: '.swiper-scrollbar',
             scrollbarHide: true,
             slidesPerView: 'auto',
             centeredSlides: true,
@@ -1059,9 +1059,9 @@
     // section-group-2
     $('#dropCardBtn').on("click", "", function () {
         $('.section-group-2 .section-5 .shoutout-swiper').removeClass('card-unfold');
+        $('.drop-card').addClass('tooltip-hide');
 
         new Swiper('.section-group-2 .section-5 .swiper-container', {
-            // scrollbar: '.swiper-scrollbar',
             scrollbarHide: true,
             slidesPerView: 'auto',
             centeredSlides: true,
@@ -1081,9 +1081,9 @@
     // section-group-3
     $('#mingleCardBtn').on("click", "", function () {
         $('.section-group-3 .section-5 .shoutout-swiper').removeClass('card-unfold');
+        $('.mingle-card').addClass('tooltip-hide');
 
         new Swiper('.section-group-3 .section-5 .swiper-container', {
-            // scrollbar: '.swiper-scrollbar',
             scrollbarHide: true,
             slidesPerView: 'auto',
             centeredSlides: true,
