@@ -3165,6 +3165,9 @@ img {
   margin-left: 102px;
   line-height: 1.3;
 }
+#contactus .main .section-6 .section-wrap {
+  padding-bottom: 400px;
+}
 #contactus .main .section-6 .section-wrap .section-inner-wrap .channel-wrap {
   display: flex;
   flex-direction: row;
@@ -4297,6 +4300,7 @@ img {
     height: 49.2vw !important;
   }
   #aboutus .main .section-1 .info {
+    width: 100% !important;
     margin: 48px 0 0 !important;
   }
   #aboutus .main .section-1 .info h2 {
