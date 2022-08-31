@@ -220,9 +220,24 @@
 
 
             // scroll
-            var $shoutOutsections = $(".section-group-1 .section-4").offset().top;
-
-            console.log($shoutOutsections, window.scrollTo())
+//             $(window).scroll(function(){
+//                 const nowScrollTop = $(window).scrollTop();
+//
+//                 if (nowScrollTop === 0) {
+//                     $('.main').addClass('scroll');
+//                     $('.visual-banner').addClass('scroll');
+//                 } else {
+//                     $('.main').removeClass('scroll');
+//                     $('.visual-banner').removeClass('scroll');
+//                 }
+//
+//                 var $shoutOutSections = $(".section-group-1 .section-4.now")[0]
+//
+//                 // console.log($shoutOutSections)
+//                 if (!!$shoutOutSections) {
+//                 console.log(`now> ${nowScrollTop}, view> ${window.innerHeight * 0.01 * 50}, top> ${$shoutOutSections.scrollHeight}`)
+//                 }
+//             });
 
         });
     </script>
