@@ -32,16 +32,8 @@
             // Contact Us 페이지에 대한 스크립트만 적어주세요
 
             $(window).scroll(function(){
-                const nowScrollTop = $(window).scrollTop();
-
-                if (nowScrollTop === 0) {
-                    $('.main').addClass('scroll');
-                    $('.visual-banner').addClass('scroll');
-                } else {
-                    $('.main').removeClass('scroll');
-                }
-
-
+                $('.main').addClass('scroll');
+                $('.visual-banner').addClass('scroll');
             });
         });
     </script>
