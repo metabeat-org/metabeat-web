@@ -41,8 +41,13 @@
             });
 
             $(window).scroll(function(){
+                const nowScrollTop = $(window).scrollTop();
+
+                if (nowScrollTop === 0) {
                     $('.main').addClass('scroll');
-                    $('.visual-banner').addClass('scroll');
+                } else {
+                    $('.main').removeClass('scroll');
+                }
             });
         });
     </script>
