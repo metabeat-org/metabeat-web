@@ -531,10 +531,14 @@ img { object-fit: contain; }
                   }
                 }
 
-                .card-wrap.md { width: 400px !important; min-height: 620px !important; margin: auto auto; padding: 28px;
+                .card-wrap.md { width: 400px !important; min-height: 620px !important; height: 620px !important; max-height: 620px !important; overflow-x: hidden; overflow-y: auto; margin: auto auto; padding: 28px;
                   //.service { width: 330px; height: 330px;}
                   p { font-weight: 500; font-size: 18rem; line-height: 1.15; }
                   .service { width: 220px; height: 220px; margin-top: auto }
+                  &::-webkit-scrollbar { width: 6px; }
+                  &::-webkit-scrollbar-track { background-color: transparent; }
+                  &::-webkit-scrollbar-thumb { border-radius: 3px; background-color: #bbb; }
+                  &::-webkit-scrollbar-button { width: 0; height: 0; }
                 }
 
                 //&:nth-of-type(1) { transform: translateX(-30px); }
@@ -830,8 +834,7 @@ img { object-fit: contain; }
           .team-wrap { position: relative; padding: 100px 64px 24px; width: 100%; height: 620px; margin: 20px auto;
             .team-list { display: flex;
               .team { width: 260px; margin: 0 50px;
-                .team-photo { width: 255px; height: 375px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) /*, url(Group.png)*/;
-                  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1)); backdrop-filter: blur(54px); border-radius: 32px; margin-bottom: 34px;
+                .team-photo { width: 255px; height: 375px; background: #FCFCFC; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); backdrop-filter: blur(54px); border-radius: 32px; margin-bottom: 34px;
                   img { width: 100%; border-radius: 32px; overflow: hidden; }
                 }
                 .team-info { display: flex; justify-content: space-between;
@@ -844,7 +847,6 @@ img { object-fit: contain; }
                     &.linkedin { background: url("../images/contact_channel_linkedin.png") center center no-repeat; background-size: 22px; }
                   }
                 }
-                &:last-of-type {  width: 432px !important; padding-right: 64px;}
               }
             }
           }
@@ -881,27 +883,39 @@ img { object-fit: contain; }
         .section-inner-wrap { display: flex; flex-direction: column; justify-content: flex-start;
           h2 { text-align: center; }
           .partners { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; gap: 180px 200px; margin-top: 180px; margin-bottom: 100px;
-            div { width: 180px; position: relative; top: 100px; opacity: 1; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;}
+            div { width: 180px; position: relative; top: 200px; opacity: 1; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;}
           }
         }
       }
       &.now {
         .partners {
           div:nth-of-type(1) { top: 0 !important; opacity: 1 !important; transition-delay: 0ms !important; }
-          div:nth-of-type(2) { top: 0 !important; opacity: 1 !important; transition-delay: 100ms !important; }
-          div:nth-of-type(3) { top: 0 !important; opacity: 1 !important; transition-delay: 200ms !important; }
-          div:nth-of-type(4) { top: 0 !important; opacity: 1 !important; transition-delay: 300ms !important; }
-          div:nth-of-type(5) { top: 0 !important; opacity: 1 !important; transition-delay: 400ms !important; }
-          div:nth-of-type(6) { top: 0 !important; opacity: 1 !important; transition-delay: 500ms !important; }
-          div:nth-of-type(7) { top: 0 !important; opacity: 1 !important; transition-delay: 600ms !important; }
-          div:nth-of-type(8) { top: 0 !important; opacity: 1 !important; transition-delay: 700ms !important; }
-          div:nth-of-type(9) { top: 0 !important; opacity: 1 !important; transition-delay: 800ms !important; }
-          div:nth-of-type(10) { top: 0 !important; opacity: 1 !important; transition-delay: 900ms !important; }
-          div:nth-of-type(11) { top: 0 !important; opacity: 1 !important; transition-delay: 1000ms !important; }
-          div:nth-of-type(12) { top: 0 !important; opacity: 1 !important; transition-delay: 1100ms !important; }
-          div:nth-of-type(13) { top: 0 !important; opacity: 1 !important; transition-delay: 1200ms !important; }
-          div:nth-of-type(14) { top: 0 !important; opacity: 1 !important; transition-delay: 1300ms !important; }
-          div:nth-of-type(15) { top: 0 !important; opacity: 1 !important; transition-delay: 1400ms !important; }
+          div:nth-of-type(2) { top: 0 !important; opacity: 1 !important; transition-delay: 50ms !important; }
+          div:nth-of-type(3) { top: 0 !important; opacity: 1 !important; transition-delay: 100ms !important; }
+          div:nth-of-type(4) { top: 0 !important; opacity: 1 !important; transition-delay: 200ms !important; }
+          div:nth-of-type(5) { top: 0 !important; opacity: 1 !important; transition-delay: 250ms !important; }
+          div:nth-of-type(6) { top: 0 !important; opacity: 1 !important; transition-delay: 300ms !important; }
+          div:nth-of-type(7) { top: 0 !important; opacity: 1 !important; transition-delay: 400ms !important; }
+          div:nth-of-type(8) { top: 0 !important; opacity: 1 !important; transition-delay: 450ms !important; }
+          div:nth-of-type(9) { top: 0 !important; opacity: 1 !important; transition-delay: 500ms !important; }
+          div:nth-of-type(10) { top: 0 !important; opacity: 1 !important; transition-delay: 600ms !important; }
+          div:nth-of-type(11) { top: 0 !important; opacity: 1 !important; transition-delay: 650ms !important; }
+          div:nth-of-type(12) { top: 0 !important; opacity: 1 !important; transition-delay: 700ms !important; }
+          div:nth-of-type(13) { top: 0 !important; opacity: 1 !important; transition-delay: 800ms !important; }
+          div:nth-of-type(14) { top: 0 !important; opacity: 1 !important; transition-delay: 850ms !important; }
+          div:nth-of-type(15) { top: 0 !important; opacity: 1 !important; transition-delay: 900ms !important; }
+          div:nth-of-type(16) { top: 0 !important; opacity: 1 !important; transition-delay: 1000ms !important; }
+          div:nth-of-type(17) { top: 0 !important; opacity: 1 !important; transition-delay: 1050ms !important; }
+          div:nth-of-type(18) { top: 0 !important; opacity: 1 !important; transition-delay: 1100ms !important; }
+          div:nth-of-type(19) { top: 0 !important; opacity: 1 !important; transition-delay: 1200ms !important; }
+          div:nth-of-type(20) { top: 0 !important; opacity: 1 !important; transition-delay: 1250ms !important; }
+          div:nth-of-type(21) { top: 0 !important; opacity: 1 !important; transition-delay: 1300ms !important; }
+          div:nth-of-type(22) { top: 0 !important; opacity: 1 !important; transition-delay: 1400ms !important; }
+          div:nth-of-type(23) { top: 0 !important; opacity: 1 !important; transition-delay: 1450ms !important; }
+          div:nth-of-type(24) { top: 0 !important; opacity: 1 !important; transition-delay: 1500ms !important; }
+          div:nth-of-type(25) { top: 0 !important; opacity: 1 !important; transition-delay: 1600ms !important; }
+          div:nth-of-type(26) { top: 0 !important; opacity: 1 !important; transition-delay: 1650ms !important; }
+          div:nth-of-type(27) { top: 0 !important; opacity: 1 !important; transition-delay: 1700ms !important; }
         }
       }
     }
@@ -1801,7 +1815,6 @@ img { object-fit: contain; }
                       &.linkedin { background-size: 20px !important; }
                     }
                   }
-                  &:last-of-type { width: 274px !important; padding-right: 24px;}
                 }
               }
             }

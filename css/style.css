@@ -1332,6 +1332,10 @@ img {
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md {
   width: 400px !important;
   min-height: 620px !important;
+  height: 620px !important;
+  max-height: 620px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin: auto auto;
   padding: 28px;
 }
@@ -1344,6 +1348,20 @@ img {
   width: 220px;
   height: 220px;
   margin-top: auto;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md::-webkit-scrollbar {
+  width: 6px;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #bbb;
+}
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container.card-unfold .swiper-wrapper .swiper-slide {
   cursor: pointer;
@@ -2055,8 +2073,8 @@ img {
 #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-photo {
   width: 255px;
   height: 375px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1));
+  background: #FCFCFC;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(54px);
   border-radius: 32px;
   margin-bottom: 34px;
@@ -2102,10 +2120,6 @@ img {
 #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin {
   background: url("../images/contact_channel_linkedin.png") center center no-repeat;
   background-size: 22px;
-}
-#aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type {
-  width: 432px !important;
-  padding-right: 64px;
 }
 #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap {
   position: relative;
@@ -2184,7 +2198,7 @@ img {
 #aboutus .main .section-6 .section-wrap .section-inner-wrap .partners div {
   width: 180px;
   position: relative;
-  top: 100px;
+  top: 200px;
   opacity: 1;
   transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
 }
@@ -2196,72 +2210,132 @@ img {
 #aboutus .main .section-6.now .partners div:nth-of-type(2) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 100ms !important;
+  transition-delay: 50ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(3) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 200ms !important;
+  transition-delay: 100ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(4) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 300ms !important;
+  transition-delay: 200ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(5) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 400ms !important;
+  transition-delay: 250ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(6) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 500ms !important;
+  transition-delay: 300ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(7) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 600ms !important;
+  transition-delay: 400ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(8) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 700ms !important;
+  transition-delay: 450ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(9) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 800ms !important;
+  transition-delay: 500ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(10) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 900ms !important;
+  transition-delay: 600ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(11) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 1000ms !important;
+  transition-delay: 650ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(12) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 1100ms !important;
+  transition-delay: 700ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(13) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 1200ms !important;
+  transition-delay: 800ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(14) {
   top: 0 !important;
   opacity: 1 !important;
-  transition-delay: 1300ms !important;
+  transition-delay: 850ms !important;
 }
 #aboutus .main .section-6.now .partners div:nth-of-type(15) {
   top: 0 !important;
   opacity: 1 !important;
+  transition-delay: 900ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(16) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1000ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(17) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1050ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(18) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1100ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(19) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1200ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(20) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1250ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(21) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1300ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(22) {
+  top: 0 !important;
+  opacity: 1 !important;
   transition-delay: 1400ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(23) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1450ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(24) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1500ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(25) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1600ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(26) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1650ms !important;
+}
+#aboutus .main .section-6.now .partners div:nth-of-type(27) {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition-delay: 1700ms !important;
 }
 #aboutus .main .section-7 {
   margin-top: 100px;
@@ -4297,10 +4371,6 @@ img {
   }
   #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team .team-info .channel.linkedin {
     background-size: 20px !important;
-  }
-  #aboutus .main .section-4 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type, #aboutus .main .section-5 .section-wrap .section-inner-wrap .team-wrap .team-list .team:last-of-type {
-    width: 274px !important;
-    padding-right: 24px;
   }
   #aboutus .main .section-4 .section-wrap .section-inner-wrap .advisor-wrap, #aboutus .main .section-5 .section-wrap .section-inner-wrap .advisor-wrap {
     padding: 65px 24px 24px !important;
