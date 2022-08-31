@@ -1318,6 +1318,7 @@ img {
   font-weight: 500;
   font-size: 12rem;
   opacity: 0.3;
+  margin-bottom: 0;
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.sm p:after {
   width: 13px;
@@ -1339,9 +1340,14 @@ img {
   margin: auto auto;
   padding: 28px;
 }
+#home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md h4 {
+  font-weight: 600;
+  font-size: 20rem;
+  opacity: 0.3;
+}
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md p {
-  font-weight: 500;
-  font-size: 18rem;
+  font-weight: 400;
+  font-size: 16rem;
   line-height: 1.15;
 }
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper-container .swiper-wrapper .swiper-slide .card-wrap.md .service {
@@ -3546,20 +3552,10 @@ img {
     transform: scale(1);
     -webkit-transform: scale(1);
   }
-  10% {
-    opacity: 1;
-    transform: scale(1.4);
-    -webkit-transform: scale(1.6);
-  }
   50% {
     opacity: 1;
-    transform: scale(1.8);
+    transform: scale(2);
     -webkit-transform: scale(1.8);
-  }
-  90% {
-    opacity: 1;
-    transform: scale(1.4);
-    -webkit-transform: scale(1.6);
   }
   100% {
     opacity: 1;
@@ -3884,14 +3880,14 @@ img {
   #home .main .card-wrap.sm {
     width: 73.4vw;
     min-height: 99.5vw;
-    padding: 24px;
+    padding: 24px !important;
   }
   #home .main .card-wrap.sm h2 {
     font-size: 22rem !important;
   }
   #home .main .card-wrap.sm .service-items .service {
-    width: 60vw;
-    height: 60vw;
+    width: 56vw;
+    height: 56vw;
   }
   #home .main .tile-wrap.app ul li, #home .main .tile-wrap.app ul li img {
     border-radius: 20px !important;
