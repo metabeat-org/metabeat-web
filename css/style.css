@@ -4300,6 +4300,7 @@ img {
     height: 49.2vw !important;
   }
   #aboutus .main .section-1 .info {
+    width: 100% !important;
     margin: 48px 0 0 !important;
   }
   #aboutus .main .section-1 .info h2 {
