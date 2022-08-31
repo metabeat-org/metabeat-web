@@ -883,7 +883,7 @@ img { object-fit: contain; }
         .section-inner-wrap { display: flex; flex-direction: column; justify-content: flex-start;
           h2 { text-align: center; }
           .partners { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; gap: 180px 200px; margin-top: 180px; margin-bottom: 100px;
-            div { width: 180px; position: relative; top: 200px; opacity: 1; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;}
+            div { width: 180px; position: relative; top: 100px; opacity: 1; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;}
           }
         }
       }

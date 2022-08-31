@@ -2198,7 +2198,7 @@ img {
 #aboutus .main .section-6 .section-wrap .section-inner-wrap .partners div {
   width: 180px;
   position: relative;
-  top: 200px;
+  top: 100px;
   opacity: 1;
   transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 0ms;
 }
