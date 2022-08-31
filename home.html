@@ -1086,7 +1086,11 @@
 
     // section-group-1
     $('#shoutOutCardBtn').on("click", "", function () {
-        $('.section-group-1 .section-5 .shoutout-swiper').removeClass('card-unfold');
+        if (!$(this).hasClass('card-unfold')) {
+            return;
+        }
+
+        $(this).removeClass('card-unfold');
         $('.shout-out-card').addClass('tooltip-hide');
 
         var shoutOutCard = new Swiper('.section-group-1 .section-5 .swiper-container', {
@@ -1111,7 +1115,11 @@
 
     // section-group-2
     $('#dropCardBtn').on("click", "", function () {
-        $('.section-group-2 .section-5 .shoutout-swiper').removeClass('card-unfold');
+        if (!$(this).hasClass('card-unfold')) {
+            return;
+        }
+
+        $(this).removeClass('card-unfold');
         $('.drop-card').addClass('tooltip-hide');
 
         var dropCard = new Swiper('.section-group-2 .section-5 .swiper-container', {
@@ -1137,7 +1145,11 @@
 
     // section-group-3
     $('#mingleCardBtn').on("click", "", function () {
-        $('.section-group-3 .section-5 .shoutout-swiper').removeClass('card-unfold');
+        if (!$(this).hasClass('card-unfold')) {
+            return;
+        }
+
+        $(this).removeClass('card-unfold');
         $('.mingle-card').addClass('tooltip-hide');
 
         var mingleCard = new Swiper('.section-group-3 .section-5 .swiper-container', {
