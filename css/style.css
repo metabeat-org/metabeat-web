@@ -3899,22 +3899,26 @@ img {
   #home .main .section-group {
     margin: 0px !important;
   }
-  #home .main .section-1 .service-title {
+  #home .main .section-1 .section-inner-wrap {
+    width: 100% !important;
+    height: 80vh !important;
+  }
+  #home .main .section-1 .section-inner-wrap .service-title {
     width: 76vw !important;
     top: 30vw !important;
   }
-  #home .main .home-banner {
+  #home .main .section-1 .section-inner-wrap .home-banner {
     width: 84vw !important;
     height: 145vw !important;
     margin-top: 0 !important;
   }
-  #home .main .home-banner #lottie, #home .main .home-banner #lottie2 {
+  #home .main .section-1 .section-inner-wrap .home-banner #lottie, #home .main .section-1 .section-inner-wrap .home-banner #lottie2 {
     display: none;
   }
-  #home .main .home-banner img.w {
+  #home .main .section-1 .section-inner-wrap .home-banner img.w {
     display: none;
   }
-  #home .main .home-banner img.m {
+  #home .main .section-1 .section-inner-wrap .home-banner img.m {
     display: unset !important;
     margin-left: -3vw;
   }
@@ -4482,6 +4486,9 @@ img {
   }
   #contactus .visual-banner .section-wrap .section-inner-wrap h1 b span {
     font-size: 34rem;
+  }
+  #contactus .main {
+    padding-top: 0 !important;
   }
   #contactus .main.scroll {
     width: calc(100vw - 48px);
