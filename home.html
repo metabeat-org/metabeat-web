@@ -220,24 +220,32 @@
 
 
             // scroll
-//             $(window).scroll(function(){
-//                 const nowScrollTop = $(window).scrollTop();
-//
-//                 if (nowScrollTop === 0) {
-//                     $('.main').addClass('scroll');
-//                     $('.visual-banner').addClass('scroll');
-//                 } else {
-//                     $('.main').removeClass('scroll');
-//                     $('.visual-banner').removeClass('scroll');
-//                 }
-//
-//                 var $shoutOutSections = $(".section-group-1 .section-4.now")[0]
-//
-//                 // console.log($shoutOutSections)
-//                 if (!!$shoutOutSections) {
-//                 console.log(`now> ${nowScrollTop}, view> ${window.innerHeight * 0.01 * 50}, top> ${$shoutOutSections.scrollHeight}`)
-//                 }
-//             });
+            $(window).scroll(function(){
+                const nowScrollTop = $(window).scrollTop();
+
+                if (nowScrollTop === 0) {
+                    $('.main').addClass('scroll');
+                    $('.visual-banner').addClass('scroll');
+                } else {
+                    $('.main').removeClass('scroll');
+                    $('.visual-banner').removeClass('scroll');
+                }
+
+                // var $shoutOutSections = $(".section-group-1 .section-4.now")[0]
+
+                // console.log($shoutOutSections)
+                // if (!!$shoutOutSections) {
+                // console.log(`now> ${nowScrollTop}, view> ${window.innerHeight * 0.01 * 50}, top> ${$shoutOutSections.scrollHeight}`)
+                // }
+
+                var section1 = $("#section1")[0].scrollHeight
+                var section2 = $("#section2")[0].scrollHeight
+
+                console.log(section1, section2)
+                var $shoutOutPhase2 = $("#shout-out-phase-2")[0]
+
+                // console.log(">> ", $shoutOutPhase2.scrollHeight, nowScrollTop)
+            });
 
         });
     </script>
@@ -298,7 +306,7 @@
 
     <!-- ========== MAIN CONTENT ========== -->
     <main class="main">
-        <section class="section section-1">
+        <section class="section section-1" id="section1">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="service-title">
@@ -325,7 +333,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section-2">
+        <section class="section section-2" id="section2">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
                     <div class="tile-wrap app">
@@ -413,7 +421,7 @@
                                 <p>With SHOUT OUT, you’ll be getting tokenized rewards for what you’ve already been doing this entire time!</p>
                                 <p>When you register your personal social media accounts into the MetaBeat platform, our Shout_Out Bot will calculate your rewards based on engagement.</p>
                             </div>
-                            <p>But the rewards don’t stop there. <br>
+                            <p id="shout-out-phase-2">But the rewards don’t stop there. <br>
                                 You can continue receiving $BEAT Tokens by participating in all the missions and challenges that will be launched within the platform.</p>
                         </div>
                     </div>
@@ -492,7 +500,8 @@
                                                 <div class="card-wrap md">
                                                     <h4>Reward upgrade <br> with badge</h4>
                                                     <p>Not only do users get the opportunity to earn while supporting their favorite artist(s) through Fan activities, but also with challenges and missions that will be pushed through Shout Out!</p>
-                                                    <p>As users earn $BEAT, they will be able to invest these earnings toward their favorite songs and artists on Mingle! Fans will continue to earn the more they participate with MetaBeat’s badge system on Shout Out; if your level is to the roof, so will the additional compensations!</p>
+                                                    <p>As users earn $BEAT, they will be able to invest these earnings toward their favorite songs and artists on Mingle!</p>
+                                                    <p>Fans will continue to earn the more they participate with MetaBeat’s badge system on Shout Out; if your level is to the roof, so will the additional compensations!</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -531,7 +540,7 @@
                                                 <div class="card-wrap md">
                                                     <h4>VIF <br> Very Important Fan</h4>
                                                     <p>Shout Out exists to finally value the activities that the Fans pour their hearts into in order to support their favorite artist(s).</p>
-                                                    <p>This Fan activity is what has led the revitalization of pop culture and what has allowed it to become borderless! MetaBeat has created a reward system in Web3, where the connections between artist and Fans are truly valued! </p>
+                                                    <p>This Fan activity is what has led the revitalization of pop culture and what has allowed it to become borderless! MetaBeat has created a reward system in Web3, where the connections between artist and Fans are truly valued!</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -607,9 +616,9 @@
                         </div>
                         <div class="service-info">
                             <div>
-                                <h3>Become a true partner <br>with true ownership:</h3>
-                                <p>Receive your share of the reward generated from your IP ownerships.</p>
-                                <p>Through DROPS, fans have direct access to own a piece of music IP, amongst many other creative projects, from their favorite creators/artists through NFT auctions. </p>
+                                <h3>Become a true partner <br>with true community ownership:</h3>
+                                <p>Receive your share of rewards generated from your NFT ownerships.</p>
+                                <p>Through DROPS, fans have direct access to own a piece of the fan community backed by music IP, amongst many other creative projects, from their favorite creators/artists through NFT auctions.</p>
                             </div>
                         </div>
                     </div>
@@ -631,7 +640,8 @@
                                         <div id="" class="flip">
                                             <div class="front">
                                                 <div class="card-wrap sm">
-                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <h2>Fan2Earn</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -646,9 +656,11 @@
                                             </div>
                                             <div class="back">
                                                 <div class="card-wrap md">
-                                                    <h4>Unimaginable <br> Reality</h4>
-                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
-                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <h4>Fan2Earn</h4>
+                                                    <p>MetaBeat is a Polygon and Solana multi-chain, F2E (Fan2Earn), music IP NFT platform.</p>
+                                                    <p>MetaBeat gives traditional music IP NFT auctions a unique twist with a fan community-focused service.</p>
+                                                    <p>With MetaBeat, the Neighboring copyrights of the music IP are put into community NFTs.</p>
+                                                    <p>These rights are protected by Korean copyright law, which ensures the purchaser’s rights are protected for 70 years from the date of publishing.</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -669,7 +681,8 @@
                                         <div id="" class="flip">
                                             <div class="front">
                                                 <div class="card-wrap sm">
-                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <h2>Drops, <br> Going Global</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -684,9 +697,10 @@
                                             </div>
                                             <div class="back">
                                                 <div class="card-wrap md">
-                                                    <h4>Unimaginable <br> Reality</h4>
-                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
-                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <h4>Drops, <br> Going Global</h4>
+                                                    <p>If you thought MetaBeat would only be serving you K-pop, think again.</p>
+                                                    <p>Until now, most music IP NFT services have a small-scale IP pool but MetaBeat starts off strong with one of the largest ranges of K-Pop music genres.</p>
+                                                    <p>The party doesn’t stop there as MetaBeat actively continues to expand IPs from a global level not only in music sources, but also in endless forms of content.</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -707,7 +721,8 @@
                                         <div id="" class="flip">
                                             <div class="front">
                                                 <div class="card-wrap sm">
-                                                    <h2>Unimaginable <br> Reality</h2>
+                                                    <h2>Fanship to <br> Ownership</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -722,9 +737,8 @@
                                             </div>
                                             <div class="back">
                                                 <div class="card-wrap md">
-                                                    <h4>Unimaginable <br> Reality</h4>
-                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
-                                                    <p>MetaBeat’s Shout_Out_Bot calculates the user’s engagement rates on their linked social media accounts and converts that engagement into BEAT tokens ($BEAT).</p>
+                                                    <h4>Fanship to <br> Ownership</h4>
+                                                    <p>MetaBeat Drops make the NFT itself allowing users to have a more reliable and secure ownership, to focus more time on the rewards and Fan activity!</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -824,6 +838,7 @@
                                             <div class="front">
                                                 <div class="card-wrap sm">
                                                     <h2>Collect’em all!</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -839,8 +854,9 @@
                                             <div class="back">
                                                 <div class="card-wrap md">
                                                     <h4>Collect’em all!</h4>
-                                                    <p>At MetaBeat, we want our platform to be enjoyed by everyone not only as fans, but also, as collectors. After all this time supporting your favorite artist, isn’t it time for you to hold an even deeper connection? </p>
-                                                    <p>That’s why, regardless of the amount of the support, MetaBeat wants you to join in, via its own music NFT staking service, Mingle!</p>
+                                                    <p>At MetaBeat, we want our platform to be enjoyed by everyone not only as fans, but also, as collectors.</p>
+                                                    <p>After all this time supporting your favorite artist, isn’t it time for you to hold an even deeper connection?</p>
+                                                    <p>That’s why, regardless of the amount of the support, MetaBeat wants you to join in, via its own NFT staking service, Mingle!</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -861,7 +877,8 @@
                                         <div id="" class="flip">
                                             <div class="front">
                                                 <div class="card-wrap sm">
-                                                    <h2>Collect’em all!</h2>
+                                                    <h2>Show’em off!</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -876,9 +893,10 @@
                                             </div>
                                             <div class="back">
                                                 <div class="card-wrap md">
-                                                    <h4>Collect’em all!</h4>
-                                                    <p>At MetaBeat, we want our platform to be enjoyed by everyone not only as fans, but also, as collectors. After all this time supporting your favorite artist, isn’t it time for you to hold an even deeper connection? </p>
-                                                    <p>That’s why, regardless of the amount of the support, MetaBeat wants you to join in, via its own music NFT staking service, Mingle!</p>
+                                                    <h4>Show’em off!</h4>
+                                                    <p>Using $BEAT, users can stake their desired amount into available NFTs and receive their rewards based on their staked amount, without holding period requirements.</p>
+                                                    <p>With this, users will be able to withdraw their staked $BEAT (or add more if there is room available)!</p>
+                                                    <p>Users that participate in Mingle will have something to show off as these transactions will allow them to configure their own Mingle portfolio!</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -899,7 +917,8 @@
                                         <div id="" class="flip">
                                             <div class="front">
                                                 <div class="card-wrap sm">
-                                                    <h2>Collect’em all!</h2>
+                                                    <h2>An ecosystem for all</h2>
+                                                    <p>Click to Flip the card</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -914,9 +933,9 @@
                                             </div>
                                             <div class="back">
                                                 <div class="card-wrap md">
-                                                    <h4>Collect’em all!</h4>
-                                                    <p>At MetaBeat, we want our platform to be enjoyed by everyone not only as fans, but also, as collectors. After all this time supporting your favorite artist, isn’t it time for you to hold an even deeper connection? </p>
-                                                    <p>That’s why, regardless of the amount of the support, MetaBeat wants you to join in, via its own music NFT staking service, Mingle!</p>
+                                                    <h4>An ecosystem for all</h4>
+                                                    <p>The staking structure in Mingle gives support to the platform’s ecosystem, therefore, allows MetaBeat to be accessible to as many users as possible.</p>
+                                                    <p>With this structure, fans can get the effect of supporting their artist and the music they love most, without any commitments!</p>
                                                     <div class="service-items">
                                                         <div class="service">
                                                             <ul>
@@ -1020,6 +1039,7 @@
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="https://metabeat.io/apps/and/app-release.apk">Android Download</a></li>
                         <li><a href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction" target="_blank">White Paper</a></li>
+                        <li><a href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction" target="_blank">Powered by Polygon®</a></li>
                     </ul>
                 </div>
                 <div class="fnb">
@@ -1027,7 +1047,7 @@
                         <li><a href="home.html">Service System</a></li>
                         <li><a href="aboutus.html">About us</a></li>
                         <li><a href="contactus.html">Contact us</a></li>
-                        <li><a href="https://metabeat.gitbook.io/terms-and-conditions/" target="_blank">Terms and Conditions</a></li>
+                        <li><a href="https://polygon.technology/" target="_blank">Terms and Conditions</a></li>
                     </ul>
                 </div>
             </div>
