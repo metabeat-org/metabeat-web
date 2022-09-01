@@ -1434,7 +1434,7 @@ img { object-fit: contain; }
   /*========== HEADER ==========*/
   .header.active { background-color: transparent !important; }
   .header .header-wrap {
-    .navbar-brand { width: 36px; height: 36px; background: url("../images/gnb_bi_metabeat_blue_m.png") center center no-repeat; background-size: 36px !important; }
+    .navbar-brand { width: 70px; height: 36px; background: url("../images/gnb_bi_metabeat_blue_m.png") center center no-repeat; background-size: 70px 26px !important; }
     .navbar {
       ul { display: none;
         &.hide { display: none; }
@@ -1866,8 +1866,8 @@ img { object-fit: contain; }
 
   /*========== CONTACT US ==========*/
   #contactus {
-    .header .navbar-brand { width: 36px; height: 36px; background: url("../images/gnb_bi_metabeat_light_m.png") center center no-repeat; background-size: 36px !important; }
-    .header.active .navbar-brand { width: 36px; height: 36px; background: url("../images/gnb_bi_metabeat_blue_m.png") center center no-repeat; background-size: 36px !important; }
+    .header .navbar-brand { width: 70px; height: 36px; background: url("../images/gnb_bi_metabeat_light_m.png") center center no-repeat; background-size: 70px 26px !important; }
+    .header.active .navbar-brand { width: 70px; height: 36px; background: url("../images/gnb_bi_metabeat_blue_m.png") center center no-repeat; background-size: 70px 26px !important; }
     .header .navbar ul.show { }
     .header .navbar ul li a span { color: #111 !important; }
     .header .navbar-toggler { display: block; background: url("../images/gnb_menu_light.png") center center no-repeat; background-size: 31px; }

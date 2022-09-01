@@ -3635,10 +3635,10 @@ img {
     background-color: transparent !important;
   }
   .header .header-wrap .navbar-brand {
-    width: 36px;
+    width: 70px;
     height: 36px;
     background: url("../images/gnb_bi_metabeat_blue_m.png") center center no-repeat;
-    background-size: 36px !important;
+    background-size: 70px 26px !important;
   }
   .header .header-wrap .navbar ul {
     display: none;
@@ -4472,16 +4472,16 @@ img {
   }
   /*========== CONTACT US ==========*/
   #contactus .header .navbar-brand {
-    width: 36px;
+    width: 70px;
     height: 36px;
     background: url("../images/gnb_bi_metabeat_light_m.png") center center no-repeat;
-    background-size: 36px !important;
+    background-size: 70px 26px !important;
   }
   #contactus .header.active .navbar-brand {
-    width: 36px;
+    width: 70px;
     height: 36px;
     background: url("../images/gnb_bi_metabeat_blue_m.png") center center no-repeat;
-    background-size: 36px !important;
+    background-size: 70px 26px !important;
   }
   #contactus .header .navbar ul li a span {
     color: #111 !important;
