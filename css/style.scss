@@ -767,10 +767,10 @@ img { object-fit: contain; }
           }
         }
       }
-      &.now {
-        .movie { animation: scale 1500ms  cubic-bezier(0, 0.55, 0.45, 1) 300ms; -webkit-animation: scale 1500ms  cubic-bezier(0, 0.55, 0.45, 1)  300ms;
-          transform-origin: center; margin-top: 200px; }
-      }
+      //&.now {
+      //  .movie { animation: scale 1500ms  cubic-bezier(0, 0.55, 0.45, 1) 300ms; -webkit-animation: scale 1500ms  cubic-bezier(0, 0.55, 0.45, 1)  300ms;
+      //    transform-origin: center; margin-top: 200px; }
+      //}
     }
     .section-2 {
       .section-wrap {
@@ -1679,8 +1679,6 @@ img { object-fit: contain; }
           }
         }
       }
-
-
       //.section-6 {
       //  .section-wrap {
       //    .section-inner-wrap { position: unset !important; height: unset !important; justify-content: space-between !important;
