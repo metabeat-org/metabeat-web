@@ -740,7 +740,7 @@ img {
   font-weight: 500;
 }
 
-/*========== HOME ==========*/
+/*========== ABOUTUS ==========*/
 #aboutus .visual-banner {
   position: absolute;
   top: 0;
@@ -1886,7 +1886,7 @@ img {
   padding-bottom: 500px;
 }
 
-/*========== ABOUT US ==========*/
+/*========== HOME ==========*/
 #home .main .section-0 .section-wrap {
   padding-top: 0;
   padding-bottom: 100px;
@@ -2187,6 +2187,9 @@ img {
 #home .main .section-5 .section-wrap .section-inner-wrap .swiper {
   margin: 10px 0;
   height: 320px;
+}
+#home .main .section-6 .section-wrap {
+  padding-bottom: 300px;
 }
 #home .main .section-6 .section-wrap .section-inner-wrap {
   display: flex;
@@ -3812,7 +3815,7 @@ img {
     font-size: 10rem !important;
     font-weight: 500;
   }
-  /*========== HOME ==========*/
+  /*========== ABOUTUS ==========*/
   #aboutus .main .card-wrap {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(34px) !important;
@@ -4270,7 +4273,7 @@ img {
     width: 83vw !important;
     right: 0;
   }
-  /*========== ABOUT US ==========*/
+  /*========== HOME ==========*/
   #home .visual-banner.scroll .section-wrap .section-inner-wrap h1 .h-line {
     width: 70px !important;
     margin: 0 4px !important;
@@ -4427,6 +4430,9 @@ img {
   }
   #home .main .section-5 .section-inner-wrap {
     padding: 0 !important;
+  }
+  #home .main .section-6 .section-wrap {
+    padding: 100px !important;
   }
   #home .main .section-6 .section-inner-wrap {
     padding: 0 !important;

@@ -212,7 +212,7 @@ img { object-fit: contain; }
   }
 }
 
-/*========== HOME ==========*/
+/*========== ABOUTUS ==========*/
 #aboutus {
 
   // VISUAL BANNER
@@ -711,9 +711,8 @@ img { object-fit: contain; }
 }
 
 
-/*========== ABOUT US ==========*/
+/*========== HOME ==========*/
 #home {
-
 
   // MAIN
   .main {
@@ -891,7 +890,7 @@ img { object-fit: contain; }
       }
     }
     .section-6 {
-      .section-wrap {
+      .section-wrap {  padding-bottom: 300px;
         .section-inner-wrap { display: flex; flex-direction: column; justify-content: flex-start;
           h2 { text-align: center; }
           .partners { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; gap: 180px 200px; margin-top: 180px; margin-bottom: 100px;
@@ -1515,7 +1514,7 @@ img { object-fit: contain; }
     }
   }
 
-  /*========== HOME ==========*/
+  /*========== ABOUTUS ==========*/
   #aboutus {
     .main {
       .card-wrap { box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1) !important; backdrop-filter: blur(34px) !important; border-radius: 20px !important;
@@ -1771,7 +1770,7 @@ img { object-fit: contain; }
   }
 
 
-  /*========== ABOUT US ==========*/
+  /*========== HOME ==========*/
   #home {
 
     .visual-banner.scroll .section-wrap .section-inner-wrap h1 .h-line { width: 70px !important; margin: 0 4px !important; opacity: 1 !important; }
@@ -1859,6 +1858,7 @@ img { object-fit: contain; }
       }
 
       .section-5 .section-inner-wrap { padding: 0 !important; }
+      .section-6 .section-wrap { padding: 100px !important; }
       .section-6 .section-inner-wrap { padding: 0 !important; }
       .section-6 .partners { gap: 24vw 12vw !important; margin-top: 24px !important; }
       .section-6 .partners div { width: 18vw !important; }
