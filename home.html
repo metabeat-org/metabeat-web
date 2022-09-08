@@ -26,22 +26,224 @@
     <script type="text/javascript" async src="js/scroll.js"></script>
     <!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
     <script>
-        $(document).ready(function () {
-            $('.visual-banner').addClass('scroll');
-        });
-
         $(function() {
-            // Contact Us 페이지에 대한 스크립트만 적어주세요
+            // Home 페이지에 대한 스크립트만 적어주세요
 
+            // Bind App Menu
+            $("#appMenu").on("click", "a", function(e) {
+                e.preventDefault(); // Remove Anchor Tag Action
+                var $selected = $(this);
+                $("#appMenu a").removeClass("selected");
+                $selected.addClass("selected");
+
+                var selectedId = $selected.attr("id");
+                // $("#appMenuViewSection > li").hide();
+                // $("#" + selectedId + "View").show();
+
+                $("#appMenuViewSection > li").removeClass();
+                $("#" + selectedId + "View").addClass("slideup");
+            })
+
+            // Lottie
+            var homeLoop = bodymovin.loadAnimation({
+                container: document.getElementById('lottie'), // Required
+                path: './lottie/home-loop.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+                name: "Hello World", // Name for future reference. Optional.
+            })
+
+            var homeOnce = bodymovin.loadAnimation({
+                container: document.getElementById('lottie2'), // Required
+                path: './lottie/home-once.json', // Required
+                renderer: 'svg', // Required
+                loop: false, // Optional
+                autoplay: true, // Optional
+                name: "Hello World", // Name for future reference. Optional.
+            })
+
+            var shoutOut1 = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut1'), // Required
+                path: './lottie/shout-out-1.json', // Required
+                renderer: 'svg', // Required
+                loop: false, // Optional
+                autoplay: true, // Optional
+            })
+
+            var shoutOut2 = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut2'), // Required
+                path: './lottie/shout-out-2.json', // Required
+                renderer: 'svg', // Required
+                loop: false, // Optional
+                autoplay: true, // Optional
+            })
+
+            var shoutOut3_2_front = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut3_2_front'), // Required
+                path: './lottie/shout-out-3-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+            var shoutOut3_2_back = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut3_2_back'), // Required
+                path: './lottie/shout-out-3-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var shoutOut3_3_front = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut3_3_front'), // Required
+                path: './lottie/shout-out-3-3.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var shoutOut3_3_back = bodymovin.loadAnimation({
+                container: document.getElementById('shoutOut3_3_back'), // Required
+                path: './lottie/shout-out-3-3.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var drop3_1_front = bodymovin.loadAnimation({
+                container: document.getElementById('drop3_1_front'), // Required
+                path: './lottie/drop-3-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var drop3_1_back = bodymovin.loadAnimation({
+                container: document.getElementById('drop3_1_back'), // Required
+                path: './lottie/drop-3-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle1 = bodymovin.loadAnimation({
+                container: document.getElementById('mingle1'), // Required
+                path: './lottie/mingle-1.json', // Required
+                renderer: 'svg', // Required
+                loop: false, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle2 = bodymovin.loadAnimation({
+                container: document.getElementById('mingle2'), // Required
+                path: './lottie/mingle-2.json', // Required
+                renderer: 'svg', // Required
+                loop: false, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_1_front = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_1_front'), // Required
+                path: './lottie/mingle-3-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_1_back = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_1_back'), // Required
+                path: './lottie/mingle-3-1.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_2_front = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_2_front'), // Required
+                path: './lottie/mingle-3-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_2_back = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_2_back'), // Required
+                path: './lottie/mingle-3-2.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_3_front = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_3_front'), // Required
+                path: './lottie/mingle-3-3.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var mingle3_3_back = bodymovin.loadAnimation({
+                container: document.getElementById('mingle3_3_back'), // Required
+                path: './lottie/mingle-3-3.json', // Required
+                renderer: 'svg', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            })
+
+            var marketplace1 = bodymovin.loadAnimation({
+                container: document.getElementById('marketplace1'), // Required
+                path: './lottie/marketplace-1.json', // Required
+                renderer: 'svg', // Required
+                loop: false, // Optional
+                autoplay: true, // Optional
+            })
+
+            var marketplace2 = bodymovin.loadAnimation({
+                container: document.getElementById('marketplace2'), // Required
+                path: './lottie/marketplace-2.json', // Required
+                renderer: 'svg', // Required
+                loop: false, // Optional
+                autoplay: true, // Optional
+            })
+
+            // Section Download Button
+            $('#section-download-btn')
+                .on("click", "", function () {
+                    $('#section-download-btn ul').toggleClass('show');
+                })
+                .on("mouseleave", "", function(){
+                    $('#section-download-btn ul').removeClass('show');
+                });
+
+
+            // scroll
             $(window).scroll(function(){
                 const nowScrollTop = $(window).scrollTop();
 
                 if (nowScrollTop === 0) {
                     $('.main').addClass('scroll');
+                    $('.visual-banner').addClass('scroll');
                 } else {
                     $('.main').removeClass('scroll');
+                    $('.visual-banner').removeClass('scroll');
                 }
+
+                // var $shoutOutSections = $(".section-group-1 .section-4.now")[0]
+
+                // console.log($shoutOutSections)
+                // if (!!$shoutOutSections) {
+                // console.log(`now> ${nowScrollTop}, view> ${window.innerHeight * 0.01 * 50}, top> ${$shoutOutSections.scrollHeight}`)
+                // }
+
+                var section1 = $("#section1")[0].scrollHeight
+                var section2 = $("#section2")[0].scrollHeight
+
+                console.log(section1, section2)
+                var $shoutOutPhase2 = $("#shout-out-phase-2")[0]
+
+                // console.log(">> ", $shoutOutPhase2.scrollHeight, nowScrollTop)
             });
+
         });
     </script>
 </head>
@@ -50,7 +252,7 @@
 <div class="loader">
     <div class="loading-animation"></div>
 </div>
-<div class="page-wrapper" id="aboutus">
+<div class="page-wrapper" id="home">
     <!-- ========== HEADER ========== -->
     <header class="header">
         <div class="header-wrap container">
@@ -101,24 +303,78 @@
     </header>
     <!-- ========== END HEADER ========== -->
 
-    <section class="visual-banner">
-        <div class="section-wrap container">
-            <div class="section-inner-wrap">
-                <h1>
-                    <span class="int-1">Here. </span>
-                    <span class="int-2">We are </span> <br>
-                    <span class="int-3">the team </span>
-                    <span class="int-4">who made </span>  <br>
-                    <span class="int-5">New</span>
-                    <i class="h-line int-7"></i>
-                    <span class="int-6">Distance </span>
-                </h1>
-            </div>
-        </div>
-    </section>
 
     <!-- ========== MAIN CONTENT ========== -->
     <main class="main">
+
+        <section class="section section-0" id="section1">
+            <div class="section-wrap container">
+                <div class="section-inner-wrap">
+                    <div class="service-title">
+                        <img src="images/home_title.png" title="Let's Experience New Distance">
+                    </div>
+                    <div class="home-banner">
+                        <div id="lottie"></div>
+                        <div id="lottie2"></div>
+                        <img class="w" src="images/title-graphic.gif" >
+                        <img class="m" src="images/title-graphic-m.gif" >
+                    </div>
+                    <!--                    <div class="card-wrap">-->
+                    <!--                        <div class="service-items">-->
+                    <!--                            <div class="service">-->
+                    <!--                                <ul>-->
+                    <!--                                    <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>-->
+                    <!--                                    <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
+                    <!--                                    <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
+                    <!--                                    <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
+                    <!--                                </ul>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section section-6">
+            <div class="section-wrap container">
+                <div class="section-inner-wrap">
+                    <h2>We call them<br>
+                        <strong> The Investors / Partners</strong>
+                    </h2>
+                    <div class="partners">
+                        <div><img src="images/about_partner_ngc.png" alt="NGC Ventures"></div>
+                        <div><img src="images/about_partner_ac.png" alt="AC Capital"></div>
+                        <div><img src="images/about_partner_kucoin.png" alt="BUCOIN LABS"></div>
+                        <div><img src="images/about_partner_gbic.png" alt="GBIC"></div>
+                        <div><img src="images/about_partner_nexusone.png" alt="NEXUS ONE"></div>
+                        <div><img src="images/about_partner_alchemic.png" alt="alchemic INVESTMENTS"></div>
+                        <div><img src="images/about_partner_digifinex.png" alt="DIGIFINEX"></div>
+                        <div><img src="images/about_partner_alphanonce.png" alt="alphanonce"></div>
+                        <div><img src="images/about_partner_bci.png" alt="BLOCKCHAIN INTERNATIONAL"></div>
+                        <div><img src="images/about_partner_finngram.png" alt="Finngram"></div>
+                        <div><img src="images/about_partner_stc.png" alt="STCapital"></div>
+                        <div><img src="images/about_partner_crypto.png" alt="crypto.com"></div>
+                        <div><img src="images/about_partner_rbw.png" alt="rbw"></div>
+                        <div><img src="images/about_partner_wm.png" alt="WM ENTERTAINMENT"></div>
+                        <div><img src="images/about_partner_woorinet.png" alt="WOORINET"></div>
+                        <div><img src="images/about_partner_contentsx.png" alt="CONTENTS X"></div>
+                        <div><img src="images/about_partner_tr.png" alt="TR ENTERTAINMENT"></div>
+                        <div><img src="images/about_partner_beats.png" alt="BEATS ENTERTAINMENT"></div>
+                        <div><img src="images/about_partner_jamm.png" alt="STUDIO jamm"></div>
+                        <div><img src="images/about_partner_dsp.png" alt="DSP media"></div>
+                        <div><img src="images/about_partner_nbreds.png" alt="NBREDS"></div>
+                        <div><img src="images/about_partner_polygon.png" alt="polygon studios"></div>
+                        <div><img src="images/about_partner_cobak.png" alt="cobak"></div>
+                        <div><img src="images/about_partner_chainlabs.png" alt="ChainLabs"></div>
+                        <div><img src="images/about_partner_indigo.png" alt="INDIGO CHILD"></div>
+                        <div><img src="images/about_partner_maeheon.png" alt="법무법인 매헌"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section section-1">
             <div class="section-wrap container">
                 <div class="section-inner-wrap">
@@ -448,45 +704,6 @@
                         <div class="swiper-scrollbar"></div>
                     </div>
 
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-6">
-            <div class="section-wrap container">
-                <div class="section-inner-wrap">
-                    <h2>We call them<br>
-                        <strong> The Investors / Partners</strong>
-                    </h2>
-                    <div class="partners">
-                        <div><img src="images/about_partner_ngc.png" alt="NGC Ventures"></div>
-                        <div><img src="images/about_partner_ac.png" alt="AC Capital"></div>
-                        <div><img src="images/about_partner_kucoin.png" alt="BUCOIN LABS"></div>
-                        <div><img src="images/about_partner_gbic.png" alt="GBIC"></div>
-                        <div><img src="images/about_partner_nexusone.png" alt="NEXUS ONE"></div>
-                        <div><img src="images/about_partner_alchemic.png" alt="alchemic INVESTMENTS"></div>
-                        <div><img src="images/about_partner_digifinex.png" alt="DIGIFINEX"></div>
-                        <div><img src="images/about_partner_alphanonce.png" alt="alphanonce"></div>
-                        <div><img src="images/about_partner_bci.png" alt="BLOCKCHAIN INTERNATIONAL"></div>
-                        <div><img src="images/about_partner_finngram.png" alt="Finngram"></div>
-                        <div><img src="images/about_partner_stc.png" alt="STCapital"></div>
-                        <div><img src="images/about_partner_crypto.png" alt="crypto.com"></div>
-                        <div><img src="images/about_partner_rbw.png" alt="rbw"></div>
-                        <div><img src="images/about_partner_wm.png" alt="WM ENTERTAINMENT"></div>
-                        <div><img src="images/about_partner_woorinet.png" alt="WOORINET"></div>
-                        <div><img src="images/about_partner_contentsx.png" alt="CONTENTS X"></div>
-                        <div><img src="images/about_partner_tr.png" alt="TR ENTERTAINMENT"></div>
-                        <div><img src="images/about_partner_beats.png" alt="BEATS ENTERTAINMENT"></div>
-                        <div><img src="images/about_partner_jamm.png" alt="STUDIO jamm"></div>
-                        <div><img src="images/about_partner_dsp.png" alt="DSP media"></div>
-                        <div><img src="images/about_partner_nbreds.png" alt="NBREDS"></div>
-                        <div><img src="images/about_partner_polygon.png" alt="polygon studios"></div>
-                        <div><img src="images/about_partner_cobak.png" alt="cobak"></div>
-                        <div><img src="images/about_partner_chainlabs.png" alt="ChainLabs"></div>
-                        <div><img src="images/about_partner_indigo.png" alt="INDIGO CHILD"></div>
-                        <div><img src="images/about_partner_maeheon.png" alt="법무법인 매헌"></div>
-                        <div></div>
-                    </div>
                 </div>
             </div>
         </section>
