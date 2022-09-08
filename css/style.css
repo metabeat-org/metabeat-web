@@ -3905,29 +3905,6 @@ img {
   #aboutus .main .section-group {
     margin: 0px !important;
   }
-  #aboutus .main .section-1 .section-inner-wrap {
-    width: 100% !important;
-    height: 80vh !important;
-  }
-  #aboutus .main .section-1 .section-inner-wrap .service-title {
-    width: 76vw !important;
-    top: 30vw !important;
-  }
-  #aboutus .main .section-1 .section-inner-wrap .home-banner {
-    width: 84vw !important;
-    height: 145vw !important;
-    margin-top: 0 !important;
-  }
-  #aboutus .main .section-1 .section-inner-wrap .home-banner #lottie, #aboutus .main .section-1 .section-inner-wrap .home-banner #lottie2 {
-    display: none;
-  }
-  #aboutus .main .section-1 .section-inner-wrap .home-banner img.w {
-    display: none;
-  }
-  #aboutus .main .section-1 .section-inner-wrap .home-banner img.m {
-    display: unset !important;
-    margin-left: -3vw;
-  }
   #aboutus .main .section-2 .section-wrap .section-inner-wrap {
     display: flex;
     flex-direction: column;
@@ -4333,6 +4310,29 @@ img {
   #home .main .section-3 .service-items img {
     width: 55vw !important;
     height: unset;
+  }
+  #home .main .section-0 .section-inner-wrap {
+    width: 100% !important;
+    height: 80vh !important;
+  }
+  #home .main .section-0 .section-inner-wrap .service-title {
+    width: 76vw !important;
+    top: 30vw !important;
+  }
+  #home .main .section-0 .section-inner-wrap .home-banner {
+    width: 84vw !important;
+    height: 145vw !important;
+    margin-top: 0 !important;
+  }
+  #home .main .section-0 .section-inner-wrap .home-banner #lottie, #home .main .section-0 .section-inner-wrap .home-banner #lottie2 {
+    display: none;
+  }
+  #home .main .section-0 .section-inner-wrap .home-banner img.w {
+    display: none;
+  }
+  #home .main .section-0 .section-inner-wrap .home-banner img.m {
+    display: unset !important;
+    margin-left: -3vw;
   }
   #home .main .section-3.now .service-items .bg {
     height: 25vw !important;

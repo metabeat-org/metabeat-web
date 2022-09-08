@@ -1561,16 +1561,7 @@ img { object-fit: contain; }
       .tile-wrap.app ul li, .tile-wrap.app ul li img { border-radius: 20px !important; }
       .section-group { margin: 0px !important; }
 
-      .section-1 {
-        .section-inner-wrap { width: 100% !important; height: 80vh !important;
-          .service-title { width: 76vw !important; top: 30vw !important; }
-          .home-banner { width: 84vw !important; height: 145vw !important; margin-top: 0 !important;
-            #lottie, #lottie2 { display: none; }
-            img.w { display: none; }
-            img.m { display: unset !important; margin-left: -3vw; }
-          }
-        }
-      }
+
 
       .section-2 {
         .section-wrap {
@@ -1807,6 +1798,18 @@ img { object-fit: contain; }
         .bg { }
         img { width: 55vw !important; height: unset; }
       }
+
+      .section-0 {
+        .section-inner-wrap { width: 100% !important; height: 80vh !important;
+          .service-title { width: 76vw !important; top: 30vw !important; }
+          .home-banner { width: 84vw !important; height: 145vw !important; margin-top: 0 !important;
+            #lottie, #lottie2 { display: none; }
+            img.w { display: none; }
+            img.m { display: unset !important; margin-left: -3vw; }
+          }
+        }
+      }
+
       .section-3.now {
         .service-items {
           .bg {  height: 25vw !important;  }
