@@ -33,8 +33,25 @@
             $('.visual-banner').addClass('scroll');
         });
 
+
+
         $(function() {
             // Contact Us 페이지에 대한 스크립트만 적어주세요
+
+            // Bind App Menu
+            $("#appMenu").on("click", "a", function(e) {
+                e.preventDefault(); // Remove Anchor Tag Action
+                var $selected = $(this);
+                $("#appMenu a").removeClass("selected");
+                $selected.addClass("selected");
+
+                var selectedId = $selected.attr("id");
+                // $("#appMenuViewSection > li").hide();
+                // $("#" + selectedId + "View").show();
+
+                $("#appMenuViewSection > li").removeClass();
+                $("#" + selectedId + "View").addClass("slideup");
+            })
 
             $(window).scroll(function(){
                 const nowScrollTop = $(window).scrollTop();
@@ -940,6 +957,17 @@
                             </div>
                             <p>In the Marketplace, Fanart can become validated NFTs, which can then be sold and traded within the platform. Fans from all over the world will be able to see your fanart as well as show theirs off!</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-7">
+                <div class="section-wrap container">
+                    <div class="section-inner-wrap">
+                        <div class="action-btn-wrap">
+                            <button onclick="location.href='contactus.html'">Get in Touch <i class="arrow-r">Right arrow</i></button>
+                        </div>
+                        <p>Contact us</p>
                     </div>
                 </div>
             </section>
