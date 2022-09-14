@@ -1561,13 +1561,15 @@ img { object-fit: contain; }
     .visual-banner.scroll .section-wrap .section-inner-wrap h1 .h-line { width: 70px !important; margin: 0 4px !important; opacity: 1 !important; }
 
     .main {
-      .section-1 .movie { width: 100% !important; height: 49.2vw !important; }
+      .section-1 .movie { width: 100% !important; height: 120.5vw !important; }
+      .section-1 .movie video { object-fit: cover; }
       .section-1 .info { width: 100% !important; margin: 48px 0 0 !important; }
       .section-1 .info h2 { margin-left: unset !important; margin-right: unset !important;}
       .section-2 { min-height: inherit !important; }
       .section-2 .section-wrap { min-height: inherit  !important; padding-bottom: 80px !important; }
-      .section-2 .section-inner-wrap { padding: 24px !important;}
-      .section-2 .section-inner-wrap > h5 { width: calc(100vw - 96px) !important;}
+      .section-2 .section-inner-wrap { padding: 74px 24px !important;}
+      .section-2 .section-inner-wrap > h5 { width: calc(100vw - 96px) !important; text-align: left !important; }
+      .section-2 .section-inner-wrap > h5 p.first { display: none; }
       .section-2 .photo { margin-bottom: 32px; }
       .section-3 .service-items {
         //&>img { position: absolute; bottom: 0; width: 120% !important; left: 50%; transform: translateX(-51%); }

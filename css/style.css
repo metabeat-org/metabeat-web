@@ -3943,7 +3943,10 @@ img {
   }
   #home .main .section-1 .movie {
     width: 100% !important;
-    height: 49.2vw !important;
+    height: 120.5vw !important;
+  }
+  #home .main .section-1 .movie video {
+    object-fit: cover;
   }
   #home .main .section-1 .info {
     width: 100% !important;
@@ -3961,10 +3964,14 @@ img {
     padding-bottom: 80px !important;
   }
   #home .main .section-2 .section-inner-wrap {
-    padding: 24px !important;
+    padding: 74px 24px !important;
   }
   #home .main .section-2 .section-inner-wrap > h5 {
     width: calc(100vw - 96px) !important;
+    text-align: left !important;
+  }
+  #home .main .section-2 .section-inner-wrap > h5 p.first {
+    display: none;
   }
   #home .main .section-2 .photo {
     margin-bottom: 32px;
