@@ -691,7 +691,7 @@ img { object-fit: contain; }
             &.app {
               ul {
                 li { position: absolute; display: flex; flex-direction: column; align-items: flex-start; /* padding: 20px 32px; */
-                  background: rgba(252, 252, 252, 0.3); box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.15); backdrop-filter: blur(54px); border-radius: 24px;
+                  background: rgba(252, 252, 252, 0.3); box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.15); /* backdrop-filter: blur(54px);*/ border-radius: 24px;
                   img { border-radius: 24px; }
                   &:nth-of-type(1) { left: 6px; top: 145px; opacity: 0; }
                   &:nth-of-type(2) { left: 112px; top: 350px; opacity: 0; }
@@ -911,7 +911,7 @@ img { object-fit: contain; }
         //&:nth-of-type(2) { left: 100px !important; top: 608px !important; z-index: 2; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 100ms; }
         &:nth-of-type(2) { left: 210px !important; top: 390px !important; z-index: 3; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 200ms; }
         &:nth-of-type(3) { left: 869px !important; top: 415px !important; z-index: 4; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 300ms; }
-        &:nth-of-type(4) { left: 830px !important; top: 570px !important; z-index: 5; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 400ms; }
+        &:nth-of-type(4) { left: 841px !important; top: 570px !important; z-index: 5; opacity: 1 !important; transition: all 800ms cubic-bezier(0.25, 1, 0.45, 1) 400ms; }
       }
     }
     // SERVICE ITEM : MINGLE
