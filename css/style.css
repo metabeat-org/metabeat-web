@@ -4617,6 +4617,29 @@ img {
     width: 83vw !important;
     right: 0;
   }
+  #aboutus .main .section-7 {
+    min-height: inherit !important;
+  }
+  #aboutus .main .section-7 .section-wrap {
+    min-height: 52vh !important;
+    padding-top: 40px !important;
+    align-items: flex-start !important;
+  }
+  #aboutus .main .section-7 .section-inner-wrap {
+    padding: 0 !important;
+  }
+  #aboutus .main .section-7 .action-btn-wrap button {
+    padding: 9px 8px 9px 8px !important;
+    font-size: 46rem !important;
+  }
+  #aboutus .main .section-7 .action-btn-wrap button i.arrow-r {
+    width: 46px !important;
+    height: 46px !important;
+    background-size: 40px !important;
+  }
+  #aboutus .main .section-7 p {
+    font-size: 14rem !important;
+  }
   /*========== CONTACT US ==========*/
   #contactus .header .navbar-brand {
     width: 70px;
