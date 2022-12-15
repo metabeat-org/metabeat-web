@@ -63,6 +63,21 @@
                 }
             });
 
+            $('#section-download-btn')
+            .on("click", "", function () {
+                $('#section-download-btn ul').toggleClass('show');
+            })
+            .on("mouseleave", "", function(){
+                $('#section-download-btn ul').removeClass('show');
+            });
+
+    // GNB
+    $('.navbar-toggler').on("click", "", function(){
+        $(this).toggleClass('show');
+        $('.header').toggleClass('active'); // Set Header Background Color
+        $('.navbar ul').toggleClass('show');
+    })
+
             var shoutOut1 = bodymovin.loadAnimation({
                 container: document.getElementById('shoutOut1'), // Required
                 path: './lottie/shout-out-1.json', // Required
