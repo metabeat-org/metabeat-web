@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MetaBeat | NFT Information</title>
+    <!-- Pretendard Variable Dynamic Subset -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/nft-info.css" />
+  </head>
+  <!-- 
+    id → JS에서 컨트롤
+    class → CSS에서 컨트롤
+   -->
+  <body>
+    <noscript>We need Javascript to Load NFT information.</noscript>
+    <main id="root">
+      <header>
+        <img id="album-cover" alt="" />
+        <h3 id="title-wrapper">
+          MetaBeat <span id="title"></span> NFT Information
+        </h3>
+        <footer class="pc-footer">
+          <p>
+            Copyright &copy; 2023 MetaBeat Inc.
+            <br />
+            All rights reserved.
+          </p>
+        </footer>
+      </header>
+      <section>
+        <h2>Feature</h2>
+        <p id="desc"></p>
+      </section>
+      <footer class="mobile-footer">
+        <p>
+          Copyright &copy; 2023 MetaBeat Inc.
+          <br />
+          All rights reserved.
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="js/nft-info-loader.js"></script>
+  </body>
+</html>

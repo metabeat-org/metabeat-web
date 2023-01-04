@@ -1,0 +1,193 @@
+/* Global */
+* {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  margin: 0;
+}
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Header */
+header {
+  align-items: center;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 44px 24px 16px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+img {
+  aspect-ratio: 1 / 1;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  max-width: 216px;
+}
+h3 {
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  max-width: 288px;
+}
+/* Section */
+section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  padding-bottom: 100px;
+}
+h2 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+}
+/* Footer */
+footer {
+  padding: 16px 24px 34px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+footer p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.pc-footer {
+  display: none;
+  padding: 16px 0;
+  width: 100%;
+}
+.pc-footer p {
+  font-size: 14px;
+  margin: 0 24px;
+}
+
+/* Error Page */
+.error {
+  height: 100vh;
+}
+.error header {
+  background-color: white;
+  flex: 1;
+  justify-content: center;
+  padding: 72px 36px;
+}
+.error img {
+  border: none;
+  box-shadow: none;
+  max-width: 320px;
+}
+.error section {
+  background-color: #f4f4f4;
+  flex: 0;
+  padding-bottom: 180px;
+}
+
+@media (min-width: 1280px) {
+  /* Main */
+  main {
+    flex-direction: row;
+  }
+  /* Header */
+  header {
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    gap: 28px;
+    height: 100vh;
+    margin-left: 48px;
+    padding: 88px 0;
+    position: fixed;
+    top: 0;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0 24px;
+    max-width: 264px;
+  }
+  /* Section */
+  section {
+    gap: 32px;
+    margin-left: calc(48px + 314px);
+    padding: 0;
+  }
+  h2 {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+    font-size: 36px;
+    margin-top: 48px;
+    padding: 0 44px 12px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.375;
+    margin: 0 48px 44px;
+  }
+  /* Footer (invisible) */
+  .mobile-footer {
+    display: none;
+  }
+  .pc-footer {
+    display: block;
+  }
+  /* Error Page */
+  .error {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .error main {
+    align-items: center;
+    background-color: #f4f4f4;
+    border-left: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    gap: 28px;
+    justify-content: center;
+    width: 312px;
+  }
+  .error main > * {
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  .error header {
+    border: none;
+    flex: 0;
+    padding: 0;
+    position: inherit;
+  }
+  .error img {
+    background-color: #f4f4f4;
+    width: 100%;
+  }
+  .error section {
+    padding: 0;
+    width: 100%;
+  }
+  .error h2 {
+    border: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .error .mobile-footer {
+    display: block;
+    padding: 16px 0 0;
+    width: 100%;
+  }
+  .error footer p {
+    margin: 0 24px;
+    text-align: center;
+  }
+} ;
