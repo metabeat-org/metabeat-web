@@ -1,0 +1,46 @@
+body {
+  font-family: Archivo;
+}
+
+.unsubscribe-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.unsubscribe-logo {
+  width: 268px;
+}
+
+.unsubscribe-title {
+  text-align: center;
+  width: 670px;
+  font-weight: 400;
+  font-size: 62px;
+  word-break: break-all;
+  margin-top: 28px;
+  margin-bottom: 20px;
+}
+
+.unsubscribe-desc {
+  color: #94949d;
+  margin-top: 0;
+  margin-bottom: 48px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.unsubscribe-btn {
+  font-family: Archivo;
+  font-stretch: expanded;
+  cursor: pointer;
+  border: none;
+  border-radius: 16px;
+  color: white;
+  background: #e32d4e;
+  padding: 14px 24px;
+  font-size: 20px;
+  font-weight: 800;
+}

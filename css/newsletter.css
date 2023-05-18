@@ -1,0 +1,154 @@
+input,
+select,
+button {
+  all: unset;
+}
+
+.newsletter-container {
+  height: max(80vh, 1200px);
+  padding: 0;
+}
+
+.newsletter-subtitle {
+  text-align: center;
+  color: #00f;
+  font-weight: 600;
+  font-size: 32rem;
+  margin-bottom: 20rem;
+}
+
+.newsletter-title {
+  text-align: center;
+  font-size: 62rem;
+  margin-bottom: 48rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+}
+
+.newsletter-input-wrap {
+  display: flex;
+  gap: 20rem;
+  justify-content: space-between;
+  padding: 16rem 20rem 16rem 24rem;
+  width: 680rem;
+  height: 80rem;
+  border-radius: 9999px;
+  background-color: #f6f6f9;
+}
+
+.newsletter-input {
+  flex: 1;
+  font-size: 20rem;
+  font-weight: 500;
+}
+
+.newsletter-select {
+  width: 80rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  font-weight: 800;
+  padding: 14rem 30rem 14rem 18rem;
+  border-radius: 9999px;
+  background-image: url("/images/faq_arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 11rem center;
+  background-size: 16rem;
+}
+
+.newsletter-submit-btn {
+  background-color: #00f;
+  color: white;
+  border-radius: 18rem;
+  padding: 16rem 24rem;
+  font-weight: 700;
+}
+
+.newsletter-submit-complete {
+  display: flex;
+  gap: 8px;
+  background-color: #f6f6f9;
+  color: #0fd280;
+}
+
+.newsletter-submit-complete::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("/images/checked.png") center no-repeat;
+  background-size: 20px;
+}
+
+.newsletter-footnote {
+  text-align: center;
+  margin-top: 20rem;
+  color: #94949d;
+  font-weight: 600;
+  font-size: 16rem;
+}
+
+@media (max-width: 576px) {
+  .newsletter-container {
+    height: 100vh;
+    padding: 0;
+  }
+
+  .newsletter-subtitle {
+    font-size: 16rem;
+    margin-bottom: 16rem;
+  }
+
+  .newsletter-title {
+    font-size: 36rem;
+    margin-bottom: 28rem;
+  }
+
+  .newsletter-form-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 20rem;
+  }
+
+  .newsletter-input-wrap {
+    gap: 12rem;
+    padding: 8rem 10rem 8rem 18rem;
+    width: 100%;
+    height: 48rem;
+  }
+
+  .newsletter-input {
+    font-size: 15rem;
+  }
+
+  .newsletter-select {
+    width: 58rem;
+    font-size: 11rem;
+    padding: 8rem 6rem 8rem 12rem;
+    background-position: right 6rem center;
+    background-size: 12rem;
+  }
+
+  .newsletter-submit-btn {
+    border-radius: 12rem;
+    padding: 10rem 12rem;
+    font-weight: 600;
+    font-size: 14rem;
+  }
+
+  .newsletter-footnote {
+    margin-top: 0rem;
+    margin-bottom: 32rem;
+    font-weight: 500;
+    font-size: 14rem;
+  }
+}

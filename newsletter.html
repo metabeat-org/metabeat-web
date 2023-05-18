@@ -21,10 +21,10 @@
 
     <title> </title>
     <link type="text/css" media="all" rel="stylesheet" href="css/style.css" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="css/swiper.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/newsletter.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;100,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;100,700;100,800&display=swap"
       rel="stylesheet"
     />
     <script src="js/jquery-3.6.0.js"></script>
@@ -37,16 +37,6 @@
       });
 
       $(function () {
-        // Contact Us 페이지에 대한 스크립트만 적어주세요
-        $(".faq-wrap dd").hide();
-        $(".faq-wrap dt").click(function () {
-          $(this).addClass("show");
-          $(this).siblings().removeClass("show");
-          $(".faq-wrap dd")
-            .not($(this).next(".faq-wrap dd").slideToggle(500))
-            .slideUp();
-        });
-
         $(window).scroll(function () {
           const nowScrollTop = $(window).scrollTop();
 
@@ -58,13 +48,39 @@
         });
       });
     </script>
+
+    <!-- 메일 발송 스크립트 -->
+    <script>
+      $(function () {
+        $(".newsletter-form").submit(async function (e) {
+          e.preventDefault();
+          const id = e.currentTarget.email.value;
+
+          try {
+            await axios.post("https://newsletter.metabeat.io/letter", {
+              id,
+              isLetter: true,
+            });
+
+            $(".newsletter-submit-btn").addClass("newsletter-submit-complete");
+            $("#newsletter-submit-input").val("Apply Complete!");
+            $(".newsletter-submit-btn").prop("disabled", true);
+            $("#newsletter-submit-input").prop("disabled", true);
+          } catch (err) {
+            alert(
+              `The request could not be completed, please try again.\n${err}`
+            );
+          }
+        });
+      });
+    </script>
   </head>
 
   <body>
     <div class="loader">
       <div class="loading-animation"></div>
     </div>
-    <div class="page-wrapper" id="faq">
+    <div class="page-wrapper" id="contactus">
       <!-- ========== HEADER ========== -->
       <header class="header">
         <div class="header-wrap container">
@@ -122,12 +138,12 @@
                   >
                 </a>
               </li>
-              <!-- <li class="nav-item dropdown">
+              <li class="nav-item dropdown">
                 <a href="newsletter.html">
                   <span>NewsLetter </span>
                   <i>How to get MetaBeat News<br />faster than anyone.</i>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </nav>
           <div class="download-app-btn-wrap" id="header-download-btn">
@@ -155,179 +171,66 @@
         <div class="section-wrap container">
           <div class="section-inner-wrap">
             <h1>
-              <span class="int-1">FAQ </span><br />
-              <span class="int-2">Everything </span>
-              <span class="int-3">you </span>
-              <span class="int-4">want to know </span> <br />
-              <span class="int-6">about MetaBeat </span>
+              <span class="int-1">How </span>
+              <span class="int-2">to </span>
+              <span class="int-3">get </span>
+              <span class="int-4">MetaBeat News</span> <br />
+              <span class="int-5">faster </span>
+              <span class="int-6">than </span>
+              <span class="int-7">anyone </span>
             </h1>
           </div>
         </div>
       </section>
 
       <!-- ========== MAIN CONTENT ========== -->
-      <main class="main">
+      <!-- <main class="main scroll">-->
+      <main class="main scroll">
         <section class="section section-1">
           <div class="section-wrap container">
+            <div class="section-inner-wrap col-flex-column">
+              <div class="conttactus-title-wrap col-flex-column">
+                <h2 class="col-full">
+                  Subscribe to our<br />
+                  <strong>NewsLetter</strong>
+                </h2>
+                <p>
+                  Scroll down to<br />
+                  open the page
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-2">
+          <div class="section-wrap newsletter-container">
             <div class="section-inner-wrap">
-              <div class="faq-wrap">
-                <dl>
-                  <dt class="faq-title">What is a MetaBeat?</dt>
-                  <dd class="faq-content">
-                    <p>
-                      The MetaBeat platform is built around NFT creations,
-                      participants, and rewards related to an artist's
-                      intellectual property (IP).
-                    </p>
-                    <p>
-                      As NFT creations and users grow on the platform,
-                      partnerships between creators or artists and fans are
-                      strengthened through positive symbiotic experiences
-                      facilitated by the MetaBeat ecosystem that reflect the
-                      values ​​and contributions of users in the MetaBeat
-                      community.
-                    </p>
-                    <p>
-                      Participants will have a special experience of being
-                      rewarded with Beat, a token of MetaBeat, through three
-                      business models: Drops, Mingle, and Shout-out, and further
-                      contribute to the revival of the entertainment industry.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">What are Drops?</dt>
-                  <dd class="faq-content">
-                    <p>
-                      The NFTs are generated by diverse projects such as music
-                      albums, singles, metaverse concerts, fan meetings, etc.
-                    </p>
-                    <p>
-                      Users purchase direct ownership of community NFTs through
-                      auctions at MetaBeat Drops and winners of the auction can
-                      enjoy rewards based on their FANomance Index generated
-                      from the ownership.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">How can I join Drops?</dt>
-                  <dd class="faq-content">
-                    <p>
-                      You can participate in Drops by selecting a product on the
-                      MetaBeat app HOME > DROPS page and clicking the Open Run
-                      (participation) button.
-                    </p>
-                    <p>
-                      After the end of Drops, among the number of participants
-                      who participated in the open run, the winning bid is
-                      decided by the lowest winning bid method, starting with
-                      the user who participated with the highest amount
-                      according to the amount of NFT issuance.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">What if I want to sell my Drops?</dt>
-                  <dd class="faq-content">
-                    <p>
-                      You can sell the NFT you want in the NFT section of the MY
-                      BEAT > MY WALLET page of the MetaBeat app, and secondary
-                      transactions are possible through the sale and purchase
-                      list on the HOME > MARKETPLACE page.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">
-                    In the case of drops, are there any other benefits other
-                    than owning NFTs when participating?
-                  </dt>
-                  <dd class="faq-content">
-                    <p>
-                      For NFT holders who have already participated in our
-                      Drops, we plan to offer pre-sale benefits related to the
-                      artist's NFT or pre-purchase limited edition NFT to be
-                      released later, and we will provide concert tickets or fan
-                      meeting tickets through consultation with the artist. The
-                      expected.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">
-                    How to Safely trade and store Drop (NFT)?
-                  </dt>
-                  <dd class="faq-content">
-                    <p>
-                      Never do any trading other than the trading method not
-                      announced by MetaBeat.
-                    </p>
-                    <p>
-                      Do not click on suspicious files or links received through
-                      SCR files or DMs.
-                    </p>
-                    <p>
-                      Do not sign suspicious MetaMask transactions, and do not
-                      disclose your seed phrases to anyone other than yourself.
-                      Most DMs are likely to be scams. Always be careful.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">What is Mingle?</dt>
-                  <dd class="faq-content">
-                    <p>Stake and get rewarded for artist activity!</p>
-                    <p>
-                      Each Mingle is backed by real assets, music IP, and by
-                      staking BEAT on an open Mingle, you can receive rewards
-                      according to Mingle's FANomance Index.
-                    </p>
-                    <p>
-                      Create your own portfolio with free and diverse Mingle
-                      participation.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">How can I join Mingle?</dt>
-                  <dd class="faq-content">
-                    <p>
-                      You can participate in Mingle by selecting a product from
-                      the HOME > MINGLE page of the MetaBeat app and matching
-                      the available pieces (PCS).
-                    </p>
-                    <p>
-                      Mingle who has completed participation can modify and
-                      cancel the pieces at any time.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">What is a Shout Out?</dt>
-                  <dd class="faq-content">
-                    <p>
-                      Cheer on the artist on my social media and get rewards!
-                    </p>
-                    <p>
-                      Shout-out is a participatory reward program that rewards
-                      users for promotional and marketing activities for their
-                      artists.
-                    </p>
-                    <p>
-                      You can receive BEAT rewards according to performance by
-                      directly uploading posts about artist activities on
-                      MetaBeat or uploading them to various personal social
-                      media accounts and authenticating them to MetaBeat.
-                    </p>
-                  </dd>
-                  <dt class="faq-title">What is FANomance Index?</dt>
-                  <dd class="faq-content">
-                    <p>MetaBeat created the FANomance Index.</p>
-                    <p>
-                      The FANomance Index is a customized index uniquely
-                      designed by MetaBeat, based on key criteria of artists and
-                      fan community performance.
-                    </p>
-                    <p>
-                      Though simple, the index represents MetaBeat’s philosophy
-                      that lies in the shared distribution of a value system.
-                      The index criteria includes:
-                    </p>
-
-                    <p>
-                      1. Commitment to Hold and Stake<br />
-                      2. Performance data gathered from social media buzz on
-                      artists<br />
-                      3. Performance data gathered from ShoutOut Fandom buzz on
-                      platform
-                    </p>
-                  </dd>
-                </dl>
+              <p class="newsletter-subtitle">MetaBeat NewsLetter</p>
+              <h1 class="newsletter-title">Subscribe to our NewsLetter.</h1>
+              <div class="newsletter-form-wrap">
+                <form class="newsletter-form">
+                  <div class="newsletter-input-wrap">
+                    <input
+                      class="newsletter-input"
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email address"
+                      required
+                      aria-label="email"
+                    />
+                  </div>
+                  <button class="newsletter-submit-btn">
+                    <input
+                      id="newsletter-submit-input"
+                      type="submit"
+                      value="Apply NewsLetter"
+                      aria-label="apply"
+                    />
+                  </button>
+                </form>
+                <p class="newsletter-footnote">
+                  Stay up-to-date with the latest News and technical updates.
+                </p>
               </div>
             </div>
           </div>
@@ -459,18 +362,5 @@
       </footer>
       <!-- ========== END FOOTER ========== -->
     </div>
-    <!-- Swiper JS -->
-    <script src="js/swiper.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        scrollbar: ".swiper-scrollbar",
-        scrollbarHide: true,
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 0,
-        grabCursor: true,
-      });
-    </script>
   </body>
 </html>

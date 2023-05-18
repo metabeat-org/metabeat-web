@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="description" content="" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="metabeat.io" />
+    <meta property="og:title" content="Here. This is MetaBeat." />
+    <meta property="og:image" content="images/og_image.png" />
+    <meta
+      property="og:description"
+      content="Experience new distance with your favorite artists’ NFT!"
+    />
+    <meta property="og:site_name" content="METABEAT" />
+
+    <title> </title>
+    <link rel="stylesheet" href="css/unsubscribe.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,700;125,800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        if (!id) {
+          alert("Unusual access detected. Please try again.");
+          $("body").remove();
+        }
+      });
+
+      async function handleClick() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        try {
+          await axios.post("https://newsletter.metabeat.io/letter", {
+            id,
+            isLetter: false,
+          });
+          $(location).prop("href", "/unsubscribe_complete.html");
+        } catch (err) {
+          alert(`The request was not successful, please try again.\n${err}`);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="unsubscribe-container">
+      <img
+        src="images/newsletter_metabeat.png"
+        alt="MetaBeat Logo"
+        class="unsubscribe-logo"
+      />
+      <h1 class="unsubscribe-title">
+        Are you sure you want to
+        <strong>unsubscribe<br />from the newsletter?</strong>
+      </h1>
+      <p class="unsubscribe-desc">You can resubscribe at any time.</p>
+      <button class="unsubscribe-btn" onclick="handleClick()">
+        Unsubscribe
+      </button>
+    </main>
+  </body>
+</html>
