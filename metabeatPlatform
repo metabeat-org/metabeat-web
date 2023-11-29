@@ -1018,6 +1018,7 @@
                         <li><a href="https://twitter.com/Metabeatoffl" target="_blank"><img src="./images/fnb_channel_twitter.png" title="Go to Twitter"></a></li>
                         <li><a href="https://t.me/metabeatoffl" target="_blank"><img src="./images/fnb_channel_telegram.png" title="Go to Telegram"></a></li>
                         <li><a href="https://www.linkedin.com/company/metabeat" target="_blank"><img src="./images/fnb_channel_linkedin.png" title="Go to Linked In"></a></li>
+                        <li><a href="https://www.coingecko.com/en/coins/metabeat" target="_blank"><img src="./images/coin_gekko.png" title="Go to Coin Gekko"></a></li>
                     </ul>
                     <ul class="fnb-etc">
                         <!-- <li><a onClick="alert('Coming soon!')">IOS Download</a></li> -->
