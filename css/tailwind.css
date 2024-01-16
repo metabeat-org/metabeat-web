@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TODO: React 컨버팅 이후 전체 삭제 */
+
+.tailwind-provider html,
+.tailwind-provider body,
+.tailwind-provider div,
+.tailwind-provider span,
+.tailwind-provider applet,
+.tailwind-provider object,
+.tailwind-provider iframe,
+.tailwind-provider h1,
+.tailwind-provider h2,
+.tailwind-provider h3,
+.tailwind-provider h4,
+.tailwind-provider h5,
+.tailwind-provider h6,
+.tailwind-provider p,
+.tailwind-provider blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.tailwind-provider button {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: inherit;
+}
+
+.tailwind-provider svg {
+    width: auto;
+}
+
+#header.active {
+    header {
+        @apply bg-metabeat-gray;
+    }
+}
+
+/* SWIPER */
+.swiper-container {
+    @apply overflow-hidden
+}
+
+.swiper-scrollbar {
+    @apply hidden
+}

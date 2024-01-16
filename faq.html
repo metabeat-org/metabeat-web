@@ -1,63 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <!-- ========== METADATA ========== -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="description" content="" />
-
+    <title>MetaBeat | FAQ</title>
+    <meta
+      name="description"
+      content="Everything you want to know about MetaBeat."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="metabeat.io" />
-    <meta property="og:title" content="Here. This is MetaBeat." />
+    <meta property="og:title" content="MetaBeat | FAQ" />
     <meta property="og:image" content="images/og_image.png" />
     <meta
       property="og:description"
-      content="Experience new distance with your favorite artists’ NFT!"
+      content="Everything you want to know about MetaBeat."
     />
-    <meta property="og:site_name" content="METABEAT" />
-
-    <title> </title>
+    <!-- ========== CSS ========== -->
     <link type="text/css" media="all" rel="stylesheet" href="css/style.css" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="css/swiper.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;100,800&display=swap"
       rel="stylesheet"
     />
-    <script src="js/jquery-3.6.0.js"></script>
-    <script type="text/javascript" async src="js/header.js"></script>
+    <!-- ========== TAILWIND ========== -->
+    <!-- DEVEOPMENT -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/tailwind-output.css" /> -->
+    <!-- PRODUCTION  -->
+    <link type="text/css" rel="stylesheet" href="css/tailwind-build.css" />
+    <!-- ========== JS ========== -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
     <script type="text/javascript" async src="js/scroll.js"></script>
-    <!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
-    <script>
-      $(document).ready(function () {
-        $(".visual-banner").addClass("scroll");
-      });
-
-      $(function () {
-        // Contact Us 페이지에 대한 스크립트만 적어주세요
-        $(".faq-wrap dd").hide();
-        $(".faq-wrap dt").click(function () {
-          $(this).addClass("show");
-          $(this).siblings().removeClass("show");
-          $(".faq-wrap dd")
-            .not($(this).next(".faq-wrap dd").slideToggle(500))
-            .slideUp();
-        });
-
-        $(window).scroll(function () {
-          const nowScrollTop = $(window).scrollTop();
-
-          if (nowScrollTop === 0) {
-            $(".main").addClass("scroll");
-          } else {
-            $(".main").removeClass("scroll");
-          }
-        });
-      });
-    </script>
+    <script type="text/javascript" src="js/faq.js"></script>
   </head>
 
   <body>
@@ -66,91 +47,8 @@
     </div>
     <div class="page-wrapper" id="faq">
       <!-- ========== HEADER ========== -->
-      <header class="header">
-        <div class="header-wrap container">
-          <a class="navbar-brand" href="home.html">MetaBeat Logo</a>
-          <nav class="navbar">
-            <ul>
-              <li class="nav-item dropdown">
-                <a href="metabeatPlatform.html">
-                  <span>MetaBeat Platform </span>
-                  <i
-                    >Here. The Platform where you <br />
-                    experience new - distance.</i
-                  >
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="contactus.html">
-                  <span>Contact us </span>
-                  <i
-                    >Ring,Ring This is MetaBeat.<br />
-                    We are always awake.</i
-                  >
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="faq.html">
-                  <span>FAQ </span>
-                  <i
-                    >Everything you want to<br />
-                    know about MetaBeat.</i
-                  >
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  href="https://heathered-fernleaf-3a1.notion.site/MetaBeat-Upcoming-Events-a9650c311ab04708ac2b30e583984658"
-                  target="_blank"
-                >
-                  <span>Events </span>
-                  <i
-                    >We prepared<br />
-                    various events for you.</i
-                  >
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction"
-                  target="_blank"
-                >
-                  <span>White paper </span>
-                  <i
-                    >Typing hard, For those of you who<br />
-                    want to know more about MetaBeat.</i
-                  >
-                </a>
-              </li>
-              <!-- <li class="nav-item dropdown">
-                <a href="newsletter.html">
-                  <span>NewsLetter </span>
-                  <i>How to get MetaBeat News<br />faster than anyone.</i>
-                </a>
-              </li> -->
-            </ul>
-          </nav>
-          <div class="download-app-btn-wrap" id="header-download-btn">
-            <button class="download-app-btn">Download the app</button>
-            <ul>
-              <!-- <li class="nav-item dropdown"><a onClick="alert('Coming soon!')"><span>Google Play Store</span></a></li> -->
-              <!-- <li class="nav-item dropdown"><a onClick="alert('Coming soon!')"><span>Apple App Store</span></a></li> -->
-              <li class="nav-item dropdown">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.metabeat.metabeat"
-                  ><span>Google Play Store</span></a
-                >
-              </li>
-              <!--                    <li class="nav-item dropdown"><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist"><span>Apple App Store</span></a></li>-->
-            </ul>
-          </div>
-          <button class="navbar-toggler" type="button">
-            Navigation Toggler
-          </button>
-        </div>
-      </header>
-      <!-- ========== END HEADER ========== -->
-
+      <div id="header" class="tailwind-provider"></div>
+      <!-- ========== MAIN CONTENT ========== -->
       <section class="visual-banner">
         <div class="section-wrap container">
           <div class="section-inner-wrap">
@@ -164,8 +62,6 @@
           </div>
         </div>
       </section>
-
-      <!-- ========== MAIN CONTENT ========== -->
       <main class="main">
         <section class="section section-1">
           <div class="section-wrap container">
@@ -333,8 +229,6 @@
           </div>
         </section>
       </main>
-      <!-- ========== END MAIN CONTENT ========== -->
-
       <!-- ========== FOOTER ========== -->
       <footer class="footer">
         <div class="footer-wrap container">
@@ -380,25 +274,56 @@
                       title="Go to Linked In"
                   /></a>
                 </li>
-                                        <li><a href="https://www.coingecko.com/en/coins/metabeat" target="_blank"><img src="./images/coin_gekko.png"
-                                              title="Go to Coin Gekko"></a></li>
-
+                <li>
+                  <a
+                    href="https://www.coingecko.com/en/coins/metabeat"
+                    target="_blank"
+                    ><img
+                      src="./images/coin_gekko.png"
+                      title="Go to Coin Gekko"
+                  /></a>
+                </li>
               </ul>
               <ul class="fnb-etc">
-<!-- <li><a onClick="alert('Coming soon!')">IOS Download</a></li> -->
-<li><a href="https://play.google.com/store/apps/details?id=com.metabeat.metabeat">Android Download</a></li>
-<!-- <li><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist">IOS Download</a></li>-->
-<li><a href="faq.html">FAQ</a></li>
-<!-- <li><a onClick="alert('Coming soon!')">Android Download</a></li> -->
-<li><a href="https://web.metabeat.io/">Launch on Web</a></li>
-<li><a href="https://heathered-fernleaf-3a1.notion.site/MetaBeat-Upcoming-Events-a9650c311ab04708ac2b30e583984658"
-    target="_blank">Events</a></li>
-<li><a href="https://polygon.technology/" target="_blank" style="text-decoration: underline">Powered by Polygon®</a>
-</li>
-<li><a href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction" target="_blank">White Paper</a>
-</li>
-<li></li>
-<li><a href="https://linktr.ee/metabeat" target="_blank">Linktree</a></li>
+                <!-- <li><a onClick="alert('Coming soon!')">IOS Download</a></li> -->
+                <li>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.metabeat.metabeat"
+                    >Android Download</a
+                  >
+                </li>
+                <!-- <li><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist">IOS Download</a></li>-->
+                <li><a href="faq.html">FAQ</a></li>
+                <!-- <li><a onClick="alert('Coming soon!')">Android Download</a></li> -->
+                <li><a href="https://web.metabeat.io/">Launch on Web</a></li>
+                <li>
+                  <a
+                    href="https://heathered-fernleaf-3a1.notion.site/MetaBeat-Upcoming-Events-a9650c311ab04708ac2b30e583984658"
+                    target="_blank"
+                    >Events</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://polygon.technology/"
+                    target="_blank"
+                    style="text-decoration: underline"
+                    >Powered by Polygon®</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction"
+                    target="_blank"
+                    >White Paper</a
+                  >
+                </li>
+                <li></li>
+                <li>
+                  <a href="https://linktr.ee/metabeat" target="_blank"
+                    >Linktree</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="fnb">
@@ -406,7 +331,12 @@
                 <li><a href="home.html">About us</a></li>
                 <li><a href="metabeatPlatform.html">MetaBeat Platform</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
-                        <li><a href="https://drive.google.com/drive/u/1/folders/1-rPclJg1hHfRudXbkQV5FRCf1gVauxo2">Brand logos</a></li>
+                <li>
+                  <a
+                    href="https://drive.google.com/drive/u/1/folders/1-rPclJg1hHfRudXbkQV5FRCf1gVauxo2"
+                    >Brand logos</a
+                  >
+                </li>
                 <li>
                   <a
                     href="https://metabeat.gitbook.io/terms-and-conditions/"
@@ -432,20 +362,38 @@
           </div>
         </div>
       </footer>
-      <!-- ========== END FOOTER ========== -->
     </div>
     <!-- Swiper JS -->
-    <script src="js/swiper.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        scrollbar: ".swiper-scrollbar",
-        scrollbarHide: true,
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 0,
-        grabCursor: true,
-      });
-    </script>
+    <!-- ========== JS ========== -->
+    <script type="module" src="js/swiper/home.js"></script>
+    <!-- ========== REACT ========== -->
+
+    <!-- DEVELOPMENT -->
+    <!-- <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script> -->
+
+    <!-- PRODUCTION -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/react-responsive@9.0.2/dist/react-responsive.min.js"></script>
+
+    <!-- DEVELOPMENT -->
+    <!-- <script type="module" src="build/components/layouts/header.js"></script> -->
+
+    <!-- PRODUCTION -->
+    <script type="module" src="dist/header.bundle.js"></script>
   </body>
 </html>

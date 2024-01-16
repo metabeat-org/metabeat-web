@@ -1,0 +1,28 @@
+{
+  "name": "metabeat-web",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "watch:tailwind": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css --watch",
+    "watch:react": "babel --watch src --out-dir build",
+    "build:tailwind": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-build.css --minify",
+    "build:react": "webpack"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.2",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "babel-loader": "^9.1.3"
+  }
+}

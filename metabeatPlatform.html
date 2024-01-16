@@ -1,1169 +1,1282 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="metabeat.io">
-    <meta property="og:title" content="Here. This is MetaBeat.">
-    <meta property="og:image" content="images/og_image.png">
-    <meta property="og:description" content="Experience new distance with your favorite artists’ NFT!">
-    <meta property="og:site_name" content="METABEAT">
-
-    <title> </title>
-    <link type="text/css" media="all" rel="stylesheet" href="css/style.css">
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="css/swiper.css">
+  <head>
+    <!-- ========== METADATA ========== -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>MetaBeat | Platform</title>
+    <meta
+      name="description"
+      content="Here. The Platform where you experience new - distance."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="metabeat.io" />
+    <meta property="og:title" content="Here. This is MetaBeat." />
+    <meta property="og:image" content="images/og_image.png" />
+    <meta
+      property="og:description"
+      content="Here. The Platform where you experience new - distance."
+    />
+    <meta property="og:site_name" content="MetaBeat | Platform" />
+    <!-- ========== CSS ========== -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;100,800&display=swap"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="js/jquery-3.6.0.js"></script>
-    <script type="text/javascript" async src="js/header.js"></script>
+    <!-- ========== TAILWIND ========== -->
+    <!-- DEVEOPMENT -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/tailwind-output.css" /> -->
+    <!-- PRODUCTION  -->
+    <link type="text/css" rel="stylesheet" href="css/tailwind-build.css" />
+    <!-- ========== JS ========== -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.5/lottie.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
     <script type="text/javascript" async src="js/scroll.js"></script>
-    <!--    <script type="text/javascript" async src="js/jquery-scroll-ani.js"></script>-->
-    <!--    <script src="js/bodymovin.js" type="text/javascript"></script>-->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.5/lottie.min.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function () {
-            $('.visual-banner').addClass('scroll');
-        });
-
-
-
-        $(function() {
-            // Contact Us 페이지에 대한 스크립트만 적어주세요
-
-            // Bind App Menu
-            $("#appMenu").on("click", "a", function(e) {
-                e.preventDefault(); // Remove Anchor Tag Action
-                var $selected = $(this);
-                $("#appMenu a").removeClass("selected");
-                $selected.addClass("selected");
-
-                var selectedId = $selected.attr("id");
-                // $("#appMenuViewSection > li").hide();
-                // $("#" + selectedId + "View").show();
-
-                $("#appMenuViewSection > li").removeClass();
-                $("#" + selectedId + "View").addClass("slideup");
-            })
-
-            $(window).scroll(function(){
-                const nowScrollTop = $(window).scrollTop();
-
-                if (nowScrollTop === 0) {
-                    $('.main').addClass('scroll');
-                } else {
-                    $('.main').removeClass('scroll');
-                }
-            });
-
-            $('#section-download-btn')
-            .on("click", "", function () {
-                $('#section-download-btn ul').toggleClass('show');
-            })
-            .on("mouseleave", "", function(){
-                $('#section-download-btn ul').removeClass('show');
-            });
-
-    // GNB
-    $('.navbar-toggler').on("click", "", function(){
-        $(this).toggleClass('show');
-        $('.header').toggleClass('active'); // Set Header Background Color
-        $('.navbar ul').toggleClass('show');
-    })
-
-            var shoutOut1 = bodymovin.loadAnimation({
-                container: document.getElementById('shoutOut1'), // Required
-                path: './lottie/shout-out-1.json', // Required
-                renderer: 'svg', // Required
-                loop: false, // Optional
-                autoplay: true, // Optional
-            })
-
-            var shoutOut2 = bodymovin.loadAnimation({
-                container: document.getElementById('shoutOut2'), // Required
-                path: './lottie/shout-out-2.json', // Required
-                renderer: 'svg', // Required
-                loop: false, // Optional
-                autoplay: true, // Optional
-            })
-
-            var shoutOut3_2_front = bodymovin.loadAnimation({
-                container: document.getElementById('shoutOut3_2_front'), // Required
-                path: './lottie/shout-out-3-2.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-            var shoutOut3_2_back = bodymovin.loadAnimation({
-                container: document.getElementById('shoutOut3_2_back'), // Required
-                path: './lottie/shout-out-3-2.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var shoutOut3_3_front = bodymovin.loadAnimation({
-                container: document.getElementById('shoutOut3_3_front'), // Required
-                path: './lottie/shout-out-3-3.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var shoutOut3_3_back = bodymovin.loadAnimation({
-                container: document.getElementById('shoutOut3_3_back'), // Required
-                path: './lottie/shout-out-3-3.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var drop3_1_front = bodymovin.loadAnimation({
-                container: document.getElementById('drop3_1_front'), // Required
-                path: './lottie/drop-3-1.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var drop3_1_back = bodymovin.loadAnimation({
-                container: document.getElementById('drop3_1_back'), // Required
-                path: './lottie/drop-3-1.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var mingle1 = bodymovin.loadAnimation({
-                container: document.getElementById('mingle1'), // Required
-                path: './lottie/mingle-1.json', // Required
-                renderer: 'svg', // Required
-                loop: false, // Optional
-                autoplay: true, // Optional
-            })
-
-            var mingle2 = bodymovin.loadAnimation({
-                container: document.getElementById('mingle2'), // Required
-                path: './lottie/mingle-2.json', // Required
-                renderer: 'svg', // Required
-                loop: false, // Optional
-                autoplay: true, // Optional
-            })
-
-            var mingle3_1_front = bodymovin.loadAnimation({
-                container: document.getElementById('mingle3_1_front'), // Required
-                path: './lottie/mingle-3-1.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var mingle3_1_back = bodymovin.loadAnimation({
-                container: document.getElementById('mingle3_1_back'), // Required
-                path: './lottie/mingle-3-1.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var mingle3_2_front = bodymovin.loadAnimation({
-                container: document.getElementById('mingle3_2_front'), // Required
-                path: './lottie/mingle-3-2.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var mingle3_2_back = bodymovin.loadAnimation({
-                container: document.getElementById('mingle3_2_back'), // Required
-                path: './lottie/mingle-3-2.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var mingle3_3_front = bodymovin.loadAnimation({
-                container: document.getElementById('mingle3_3_front'), // Required
-                path: './lottie/mingle-3-3.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var mingle3_3_back = bodymovin.loadAnimation({
-                container: document.getElementById('mingle3_3_back'), // Required
-                path: './lottie/mingle-3-3.json', // Required
-                renderer: 'svg', // Required
-                loop: true, // Optional
-                autoplay: true, // Optional
-            })
-
-            var marketplace1 = bodymovin.loadAnimation({
-                container: document.getElementById('marketplace1'), // Required
-                path: './lottie/marketplace-1.json', // Required
-                renderer: 'svg', // Required
-                loop: false, // Optional
-                autoplay: true, // Optional
-            })
-
-            var marketplace2 = bodymovin.loadAnimation({
-                container: document.getElementById('marketplace2'), // Required
-                path: './lottie/marketplace-2.json', // Required
-                renderer: 'svg', // Required
-                loop: false, // Optional
-                autoplay: true, // Optional
-            })
-        });
-    </script>
-</head>
-
-<body>
-<div class="loader">
-    <div class="loading-animation"></div>
-</div>
-<div class="page-wrapper" id="aboutus">
-    <!-- ========== HEADER ========== -->
-    <header class="header">
-        <div class="header-wrap container">
-            <a class="navbar-brand" href="home.html">MetaBeat Logo</a>
-            <nav class="navbar">
-                <ul>
-                    <li class="nav-item dropdown">
-                        <a href="metabeatPlatform.html">
-                            <span>MetaBeat Platform </span>
-                            <i>Here. The Platform where you <br>
-                                experience new - distance.</i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="contactus.html">
-                            <span>Contact us </span>
-                            <i>Ring,Ring This is MetaBeat.<br>
-                                We are always awake.</i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="faq.html">
-                            <span>FAQ </span>
-                            <i>Everything you want to<br>
-                                know about MetaBeat.</i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="https://heathered-fernleaf-3a1.notion.site/MetaBeat-Upcoming-Events-a9650c311ab04708ac2b30e583984658" target="_blank">
-                            <span>Events </span>
-                            <i>We prepared<br>
-                                various events for you.</i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction" target="_blank">
-                            <span>White paper </span>
-                            <i>Typing hard, For those of you who<br>
-                                want to know more about MetaBeat.</i>
-                        </a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a href="newsletter.html">
-                            <span>NewsLetter </span>
-                            <i>How to get MetaBeat News<br />faster than anyone.</i>
-                          </a>
-                      </li> -->
-                </ul>
-            </nav>
-            <div class="download-app-btn-wrap" id="header-download-btn">
-                <button class="download-app-btn">Download the app</button>
-                <ul>
-                    <!-- <li class="nav-item dropdown"><a onClick="alert('Coming soon!')"><span>Google Play Store</span></a></li> -->
-                    <!-- <li class="nav-item dropdown"><a onClick="alert('Coming soon!')"><span>Apple App Store</span></a></li> -->
-                    <li class="nav-item dropdown"><a href="https://play.google.com/store/apps/details?id=com.metabeat.metabeat"><span>Google Play Store</span></a></li>
-                    <!--                    <li class="nav-item dropdown"><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist"><span>Apple App Store</span></a></li>-->
-                </ul>
-            </div>
-            <button class="navbar-toggler" type="button">Navigation Toggler</button>
-        </div>
-    </header>
-    <!-- ========== END HEADER ========== -->
-
-
-    <section class="visual-banner">
+    <script type="text/javascript" src="js/metabeat-platform.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper" id="aboutus">
+      <!-- ========== HEADER ========== -->
+      <div id="header" class="tailwind-provider"></div>
+      <!-- ========== MAIN CONTENT ========== -->
+      <section class="visual-banner">
         <div class="section-wrap container">
-            <div class="section-inner-wrap">
-                <h1>
-                    <span class="int-1">Here. </span>
-                    <span class="int-2">We are </span> <br>
-                    <span class="int-3">the team </span>
-                    <span class="int-4">who made </span>  <br>
-                    <span class="int-5">New</span>
-                    <i class="h-line int-7"></i>
-                    <span class="int-6">Distance </span>
-                </h1>
-
-                <div class="scrolldown-btn-wrap">
-                    <button class=scrolldown-btn">Scroll down to experience</button>
-                </div>
+          <div class="section-inner-wrap">
+            <h1>
+              <span class="int-1">Here. </span>
+              <span class="int-2">We are </span> <br />
+              <span class="int-3">the team </span>
+              <span class="int-4">who made </span> <br />
+              <span class="int-5">New</span>
+              <i class="h-line int-7"></i>
+              <span class="int-6">Distance </span>
+            </h1>
+            <div class="scrolldown-btn-wrap">
+              <button class="scrolldown-btn">Scroll down to experience</button>
             </div>
+          </div>
         </div>
-    </section>
-
-
-    <!-- ========== MAIN CONTENT ========== -->
-    <main class="main">
-
+      </section>
+      <main class="main">
         <section class="section section-2" id="section2">
-            <div class="section-wrap container">
-                <div class="section-inner-wrap">
-                    <div class="tile-wrap app">
-                        <ul id="appMenuViewSection" class="app-screen">
-                            <li id="appMenuHomeView" class="show"><img src="images/home_app_1.png" title="App - home"></li>
-                            <li id="appMenuShoutOutView"><img src="images/home_app_2.png" title="App - Shout out"></li>
-                            <li id="appMenuNotificationView"><img src="images/home_app_3.png" title="App - Notification"></li>
-                            <li id="appMenuMyBeatView"><img src="images/home_app_4.png" title="App - My Beat"></li>
-                        </ul>
-                    </div>
-                    <div class="service-info">
-                        <h5>Ready for LUNCHE</h5>
-                        <h2>MetaBeat, <br> in your hand</h2>
-                        <p class="f24">You can download Google Play Store.</p>
-                        <div class="download-app-btn-wrap" id="section-download-btn">
-                           <button class="download-app-btn">Download the app</button>
-                           <ul>
-                               <!-- <li class="nav-item dropdown"><a onClick="alert('Coming soon!')"><span>Google Play Store</span></a></li> -->
-<!--                                <li class="nav-item dropdown"><a onClick="alert('Coming soon!')"><span>Apple App Store</span></a></li>-->
-                               <li class="nav-item dropdown"><a href="https://play.google.com/store/apps/details?id=com.metabeat.metabeat"><span>Google Play Store</span></a></li>
-<!--                                &lt;!&ndash;                    <li class="nav-item dropdown"><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist"><span>Apple App Store</span></a></li>&ndash;&gt;-->
-                           </ul>
-                        </div>
-                        <div id="appMenu" class="app-menu">
-                            <ul>
-                                <li><a id="appMenuHome" href="#" class="selected"><i>home</i> <span>Home <em>Discover the artists’ NFTs <br>and enjoy the service.</em></span></a></li>
-                                <li><a id="appMenuShoutOut" href="#"><i>Shout out</i> <span>Shout out <em>Shout out your artists on  <br>your SNS and receive <br> rewards!</em></span></a></li>
-                                <li><a id="appMenuNotification" href="#"><i>Notification</i> <span>Notification <em>There is MetaBeat’s <br> News only for you. </em></span></a></li>
-                                <li><a id="appMenuMyBeat" href="#"><i>My Beat</i> <span>My Beat <em>Check your asset status <br> at a glance on My Beat.</em></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
+          <div class="section-wrap container">
+            <div class="section-inner-wrap">
+              <div class="tile-wrap app">
+                <ul id="appMenuViewSection" class="app-screen">
+                  <li id="appMenuHomeView" class="show">
+                    <img
+                      src="images/home_app_1.png"
+                      title="App - home"
+                      alt="App - home"
+                    />
+                  </li>
+                  <li id="appMenuShoutOutView">
+                    <img
+                      src="images/home_app_2.png"
+                      title="App - Shout out"
+                      alt="App - Shout out"
+                    />
+                  </li>
+                  <li id="appMenuNotificationView">
+                    <img
+                      src="images/home_app_3.png"
+                      title="App - Notification"
+                      alt="App - Notification"
+                    />
+                  </li>
+                  <li id="appMenuMyBeatView">
+                    <img
+                      src="images/home_app_4.png"
+                      title="App - My Beat"
+                      alt="App - My Beat"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="service-info">
+                <h5>Ready for LAUNCH</h5>
+                <h2>
+                  MetaBeat, <br />
+                  in your hand
+                </h2>
+                <p class="f24">You can download Google Play Store.</p>
+                <div class="download-app-btn-wrap" id="section-download-btn">
+                  <button class="download-app-btn">Download the app</button>
+                  <ul>
+                    <!-- <li class="nav-item dropdown"><a onClick="alert('Coming soon!')"><span>Google Play Store</span></a></li> -->
+                    <!--                                <li class="nav-item dropdown"><a onClick="alert('Coming soon!')"><span>Apple App Store</span></a></li>-->
+                    <li class="nav-item dropdown">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.metabeat.metabeat"
+                        ><span>Google Play Store</span></a
+                      >
+                    </li>
+                    <!--                                &lt;!&ndash;                    <li class="nav-item dropdown"><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist"><span>Apple App Store</span></a></li>&ndash;&gt;-->
+                  </ul>
                 </div>
+                <div id="appMenu" class="app-menu">
+                  <ul>
+                    <li>
+                      <a id="appMenuHome" href="#" class="selected"
+                        ><i>home</i>
+                        <span
+                          >Home
+                          <em
+                            >Discover the artists' NFTs <br />and enjoy the
+                            service.</em
+                          ></span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a id="appMenuShoutOut" href="#"
+                        ><i>Shout out</i>
+                        <span
+                          >Shout out
+                          <em
+                            >Shout out your artists on <br />your SNS and
+                            receive <br />
+                            rewards!</em
+                          ></span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a id="appMenuNotification" href="#"
+                        ><i>Notification</i>
+                        <span
+                          >Notification
+                          <em
+                            >There is MetaBeat's <br />
+                            News only for you.
+                          </em></span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a id="appMenuMyBeat" href="#"
+                        ><i>My Beat</i>
+                        <span
+                          >My Beat
+                          <em
+                            >Check your asset status <br />
+                            at a glance on My Beat.</em
+                          ></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
-
         <!-- SHOUT OUT -->
         <div class="section-group section-group-1">
-            <section class="section section-3">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap lg">
-                            <h2>The <br><strong>SHOUT OUT</strong></h2>
-                            <h2>Shout out Loud to <br>increase the rewards</h2>
-                            <div class="service-items">
+          <section class="section section-3">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="card-wrap lg">
+                  <h2>The <br /><strong>SHOUT OUT</strong></h2>
+                  <h2>Shout out Loud to <br />increase the rewards</h2>
+                  <div class="service-items">
+                    <div class="service">
+                      <ul>
+                        <li class="service-shoutout">
+                          <img
+                            src="images/home_shoutout.png"
+                            title="Shout Out"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tile-wrap app">
+                  <ul>
+                    <li>
+                      <img
+                        src="images/home_shoutout_1.png"
+                        title="App - Shout out"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_shoutout_2.png"
+                        title="App - Shout out"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_shoutout_3.png"
+                        title="App - Shout out"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_shoutout_4.png"
+                        title="App - Shout out"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-4">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="card-wrap md">
+                  <h2>
+                    Reward for <br />
+                    fanship
+                  </h2>
+                  <h2>
+                    Fan Mission <br />
+                    and Challenge
+                  </h2>
+                  <div class="service-items">
+                    <div class="service">
+                      <ul>
+                        <li class="service-shoutout">
+                          <div id="shoutOut1"></div>
+                        </li>
+                        <li class="service-drop"><div id="shoutOut2"></div></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-info">
+                  <div>
+                    <h3>
+                      Rewarding you for <br />
+                      being a fan:
+                    </h3>
+                    <p>
+                      With SHOUT OUT, you'll be getting tokenized rewards for
+                      what you've already been doing this entire time!
+                    </p>
+                    <p>
+                      When you register your personal social media accounts into
+                      the MetaBeat platform, our Shout_Out Bot will calculate
+                      your rewards based on engagement.
+                    </p>
+                  </div>
+                  <p id="shout-out-phase-2">
+                    But the rewards don't stop there. <br />
+                    You can continue receiving $BEAT Tokens by participating in
+                    all the missions and challenges that will be launched within
+                    the platform.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-5">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="service-title">
+                  <h5>Gooooing Deeeeper.</h5>
+                  <img
+                    src="images/home_shoutout_title.png"
+                    title="And here a furtber look into shout out..."
+                  />
+                  <span class="badge">3</span>
+                </div>
+                <!-- Swiper -->
+                <div
+                  class="swiper-container shoutout-swiper card-unfold"
+                  id="shoutOutCardBtn"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm" id="card1">
+                              <h2>
+                                Unimaginable <br />
+                                Reality
+                              </h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
                                 <div class="service">
-                                    <ul>
-                                        <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li>
-                                        <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                        <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                        <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                    </ul>
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <img
+                                        src="images/shout-out-3-1.gif"
+                                        title="Shout Out"
+                                      />
+                                    </li>
+                                  </ul>
                                 </div>
+                              </div>
                             </div>
-                        </div>
-                        <div class="tile-wrap app">
-                            <ul>
-                                <li><img src="images/home_shoutout_1.png" title="App - Shout out"></li>
-                                <li><img src="images/home_shoutout_2.png" title="App - Shout out"></li>
-                                <li><img src="images/home_shoutout_3.png" title="App - Shout out"></li>
-                                <li><img src="images/home_shoutout_4.png" title="App - Shout out"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section-4">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap md">
-                            <h2>Reward for <br> fanship</h2>
-                            <h2>Fan Mission <br> and Challenge</h2>
-                            <div class="service-items">
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>
+                                Unimaginable <br />
+                                Reality
+                              </h4>
+                              <p>
+                                With SHOUT OUT, the unimaginable became a
+                                reality, F2E (Fan2Earn); users can now earn
+                                $BEAT on the MetaBeat platform for their Fan
+                                activities on their social media accounts.
+                              </p>
+                              <div class="service-items">
                                 <div class="service">
-                                    <ul>
-                                        <li class="service-shoutout"><div id="shoutOut1"></div></li>
-                                        <li class="service-drop"><div id="shoutOut2"></div></li>
-                                        <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                        <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                    </ul>
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <img
+                                        src="images/shout-out-3-1.gif"
+                                        title="Shout Out"
+                                      />
+                                    </li>
+                                  </ul>
                                 </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                        <div class="service-info">
-                            <div>
-                                <h3>Rewarding you for <br> being a fan:</h3>
-                                <p>With SHOUT OUT, you’ll be getting tokenized rewards for what you’ve already been doing this entire time!</p>
-                                <p>When you register your personal social media accounts into the MetaBeat platform, our Shout_Out Bot will calculate your rewards based on engagement.</p>
-                            </div>
-                            <p id="shout-out-phase-2">But the rewards don’t stop there. <br>
-                                You can continue receiving $BEAT Tokens by participating in all the missions and challenges that will be launched within the platform.</p>
-                        </div>
+                      </div>
                     </div>
-                </div>
-            </section>
-            <section class="section section-5">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="service-title">
-                            <h5>Gooooing Deeeeper.</h5>
-                            <img src="images/home_shoutout_title.png" title="And here a furtber look into shout out...">
-                            <span class="badge">3</span>
-                        </div>
-                        <!-- Swiper -->
-                        <div class="swiper-container shoutout-swiper card-unfold" id="shoutOutCardBtn">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm" id="card1">
-                                                    <h2>Unimaginable <br> Reality</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><img src="images/shout-out-3-1.gif" title="Shout Out"></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>Unimaginable <br> Reality</h4>
-                                                    <p>With SHOUT OUT, the unimaginable became a reality, F2E (Fan2Earn); users can now earn $BEAT on the MetaBeat platform for their Fan activities on their social media accounts.</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><img src="images/shout-out-3-1.gif" title="Shout Out"></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm" id="card2">
+                              <h2>
+                                Reward upgrade <br />
+                                with badge
+                              </h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <div id="shoutOut3_2_front"></div>
+                                    </li>
+                                  </ul>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm" id="card2">
-                                                    <h2>Reward upgrade <br> with badge</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><div id="shoutOut3_2_front"></div></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>Reward upgrade <br> with badge</h4>
-                                                    <p>Fans will continue to earn the more they participate with MetaBeat’s badge system on Shout Out; if your level is to the roof, so will the additional compensations!</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><div id="shoutOut3_2_back"></div></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm" id="card3">
-                                                    <h2>VIF <br> Very Important Fan</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><div id="shoutOut3_3_front"></div></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>VIF <br> Very Important Fan</h4>
-                                                    <p>Fan activity is what has led the revitalization of pop culture and what has allowed it to become borderless! MetaBeat has created a reward system in Web3, where the connections between artist & Fans are valued!</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><div id="shoutOut3_3_back"></div></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                              </div>
                             </div>
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>
+                                Reward upgrade <br />
+                                with badge
+                              </h4>
+                              <p>
+                                Fans will continue to earn the more they
+                                participate with MetaBeat's badge system on
+                                Shout Out; if your level is to the roof, so will
+                                the additional compensations!
+                              </p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <div id="shoutOut3_2_back"></div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="tooltip shout-out-card">Click to open these cards</div>
+                      </div>
                     </div>
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm" id="card3">
+                              <h2>
+                                VIF <br />
+                                Very Important Fan
+                              </h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <div id="shoutOut3_3_front"></div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>
+                                VIF <br />
+                                Very Important Fan
+                              </h4>
+                              <p>
+                                Fan activity is what has led the revitalization
+                                of pop culture and what has allowed it to become
+                                borderless! MetaBeat has created a reward system
+                                in Web3, where the connections between artist &
+                                Fans are valued!
+                              </p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <div id="shoutOut3_3_back"></div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </section>
+                <div class="tooltip shout-out-card">
+                  Click to open these cards
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-
-
-
-
         <!-- DROP -->
         <div class="section-group section-group-2">
-            <section class="section section-3">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap lg">
-                            <h2>The <br><strong>DROP</strong></h2>
-                            <h2>The $BEATS are <br> Yours with Drops</h2>
-                            <div class="service-items">
+          <section class="section section-3">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="card-wrap lg">
+                  <h2>The <br /><strong>DROP</strong></h2>
+                  <h2>
+                    The $BEATS are <br />
+                    Yours with Drops
+                  </h2>
+                  <div class="service-items">
+                    <div class="service">
+                      <ul>
+                        <li class="service-drop">
+                          <img
+                            src="images/home_drop.png"
+                            title="Drop"
+                            alt="Drop"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tile-wrap app">
+                  <ul>
+                    <li>
+                      <img
+                        src="images/home_drop_1.png"
+                        title="App - Drop"
+                        alt="App - Drop"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_drop_2.png"
+                        title="App - Drop"
+                        alt="App - Drop"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_drop_3.png"
+                        title="App - Drop"
+                        alt="App - Drop"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_drop_4.png"
+                        title="App - Drop"
+                        alt="App - Drop"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-4">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="card-wrap md">
+                  <h2>
+                    Make the BEAT <br />
+                    yours
+                  </h2>
+                  <div class="service-items">
+                    <div class="service">
+                      <ul>
+                        <li class="service-drop">
+                          <img
+                            src="images/drop-1.png"
+                            title="Drop"
+                            alt="Drop"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-info">
+                  <div>
+                    <h3>
+                      Become a true partner <br />with true community ownership:
+                    </h3>
+                    <p>
+                      Receive your share of rewards generated from your NFT
+                      ownerships.
+                    </p>
+                    <p>
+                      Through DROPS, fans have direct access to own a piece of
+                      the fan community backed by music IP, amongst many other
+                      creative projects, from their favorite creators/artists
+                      through NFT auctions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-5">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="service-title">
+                  <h5>Gooooing Deeeeper.</h5>
+                  <img
+                    src="images/home_drop_title.png"
+                    title="And here a furtber look into shout out..."
+                  />
+                  <span class="badge">3</span>
+                </div>
+                <!-- Swiper -->
+                <div
+                  class="swiper-container shoutout-swiper card-unfold"
+                  id="dropCardBtn"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm">
+                              <h2>Fan2Earn</h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
                                 <div class="service">
-                                    <ul>
-                                        <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>
-                                        <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                        <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                    </ul>
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <div id="drop3_1_front"></div>
+                                    </li>
+                                  </ul>
                                 </div>
+                              </div>
                             </div>
-                        </div>
-                        <div class="tile-wrap app">
-                            <ul>
-                                <li><img src="images/home_drop_1.png" title="App - Drop"></li>
-                                <li><img src="images/home_drop_2.png" title="App - Drop"></li>
-                                <li><img src="images/home_drop_3.png" title="App - Drop"></li>
-                                <li><img src="images/home_drop_4.png" title="App - Drop"></li>
-<!--                                <li><img src="images/home_drop_5.png" title="App - Drop"></li>-->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section-4">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap md">
-                            <h2>Make the BEAT <br> yours</h2>
-                            <div class="service-items">
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>Fan2Earn</h4>
+                              <p>
+                                MetaBeat gives traditional music IP NFT auctions
+                                a unique twist with a fan community-focused
+                                service.
+                              </p>
+                              <p>
+                                With MetaBeat, the Neighboring copyrights of the
+                                music IP are put into community NFTs.
+                              </p>
+                              <div class="service-items">
                                 <div class="service">
-                                    <ul>
-                                        <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <li class="service-drop"><img src="images/drop-1.png" title="Drop"></li>
-                                        <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                        <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                    </ul>
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <div id="drop3_1_back"></div>
+                                    </li>
+                                  </ul>
                                 </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                        <div class="service-info">
-                            <div>
-                                <h3>Become a true partner <br>with true community ownership:</h3>
-                                <p>Receive your share of rewards generated from your NFT ownerships.</p>
-                                <p>Through DROPS, fans have direct access to own a piece of the fan community backed by music IP, amongst many other creative projects, from their favorite creators/artists through NFT auctions.</p>
-                            </div>
-                        </div>
+                      </div>
                     </div>
-                </div>
-            </section>
-            <section class="section section-5">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="service-title">
-                            <h5>Gooooing Deeeeper.</h5>
-                            <img src="images/home_drop_title.png" title="And here a furtber look into shout out...">
-                            <span class="badge">3</span>
-                        </div>
-                        <!-- Swiper -->
-                        <div class="swiper-container shoutout-swiper card-unfold" id="dropCardBtn">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm">
-                                                    <h2>Fan2Earn</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><div id="drop3_1_front"></div></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>Fan2Earn</h4>
-                                                    <p>MetaBeat gives traditional music IP NFT auctions a unique twist with a fan community-focused service.</p>
-                                                    <p>With MetaBeat, the Neighboring copyrights of the music IP are put into community NFTs.</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><div id="drop3_1_back"></div></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm">
+                              <h2>
+                                Drops, <br />
+                                Going Global
+                              </h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <img
+                                        src="images/drop3-2.gif"
+                                        title="Shout Out"
+                                      />
+                                    </li>
+                                  </ul>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm">
-                                                    <h2>Drops, <br> Going Global</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><img src="images/drop3-2.gif" title="Shout Out"></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>Drops, <br> Going Global</h4>
-                                                    <p>MetaBeat starts off strong with one of the largest ranges of K-Pop music genres. The party doesn’t stop there as MetaBeat continues to expand IPs from a global level not only in music sources, but also in endless forms of content.</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><img src="images/drop3-2.gif" title="Shout Out"></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm">
-                                                    <h2>Fanship to <br> Ownership</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><img src="images/drop3-3.gif" title="Shout Out"></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>Fanship to <br> Ownership</h4>
-                                                    <p>MetaBeat Drops make the NFT itself allowing users to have a more reliable and secure ownership, to focus more time on the rewards and Fan activity!</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <li class="service-shoutout"><img src="images/drop3-3.gif" title="Shout Out"></li>
-                                                                <!--<li class="service-drop"><img src="images/home_drop.png" title="Drop"></li>-->
-                                                                <!--<li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>-->
-                                                                <!--<li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>-->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                              </div>
                             </div>
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>
+                                Drops, <br />
+                                Going Global
+                              </h4>
+                              <p>
+                                MetaBeat starts off strong with one of the
+                                largest ranges of K-Pop music genres. The party
+                                doesn't stop there as MetaBeat continues to
+                                expand IPs from a global level not only in music
+                                sources, but also in endless forms of content.
+                              </p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <img
+                                        src="images/drop3-2.gif"
+                                        title="Shout Out"
+                                      />
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="tooltip drop-card">Click to open these cards</div>
+                      </div>
                     </div>
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm">
+                              <h2>
+                                Fanship to <br />
+                                Ownership
+                              </h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <img
+                                        src="images/drop3-3.gif"
+                                        title="Shout Out"
+                                      />
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>
+                                Fanship to <br />
+                                Ownership
+                              </h4>
+                              <p>
+                                MetaBeat Drops make the NFT itself allowing
+                                users to have a more reliable and secure
+                                ownership, to focus more time on the rewards and
+                                Fan activity!
+                              </p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-shoutout">
+                                      <img
+                                        src="images/drop3-3.gif"
+                                        title="Shout Out"
+                                      />
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </section>
+                <div class="tooltip drop-card">Click to open these cards</div>
+              </div>
+            </div>
+          </section>
         </div>
 
         <!-- MINGLE -->
         <div class="section-group section-group-3">
-            <section class="section section-3">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap lg">
-                            <h2>The <br><strong>Mingle</strong></h2>
-                            <h2>BIG or small: <br>Drop beats in your own way</h2>
-                            <div class="service-items">
+          <section class="section section-3">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="card-wrap lg">
+                  <h2>The <br /><strong>Mingle</strong></h2>
+                  <h2>BIG or small: <br />Drop beats in your own way</h2>
+                  <div class="service-items">
+                    <div class="service">
+                      <ul>
+                        <li class="service-mingle">
+                          <img
+                            src="images/home_mingle.png"
+                            title="Mingle"
+                            alt="Mingle"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tile-wrap app">
+                  <ul>
+                    <li>
+                      <img
+                        src="images/home_mingle_1.png"
+                        title="App - Mingle"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_mingle_2.png"
+                        title="App - Mingle"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_mingle_3.png"
+                        title="App - Mingle"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_mingle_4.png"
+                        title="App - Mingle"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-4">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="card-wrap md">
+                  <h2>
+                    Be free <br />
+                    with your BEAT
+                  </h2>
+                  <h2>
+                    Build with <br />
+                    your Fave
+                  </h2>
+                  <div class="service-items">
+                    <div class="service">
+                      <ul>
+                        <li class="service-mingle"><div id="mingle1"></div></li>
+                        <li class="service-mingle"><div id="mingle2"></div></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-info">
+                  <div>
+                    <h3>
+                      The sky's the limit <br />
+                      when you're in control:
+                    </h3>
+                    <p>
+                      With MINGLE, you can stake your $BEAT tokens without a
+                      direct purchase of NFT to support your artists and receive
+                      rewards.
+                    </p>
+                  </div>
+                  <p>
+                    Increase your $BEAT tokens by participating in Mingles of
+                    your favorite artists and build your MINGLE portfolio.
+                  </p>
+                  <p>
+                    Whether it's a big or small show of support, control how
+                    much you'd like to stake and when.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-5">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="service-title">
+                  <h5>Gooooing Deeeeper.</h5>
+                  <img
+                    src="images/home_mingle_title.png"
+                    title="And here a furtber look into shout out..."
+                  />
+                  <span class="badge">3</span>
+                </div>
+                <!-- Swiper -->
+                <div
+                  class="swiper-container shoutout-swiper card-unfold"
+                  id="mingleCardBtn"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm">
+                              <h2>Collect'em all!</h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
                                 <div class="service">
-                                    <ul>
-                                        <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li>
-                                        <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                    </ul>
+                                  <ul>
+                                    <li class="service-mingle">
+                                      <div id="mingle3_1_front"></div>
+                                    </li>
+                                  </ul>
                                 </div>
+                              </div>
                             </div>
-                        </div>
-                        <div class="tile-wrap app">
-                            <ul>
-                                <li><img src="images/home_mingle_1.png" title="App - Mingle"></li>
-                                <li><img src="images/home_mingle_2.png" title="App - Mingle"></li>
-                                <li><img src="images/home_mingle_3.png" title="App - Mingle"></li>
-                                <li><img src="images/home_mingle_4.png" title="App - Mingle"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section-4">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap md">
-                            <h2>Be free <br> with your BEAT</h2>
-                            <h2>Build with <br> your Fave</h2>
-                            <div class="service-items">
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>Collect'em all!</h4>
+                              <p>
+                                At MetaBeat, we want our platform to be enjoyed
+                                by everyone not only as fans, but also, as
+                                collectors.
+                              </p>
+                              <p>
+                                After all this time supporting your favorite
+                                artist, isn't it time for you to hold an even
+                                deeper connection?
+                              </p>
+                              <div class="service-items">
                                 <div class="service">
-                                    <ul>
-                                        <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <li class="service-mingle"><div id="mingle1"></div></li>
-                                        <li class="service-mingle"><div id="mingle2"></div></li>
-                                        <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                    </ul>
+                                  <ul>
+                                    <li class="service-mingle">
+                                      <div id="mingle3_1_back"></div>
+                                    </li>
+                                  </ul>
                                 </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                        <div class="service-info">
-                            <div>
-                                <h3>The sky’s the limit <br> when you’re in control:</h3>
-                                <p>With MINGLE, you can stake your $BEAT tokens without a direct purchase of NFT to support your artists and receive rewards.</p>
-                            </div>
-                            <p>Increase your $BEAT tokens by participating in Mingles of your favorite artists and build your MINGLE portfolio.</p>
-                            <p>Whether it’s a big or small show of support, control how much you’d like to stake and when.</p>
-                        </div>
+                      </div>
                     </div>
-                </div>
-            </section>
-            <section class="section section-5">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="service-title">
-                            <h5>Gooooing Deeeeper.</h5>
-                            <img src="images/home_mingle_title.png" title="And here a furtber look into shout out...">
-                            <span class="badge">3</span>
-                        </div>
-                        <!-- Swiper -->
-                        <div class="swiper-container shoutout-swiper card-unfold" id="mingleCardBtn">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm">
-                                                    <h2>Collect’em all!</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                                                <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><div id="mingle3_1_front"></div></li>
-                                                                <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>Collect’em all!</h4>
-                                                    <p>At MetaBeat, we want our platform to be enjoyed by everyone not only as fans, but also, as collectors.</p>
-                                                    <p>After all this time supporting your favorite artist, isn’t it time for you to hold an even deeper connection?</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                                                <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><div id="mingle3_1_back"></div></li>
-                                                                <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm">
+                              <h2>Show'em off!</h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-mingle">
+                                      <div id="mingle3_2_front"></div>
+                                    </li>
+                                  </ul>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm">
-                                                    <h2>Show’em off!</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                                                <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><div id="mingle3_2_front"></div></li>
-                                                                <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>Show’em off!</h4>
-                                                    <p>Users that participate in Mingle will have something to show off as these transactions will allow them to configure their own Mingle portfolio!</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                                                <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><div id="mingle3_2_back"></div></li>
-                                                                <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="flip-wrap">
-                                        <div id="" class="flip">
-                                            <div class="front">
-                                                <div class="card-wrap sm">
-                                                    <h2>An ecosystem for all</h2>
-                                                    <p>Click to Flip the card</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                                                <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><div id="mingle3_3_front"></div></li>
-                                                                <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back">
-                                                <div class="card-wrap md">
-                                                    <h4>An ecosystem for all</h4>
-                                                    <p>The staking structure in Mingle gives support to the platform’s ecosystem, therefore, allows MetaBeat to be accessible to as many users as possible. With this, fans can get the effect of supporting their artist and the music they love most, without any commitments!</p>
-                                                    <div class="service-items">
-                                                        <div class="service">
-                                                            <ul>
-                                                                <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                                                <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                                                <li class="service-mingle"><div id="mingle3_3_back"></div></li>
-                                                                <!-- <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li> -->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                              </div>
                             </div>
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>Show'em off!</h4>
+                              <p>
+                                Users that participate in Mingle will have
+                                something to show off as these transactions will
+                                allow them to configure their own Mingle
+                                portfolio!
+                              </p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-mingle">
+                                      <div id="mingle3_2_back"></div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="tooltip mingle-card">Click to open these cards </div>
+                      </div>
                     </div>
+                    <div class="swiper-slide">
+                      <div class="flip-wrap">
+                        <div id="" class="flip">
+                          <div class="front">
+                            <div class="card-wrap sm">
+                              <h2>An ecosystem for all</h2>
+                              <p>Click to Flip the card</p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-mingle">
+                                      <div id="mingle3_3_front"></div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="back">
+                            <div class="card-wrap md">
+                              <h4>An ecosystem for all</h4>
+                              <p>
+                                The staking structure in Mingle gives support to
+                                the platform's ecosystem, therefore, allows
+                                MetaBeat to be accessible to as many users as
+                                possible. With this, fans can get the effect of
+                                supporting their artist and the music they love
+                                most, without any commitments!
+                              </p>
+                              <div class="service-items">
+                                <div class="service">
+                                  <ul>
+                                    <li class="service-mingle">
+                                      <div id="mingle3_3_back"></div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </section>
+                <div class="tooltip mingle-card">Click to open these cards</div>
+              </div>
+            </div>
+          </section>
         </div>
 
         <!-- MARKETPLACE -->
         <div class="section-group section-group-4">
-            <section class="section section-3">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap lg">
-                            <h2>The <br><strong>Marketplace</strong></h2>
-                            <h2>Taking SHOW and TELL <br> to a whole new level</h2>
-                            <div class="service-items">
-                                <div class="service">
-                                    <ul>
-                                        <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                        <li class="service-marketplace"><img src="images/home_marketplace.png" title="Marketplace"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tile-wrap app">
-                            <ul>
-                                <li><img src="images/home_marketplace_1.png" title="App - Market place"></li>
-                                <li><img src="images/home_marketplace_2.png" title="App - Market place"></li>
-                                <li><img src="images/home_marketplace_3.png" title="App - Market place"></li>
-                                <li><img src="images/home_marketplace_4.png" title="App - Market place"></li>
-                                <li><img src="images/home_marketplace_5.png" title="App - Market place"></li>
-                            </ul>
-                        </div>
+          <section class="section section-3">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="card-wrap lg">
+                  <h2>The <br /><strong>Marketplace</strong></h2>
+                  <h2>
+                    Taking SHOW and TELL <br />
+                    to a whole new level
+                  </h2>
+                  <div class="service-items">
+                    <div class="service">
+                      <ul>
+                        <li class="service-marketplace">
+                          <img
+                            src="images/home_marketplace.png"
+                            title="Marketplace"
+                          />
+                        </li>
+                      </ul>
                     </div>
+                  </div>
                 </div>
-            </section>
-            <section class="section section-4">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="card-wrap md">
-                            <h2>From Fan <br> to NFT Creator</h2>
-                            <h2>Discover <br>and Trade</h2>
-                            <div class="service-items">
-                                <div class="service">
-                                    <ul>
-                                        <!-- <li class="service-shoutout"><img src="images/home_shoutout.png" title="Shout Out"></li> -->
-                                        <!-- <li class="service-drop"><img src="images/home_drop.png" title="Drop"></li> -->
-                                        <!-- <li class="service-mingle"><img src="images/home_mingle.png" title="Mingle"></li> -->
-                                        <li class="service-marketplace"><div id="marketplace1"></div></li>
-                                        <li class="service-marketplace"><div id="marketplace2"></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-info">
-                            <div>
-                                <h3>Turn your creations <br> into official pieces:</h3>
-                                <p>On MetaBeat’s MARKETPLACE, you’ll be able to trade your already acquired MetaBeat NFTs with other users, giving you more opportunities to be a part of your favorite creator/artist’s NFTs but wait, there’s more.</p>
-                            </div>
-                            <p>In the Marketplace, Fanart can become validated NFTs, which can then be sold and traded within the platform. Fans from all over the world will be able to see your fanart as well as show theirs off!</p>
-                        </div>
+                <div class="tile-wrap app">
+                  <ul>
+                    <li>
+                      <img
+                        src="images/home_marketplace_1.png"
+                        title="App - Market place"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_marketplace_2.png"
+                        title="App - Market place"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_marketplace_3.png"
+                        title="App - Market place"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_marketplace_4.png"
+                        title="App - Market place"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="images/home_marketplace_5.png"
+                        title="App - Market place"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-4">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="card-wrap md">
+                  <h2>
+                    From Fan <br />
+                    to NFT Creator
+                  </h2>
+                  <h2>Discover <br />and Trade</h2>
+                  <div class="service-items">
+                    <div class="service">
+                      <ul>
+                        <li class="service-marketplace">
+                          <div id="marketplace1"></div>
+                        </li>
+                        <li class="service-marketplace">
+                          <div id="marketplace2"></div>
+                        </li>
+                      </ul>
                     </div>
+                  </div>
                 </div>
-            </section>
+                <div class="service-info">
+                  <div>
+                    <h3>
+                      Turn your creations <br />
+                      into official pieces:
+                    </h3>
+                    <p>
+                      On MetaBeat's MARKETPLACE, you'll be able to trade your
+                      already acquired MetaBeat NFTs with other users, giving
+                      you more opportunities to be a part of your favorite
+                      creator/artist's NFTs but wait, there's more.
+                    </p>
+                  </div>
+                  <p>
+                    In the Marketplace, Fanart can become validated NFTs, which
+                    can then be sold and traded within the platform. Fans from
+                    all over the world will be able to see your fanart as well
+                    as show theirs off!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-            <section class="section section-7">
-                <div class="section-wrap container">
-                    <div class="section-inner-wrap">
-                        <div class="action-btn-wrap">
-                            <button onclick="location.href='contactus.html'">Get in Touch <i class="arrow-r">Right arrow</i></button>
-                        </div>
-                        <p>Contact us</p>
-                    </div>
+          <section class="section section-7">
+            <div class="section-wrap container">
+              <div class="section-inner-wrap">
+                <div class="action-btn-wrap">
+                  <button onclick="location.href='contactus.html'">
+                    Get in Touch <i class="arrow-r">Right arrow</i>
+                  </button>
                 </div>
-            </section>
+                <p>Contact us</p>
+              </div>
+            </div>
+          </section>
         </div>
-    </main>
-    <!-- ========== END MAIN CONTENT ========== -->
+      </main>
+      <!-- ========== END MAIN CONTENT ========== -->
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
+      <!-- ========== FOOTER ========== -->
+      <footer class="footer">
         <div class="footer-wrap container">
-            <div class="fnb-info">
-                <div class="fnb-etc-info">
-                    <ul class="channel">
-                        <li><a href="https://medium.com/@MetabeatOffl" target="_blank"><img src="./images/fnb_channel_medium.png" title="Go to Medium"></a></li>
-                        <li><a href="https://discord.com/invite/9X9GKFxRpH" target="_blank"><img src="./images/fnb_channel_discord.png" title="Go to Discord"></a></li>
-                        <li><a href="https://twitter.com/Metabeatoffl" target="_blank"><img src="./images/fnb_channel_twitter.png" title="Go to Twitter"></a></li>
-                        <li><a href="https://t.me/metabeatoffl" target="_blank"><img src="./images/fnb_channel_telegram.png" title="Go to Telegram"></a></li>
-                        <li><a href="https://www.linkedin.com/company/metabeat" target="_blank"><img src="./images/fnb_channel_linkedin.png" title="Go to Linked In"></a></li>
-                        <li><a href="https://www.coingecko.com/en/coins/metabeat" target="_blank"><img src="./images/coin_gekko.png"title="Go to Coin Gekko"></a></li>
-                    </ul>
-                    <ul class="fnb-etc">
-                        <!-- <li><a onClick="alert('Coming soon!')">IOS Download</a></li> -->
-                        <li><a href="https://play.google.com/store/apps/details?id=com.metabeat.metabeat">Android Download</a></li>
-                        <!-- <li><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist">IOS Download</a></li>-->
-                        <li><a href="faq.html">FAQ</a></li>
-                        <!-- <li><a onClick="alert('Coming soon!')">Android Download</a></li> -->
-                        <li><a href="https://web.metabeat.io/">Launch on Web</a></li>
-                        <li><a href="https://heathered-fernleaf-3a1.notion.site/MetaBeat-Upcoming-Events-a9650c311ab04708ac2b30e583984658" target="_blank">Events</a></li>
-                        <li><a href="https://polygon.technology/" target="_blank" style="text-decoration: underline">Powered by Polygon®</a></li>
-                        <li><a href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction" target="_blank">White Paper</a></li>
-                        <li></li>
-                        <li><a href="https://linktr.ee/metabeat" target="_blank">Linktree</a></li>
-                    </ul>
-                </div>
-                <div class="fnb">
-                    <ul>
-                        <li><a href="home.html">About us</a></li>
-                        <li><a href="metabeatPlatform.html">MetaBeat Platform</a></li>
-                        <li><a href="contactus.html">Contact us</a></li>
-                        <li><a href="https://drive.google.com/drive/u/1/folders/1-rPclJg1hHfRudXbkQV5FRCf1gVauxo2">Brand logos</a></li>
-                        <li><a href="https://polygon.technology/" target="_blank">Terms and Conditions</a></li>
-                    </ul>
-                </div>
+          <div class="fnb-info">
+            <div class="fnb-etc-info">
+              <ul class="channel">
+                <li>
+                  <a href="https://medium.com/@MetabeatOffl" target="_blank"
+                    ><img
+                      src="./images/fnb_channel_medium.png"
+                      title="Go to Medium"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://discord.com/invite/9X9GKFxRpH"
+                    target="_blank"
+                    ><img
+                      src="./images/fnb_channel_discord.png"
+                      title="Go to Discord"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/Metabeatoffl" target="_blank"
+                    ><img
+                      src="./images/fnb_channel_twitter.png"
+                      title="Go to Twitter"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://t.me/metabeatoffl" target="_blank"
+                    ><img
+                      src="./images/fnb_channel_telegram.png"
+                      title="Go to Telegram"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/metabeat"
+                    target="_blank"
+                    ><img
+                      src="./images/fnb_channel_linkedin.png"
+                      title="Go to Linked In"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.coingecko.com/en/coins/metabeat"
+                    target="_blank"
+                    ><img
+                      src="./images/coin_gekko.png"
+                      title="Go to Coin Gekko"
+                  /></a>
+                </li>
+              </ul>
+              <ul class="fnb-etc">
+                <li>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.metabeat.metabeat"
+                    >Android Download</a
+                  >
+                </li>
+                <!-- <li><a href="itms-services://?action=download-manifest&url=plistitms-services://?action=download-manifest&url=https://metabeat.io/apps/ios/metabeat.plist">IOS Download</a></li>-->
+                <li><a href="faq.html">FAQ</a></li>
+                <!-- <li><a onClick="alert('Coming soon!')">Android Download</a></li> -->
+                <li><a href="https://web.metabeat.io/">Launch on Web</a></li>
+                <li>
+                  <a
+                    href="https://heathered-fernleaf-3a1.notion.site/MetaBeat-Upcoming-Events-a9650c311ab04708ac2b30e583984658"
+                    target="_blank"
+                    >Events</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://polygon.technology/"
+                    target="_blank"
+                    style="text-decoration: underline"
+                    >Powered by Polygon®</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://metabeat.gitbook.io/metabeat-whitepaper_ver2.0/global/introduction"
+                    target="_blank"
+                    >White Paper</a
+                  >
+                </li>
+                <li></li>
+                <li>
+                  <a href="https://linktr.ee/metabeat" target="_blank"
+                    >Linktree</a
+                  >
+                </li>
+              </ul>
             </div>
-            <div class="fnb-logo-info">
-                <a href="home.html"><img src="images/fnb_bi.png" title="Metabeat Logo"></a>
+            <div class="fnb">
+              <ul>
+                <li><a href="home.html">About us</a></li>
+                <li><a href="metabeatPlatform.html">MetaBeat Platform</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li>
+                  <a
+                    href="https://drive.google.com/drive/u/1/folders/1-rPclJg1hHfRudXbkQV5FRCf1gVauxo2"
+                    >Brand logos</a
+                  >
+                </li>
+                <li>
+                  <a href="https://polygon.technology/" target="_blank"
+                    >Terms and Conditions</a
+                  >
+                </li>
+              </ul>
             </div>
-            <div class="copyright-info">
-                <p class="company-name">MetaBeat Holdings Limited</p>
-                <p class="address">Intershore Chambers, Road Town,<br />Tortola, British Virgin Islands</p>
-                <p class="copyright">© 2022, Metabeat all right reserved.</p>
-            </div>
+          </div>
+          <div class="fnb-logo-info">
+            <a href="home.html"
+              ><img src="images/fnb_bi.png" title="Metabeat Logo"
+            /></a>
+          </div>
+          <div class="copyright-info">
+            <p class="company-name">MetaBeat Holdings Limited</p>
+            <p class="address">
+              Intershore Chambers, Road Town,<br />Tortola, British Virgin
+              Islands
+            </p>
+            <p class="copyright">© 2022, Metabeat all right reserved.</p>
+          </div>
         </div>
-    </footer>
-    <!-- ========== END FOOTER ========== -->
-</div>
-
-<!-- ========== SECONDARY CONTENTS ==========
-<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true" hidden>
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-close">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            </div>
-            <div class="modal-footer d-block text-center py-sm-5">
-                <small class="text-cap mb-4">Trusted by the world's best teams</small>
-            </div>
-        </div>
+      </footer>
+      <!-- ========== END FOOTER ========== -->
     </div>
-</div> -->
+    <script type="module" src="js/swiper/metabeat-platform.js"></script>
+    <!-- ========== REACT ========== -->
 
-<script src="js/swiper.min.js"></script>
-<script>
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+    <!-- DEVELOPMENT -->
+    <!-- <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script> -->
 
-    // section-group-1
-    $('#shoutOutCardBtn').on("click", "", function () {
-        if (!$(this).hasClass('card-unfold')) {
-            return;
-        }
+    <!-- PRODUCTION -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
 
-        $(this).removeClass('card-unfold');
-        $('.shout-out-card').addClass('tooltip-hide');
+    <script src="https://cdn.jsdelivr.net/npm/react-responsive@9.0.2/dist/react-responsive.min.js"></script>
 
-        var shoutOutCard = new Swiper('.section-group-1 .section-5 .swiper-container', {
-            scrollbarHide: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 32,
-            grabCursor: true
-        });
+    <!-- DEVELOPMENT -->
+    <!-- <script type="module" src="build/components/layouts/header.js"></script> -->
 
-        if (!isMobile) {
-            shoutOutCard.slideTo(1)
-        }
-
-        $('.section-group-1 .section-5 .shoutout-swiper .flip').hover(function () {
-            $(this).addClass("hover")
-        }, function () {
-            $(this).removeClass("hover")
-        })
-
-    })
-
-    // section-group-2
-    $('#dropCardBtn').on("click", "", function () {
-        if (!$(this).hasClass('card-unfold')) {
-            return;
-        }
-
-        $(this).removeClass('card-unfold');
-        $('.drop-card').addClass('tooltip-hide');
-
-        var dropCard = new Swiper('.section-group-2 .section-5 .swiper-container', {
-            scrollbarHide: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 32,
-            grabCursor: true
-        });
-
-        if (!isMobile) {
-            dropCard.slideTo(1)
-        }
-
-        $('.section-group-2 .section-5 .shoutout-swiper .flip').hover(function () {
-            $(this).addClass("hover")
-        }, function () {
-            $(this).removeClass("hover")
-        })
-
-    })
-
-
-    // section-group-3
-    $('#mingleCardBtn').on("click", "", function () {
-        if (!$(this).hasClass('card-unfold')) {
-            return;
-        }
-
-        $(this).removeClass('card-unfold');
-        $('.mingle-card').addClass('tooltip-hide');
-
-        var mingleCard = new Swiper('.section-group-3 .section-5 .swiper-container', {
-            scrollbarHide: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 32,
-            grabCursor: true
-        });
-
-        if (!isMobile) {
-            mingleCard.slideTo(1)
-        }
-
-        $('.section-group-3 .section-5 .shoutout-swiper .flip').hover(function () {
-            $(this).addClass("hover")
-        }, function () {
-            $(this).removeClass("hover")
-        })
-
-    })
-</script>
-</body>
+    <!-- PRODUCTION -->
+    <script type="module" src="dist/header.bundle.js"></script>
+  </body>
 </html>

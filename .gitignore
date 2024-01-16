@@ -1,0 +1,4 @@
+# WATCH
+/build
+/css/tailwind-*.css
+/dist
