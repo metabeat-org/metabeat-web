@@ -13,6 +13,9 @@
 반영된 페이지는 아래와 같습니다.
 
 * **home.html**
+* **metabeatPlatform.html**
+* **contactus.html**
+* **faq.html**
 
 향후 `FAQ` > `Contact us` > `Newsletter (및 연관 페이지)` > `Home` > `MetaBeat Platform` 순으로 순수 React 전환을 예정하고 있으며,
 <br />
