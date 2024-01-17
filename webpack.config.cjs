@@ -1,7 +1,10 @@
 const path = require("path");
 
 module.exports = {
-  entry: { header: "./src/components/layouts/header.js" },
+  entry: {
+    header: "./src/components/layouts/header.js",
+    footer: "./src/components/layouts/footer.js",
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
