@@ -18,9 +18,8 @@
 * **contactus.html**
 * **faq.html**
 
-향후 `FAQ` > `Contact us` > `Newsletter (및 연관 페이지)` > `Home` > `MetaBeat Platform` 순으로 순수 React 전환을 예정하고 있으며,
-<br />
-전환 완료 이후에는 Next.js (Static Export) 프레임워크를 추가할 예정입니다.
+
+향후 React(w. Vite)로의 전환을 예정하고 있습니다. 자세한 사항은 `next` 리포지토리를 확인해주세요.
 
 ## 빌드
 
